@@ -27,8 +27,8 @@ Fees: Free
 
 * Schedule
 
-Opening: afternoon, March 15 (Mon)
-Closing: March 17 (Wed)
+Opening: Afternoon, March 15 (Mon)
+Closing: Noon, March 17 (Wed)
 
 * Registration
 
@@ -44,6 +44,6 @@ title of talk: (if decided)
 
 * Contact
 
-Akihisa Yamada (https://akihisayamada.github.io/trs54/)
+Akihisa Yamada (https://akihisayamada.github.io/)
 
 ====================================================================== 
