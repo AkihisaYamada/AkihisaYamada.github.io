@@ -1,0 +1,66 @@
+======================================================================
+                        Call For Participation
+
+                          50th TRS Meeting
+                          Atami, Shizuoka
+                    February 27 - March 2, 2018
+
+               http://group-mmm.org/~ayamada/trs50/
+
+* About TRS meeting
+
+Term Rewriting Meeting (TRS Meeting) is a biannual informal workshop
+that aims at promoting the research on rewriting and related areas.
+Participants are requested to give a talk of approximately 15-60 minutes
+in English on their research activities. See also
+http://www.jaist.ac.jp/~hirokawa/trs-meeting/ for further information.
+We should like to invite all of you to the upcoming TRS Meeting at
+Atami, Shizuoka. Partial participation is also welcome.
+
+
+* Basic Information
+
+Dates: February 27 - March 2, 2019
+
+Venue: Atami New Fujiya Hotel (the page is only in Japanese, sorry)
+
+http://www.itoenhotel.com/itoenresort/atami_newfujiyahotel/tabid/577/Default.aspx
+
+Access: 1km walk from Atami station (cf. https://goo.gl/maps/Npvm9v9tdKK2)
+        or a bus ride (http://www.itoenhotel.com/Portals/0/pdf/811_20190104.pdf).
+
+Fees: 8,000 JPY for registration. For accommodation, see below.
+
+* Accommodation Fee
+
+Breakfasts, dinners, consumption tax and hot-spring tax are included.
+Some single rooms are available (western style, no good view).
+
+  Feb. 27: 12030 JPY
+  Feb. 28: 12030 JPY
+  Mar. 1:  13110 JPY
+
+* Schedule
+
+Opening: 14:30, February 27 (Wed)
+Closing: 12:00, March 2 (Sat)
+
+* Registration
+
+Please send the registration form below to Akihisa Yamada
+(akihisayamada@nii.ac.jp) no later than January 11.
+
+----------------------------------------------------------------------
+              Registration Form of the 50th TRS meeting
+name:
+affiliation:
+title of talk: (if decided)
+[male / female] (leave one)
+special room request:  [single room / any] (leave one)
+----------------------------------------------------------------------
+
+* Contact
+
+Akihisa Yamada (http://group-mmm.org/~ayamada/)
+
+====================================================================== 
