@@ -1,0 +1,49 @@
+======================================================================
+                        Call For Participation
+
+                          54th TRS Meeting
+                              Online
+                    March 15 - March 17, 2021
+
+               https://akihisayamada.github.io/trs54/
+
+* About TRS meeting
+
+Term Rewriting Meeting (TRS Meeting) is a biannual informal workshop
+that aims at promoting the research on rewriting and related areas.
+Participants are requested to give a talk of approximately 15-60 minutes
+in English on their research activities. See also
+http://www.jaist.ac.jp/~hirokawa/trs-meeting/ for further information.
+We should like to invite all of you to the upcoming TRS Meeting held online.
+Partial participation is also welcome.
+
+* Basic Information
+
+Dates: March 15 - March 17, 2021
+
+Venue: Online
+
+Fees: Free
+
+* Schedule
+
+Opening: afternoon, March 15 (Mon)
+Closing: March 17 (Wed)
+
+* Registration
+
+Please send the registration form below to Akihisa Yamada
+(akihisayamada@nii.ac.jp) no later than March 1.
+
+----------------------------------------------------------------------
+              Registration Form of the 54th TRS meeting
+name:
+affiliation:
+title of talk: (if decided)
+----------------------------------------------------------------------
+
+* Contact
+
+Akihisa Yamada (https://akihisayamada.github.io/trs54/)
+
+====================================================================== 
