@@ -153,6 +153,7 @@
 </head>
 <body>
  <h1>Akihisa Yamada (山田晃久)</h1>
+ <a href="trs54/">54th TRS Meeting (Online)</a>
  <h2>Research Interests</h2>
   <ul>
    <li>Interactive Theorem Proving
@@ -209,7 +210,11 @@
    <li><a href='http://cl-informatik.uibk.ac.at/software/ceta/'>IsaFoR/CeTA</a>.
   </ul>
  <h2>Publications</h2>
-  See also my <a href='http://dblp.uni-trier.de/pers/hd/y/Yamada_0002:Akihisa'>DBLP entry</a>.
+  See also
+  <a href='http://dblp.uni-trier.de/pers/hd/y/Yamada_0002:Akihisa'>DBLP</a>,
+  <a href="https://scholar.google.com/citations?user=dB0UqC0AAAAJ&hl=en">Google Scholar</a>,
+  <a href="https://www.researchgate.net/profile/Akihisa_Yamada">Research Gate</a>,
+  <a href="https://researchmap.jp/akihisayamada">researchmap</a>.
  <h3>Journal Article</h3>
   <ol class=publications>
    <li>
