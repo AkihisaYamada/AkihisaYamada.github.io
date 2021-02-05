@@ -33,13 +33,14 @@ Closing: Noon, March 17 (Wed)
 * Registration
 
 Please send the registration form below to Akihisa Yamada
-(akihisayamada@nii.ac.jp) no later than March 1.
+(akihisa.yamada@aist.go.jp) no later than March 1.
 
 ----------------------------------------------------------------------
               Registration Form of the 54th TRS meeting
 name:
 affiliation:
-title of talk: (if decided)
+title of talk: [<your talk title> / TBA / watch video only]
+time restriction:
 ----------------------------------------------------------------------
 
 * Contact
