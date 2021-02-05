@@ -309,7 +309,7 @@
   <ol class=publications start=9>
    <li>
     <?php echo "$RT, $JonasS, $CS, $AY"?>:<br/>
-    <a class=title href="https://drops.dagstuhl.de/opus/volltexte/2020/12326/">Certifying the weighted path prder (invited talk)</a>.
+    <a class=title href="https://drops.dagstuhl.de/opus/volltexte/2020/12326/">Certifying the weighted path order (invited talk)</a>.
     <span class=bibinfo>
      <?php event("IJCAR-FSCD 2020", "Joint 5th International Conference on Formal Structures for Computation and Deduction and 10th International Joint Conference on Automatic Reasoning", "https://fscd-ijcar-2020.org/")?>,
      <span class=series>LIPIcs</span>
