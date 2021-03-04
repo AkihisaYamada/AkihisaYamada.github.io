@@ -39,6 +39,51 @@ dt { margin-left: 1em;  margin-bottom: 1em;
 dd { margin-left: 15ch; margin-bottom: 1em; }
 
 .links a { margin-left: 1ex; display: inline-block; }
+
+.program { 
+  padding: 1ex 1ex 1ex 0;
+  background: #f0f0ff;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.program tr { vertical-align: top; }
+.program td { padding: .5ex .2ex .5ex 2ex;  }
+.time      { color: black; white-space: nowrap }
+.speaker   { color: #a00; }
+.title     { color: #00a; font-weight: 600; margin-right: 1ex; }
+.abstract  { color: black;  }
+.break     { color: #060; font-weight: 600; }
+.event     { color: #06e; font-weight: 600; }
+.session { font-weight: bold; }
+.note { 
+  color: #a22; 
+  font-weight: 600; 
+  padding: .5ex; 
+  margin: 1em 1em 0 0;
+  border: #c88 solid 2px; 
+}
+
+.email {
+  font-size: 18px;
+  padding-left: 2em;
+}
+
+.affiliation {
+  margin-left: 1ex;
+  color: #282;
+}
+
+table.program {
+  width: auto;
+  font-size: normal; 
+}
+.td   { padding-right: 1em; font-family: italic; }
+.tba          { color: blue; font-family: italic; }
+
+.date { font-weight: bold; margin: 0.5em 0.5em 0 0; }
+
 </style>
 </head>
 <body>
@@ -53,6 +98,7 @@ Online<br>
 <section>
 <h2>News</h2>
 <ul class='news'>
+<li>March 4, 2021: A tentative program is up.</li>
 <li>March 2, 2021: Registration closed, thank you for registering!</li>
 <li>December 10, 2020: This page is created.
 </ul>
@@ -81,12 +127,101 @@ We should like to invite all of you to the upcoming TRS Meeting held online. Par
 </section>
 
 <section>
-<h2>Schedule</h2>
- <dl>
-  <dt>Opening:<dd>Afternoon, March 15 (Mon)
-  <dt>Closing:<dd>Noon, March 17 (Wed)
- </dl>
-</section>
+<h2>Program (Tentative)</h2>
+<h3>March 15</h3>
+<table class="program">
+<tr>
+ <td class="time">9:30 &ndash; 11:00
+ <td><span class="session">Opening & Session 1</span> (chair: Akihisa Yamada)
+<tr>
+ <td><td>
+ <span class="title">Homological Methods in Rewriting</span><br>
+ <span class="speaker">Mirai Ikebuchi</span>
+ <span class="affiliation">MIT</span>
+<tr>
+ <td><td>
+ <span class="title">Termination Analysis of Term Rewrite Systems with Bounded Increase</span><br>
+ <span class="speaker">Li Huayan</span>
+ <span class="affiliation">JAIST</span>
+<tr>
+ <td class="time">11:00 &ndash; 12:00
+ <td><span class="session">Session 2</span> (chair: Nao Hirokawa)
+<tr>
+ <td><td>
+ <span class="title">Fixed-Point Theorems for Non-Transitive Relations</span><br>
+ <span class="speaker">Jérémy Dubut</span>
+ <span class="affiliation">NII</span>
+<tr>
+ <td class="time">14:00 &ndash; 15:00
+ <td><span class="session">Session 3</span> (chair: Kiraku Shintani)
+<tr>
+ <td><td>
+ <span class="title">Multi-Dimensional Interpretation Method 2</span><br>
+ <span class="speaker">Akihisa Yamada</span>
+ <span class="affiliation">AIST</span>
+</table>
+<h3>March 16</h3>
+<table class=program>
+<tr>
+ <td class="time">9:30 &ndash; 10:30
+ <td><span class="session">Session 4</span> (chair: Munehiro Iwami)
+<tr>
+ <td><td>
+ <span class="title">TBA</span><br>
+ <span class="speaker">Naoki Nishida</span>
+ <span class="affiliation">Nagoya U.</span>
+<tr>
+ <td class="time">10:45 &ndash; 12:15
+ <td><span class="session">Session 5</span> (chair: Takahito Aoto)
+<tr>
+ <td><td>
+ <span class="title">TBA</span><br>
+ <span class="speaker">Shujun Zhang</span>
+ <span class="affiliation">Nagoya U.</span>
+<tr>
+ <td><td>
+ <span class="title">TBA</span><br>
+ <span class="speaker">Kiraku Shintani</span>
+ <span class="affiliation">JAIST</span>
+<tr>
+ <td class="time">14:00 &ndash; 15:00
+ <td><span class="session">Session 6</span> (chair: Naoki Nishida)
+<tr>
+ <td><td>
+ <span class="title">TBA</span><br>
+ <span class="speaker">Nao Hirokawa</span>
+ <span class="affiliation">JAIST</span>
+<tr>
+ <td class="time">15:15 &ndash; 18:00
+ <td><span class="session">Business Meeting and Free Discussion</span> (chair: Akihisa Yamada)
+</table>
+<h3>March 17</h3>
+<table class="program">
+<tr>
+ <td class="time">9:30 &ndash; 10:30
+ <td><span class="session">Session 7</span> (chair: Jérémy Dubut)
+<tr>
+ <td><td>
+ <span class="title">TBA</span><br>
+ <span class="speaker">Munehiro Iwami</span>
+ <span class="affiliation">Shimane U.</span>
+<tr>
+ <td class="time">10:45 &ndash; 11:45
+ <td><span class="session">Session 8</span> (chair: Akihisa Yamada)
+<tr>
+ <td><td>
+ <span class="title">TBA</span><br>
+ <span class="speaker">Takahito Aoto</span>
+ <span class="affiliation">Niigata U.</span>
+<tr>
+ <td class="time">14:00 &ndash; 15:00
+ <td><span class="session">Session 9</span> (chair: Akihisa Yamada)
+<tr>
+ <td><td>
+ <span class="title">TBA</span><br>
+ <span class="speaker">Aart Middeldorp?</span>
+ <span class="affiliation">U. Innsbruck</span>
+</table>
 
 <section>
 <h2><s>Registration</s></h2>
