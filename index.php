@@ -224,10 +224,12 @@
   <ol class=publications>
    <li>
     <?php echo "$JDubut, $AY"; ?>:<br/>
-    <span class="title">Fixed Point Theorems for Non-Transitive Relations</span>
-    <?php LMCS(); ?>
-    <span class="note">to appear</span>
-    [<a href="https://arxiv.org/abs/2009.13065">arXiv version</a>]
+    <a class="title" href="https://doi.org/10.46298/lmcs-18(1:30)2022">Fixed point theorems for non-transitive relations</a>
+    <span class="bibinfo">
+     <?php LMCS(); ?>
+     <span class="pages">18(1:30)</span>
+     <span class="year">2022</span>
+    </span>
    <li>
     <?php echo "$RT, $RalphB, $JoseD, $MaxHaslbeck, $SJ, $AY" ?>:<br>
     <a class=title href="https://doi.org/10.1007/s10817-020-09552-1">Formalizing the LLL basis reduction algorithm and the LLL factorization algorithm in Isabelle/HOL</a>
