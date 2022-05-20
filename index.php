@@ -323,13 +323,21 @@
   <ol class=publications start=10>
    <li>
     <?php echo "$AY"; ?>:<br>
+    <a class=title href="Yamada2022.pdf">Term orderings for non-reachability of (conditional) rewriting</a>
+    <span class=bibinfo>
+     <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/") ?>,
+    </span>
+    <span class=note>to appear</span>
+   <li>
+    <?php echo "$AY"; ?>:<br>
     <a class=title href="https://doi.org/10.1007/978-3-030-79876-5_16">Multi-dimensional interpretations for termination of term rewriting</a>
     <span class=bibinfo>
-    <?php event("CADE-28", "Proc. 28th International Conference on Automated Deduction", "https://www.cs.cmu.edu/~mheule/CADE28/")?>,
-    <span class=series>LNAI</span>
-    <span class=volume>12699</span>
-    <span class=pages>pp.&nbsp;273&ndash;290</span>
-    <span class=year>2021</span>
+     <?php event("CADE-28", "Proc. 28th International Conference on Automated Deduction", "https://www.cs.cmu.edu/~mheule/CADE28/")?>,
+     <span class=series>LNAI</span>
+     <span class=volume>12699</span>
+     <span class=pages>pp.&nbsp;273&ndash;290</span>
+     <span class=year>2021</span>
+    </span>
    <li>
     <?php echo "$Clovis, $AY, $StefanK, $SK, $TsutomuK, $IH, $Fuyuki"?>:<br>
     <a class=title href="https://doi.org/10.1007/978-3-030-79379-1_2">Architecture-guided test resource allocation via logic</a>
