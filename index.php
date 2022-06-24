@@ -224,7 +224,7 @@
   <ol class=publications>
    <li>
     <?php echo "$AY"; ?>:<br/>
-    <a class="title" href="YamadaJAR2022">Tuple Interpretations for Termination of Term Rewriting</a>
+    <a class="title" href="YamadaJAR2022.pdf">Tuple Interpretations for Termination of Term Rewriting</a>
     <span class="biblinfo">
      <?php JAR(); ?>
      <span class="note">Invited, special issue for CADE-28. To appear.</span>
@@ -330,7 +330,7 @@
   <ol class=publications start=11>
    <li>
     <?php echo "$AY"; ?>:<br>
-    <a class=title href="Yamada2022.pdf">Term orderings for non-reachability of (conditional) rewriting</a>
+    <a class=title href="YamadaIJCAR2022.pdf">Term orderings for non-reachability of (conditional) rewriting</a>
     <span class=bibinfo>
      <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/") ?>,
     </span>
