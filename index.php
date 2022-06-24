@@ -223,6 +223,13 @@
  <h3>Journal Articles</h3>
   <ol class=publications>
    <li>
+    <?php echo "$AY"; ?>:<br/>
+    <a class="title" href="YamadaJAR2022">Tuple Interpretations for Termination of Term Rewriting</a>
+    <span class="biblinfo">
+     <?php JAR(); ?>
+     <span class="note">Invited, special issue for CADE-28. To appear.</span>
+    </span>
+   <li>
     <?php echo "$JDubut, $AY"; ?>:<br/>
     <a class="title" href="https://doi.org/10.46298/lmcs-18(1:30)2022">Fixed point theorems for non-transitive relations</a>
     <span class="bibinfo">
@@ -320,7 +327,7 @@
     <span class=note>Awarded IPSJ Tokai-branch student paper prize for encouragement.</span>
   </ol>
  <h3>Conference Papers</h3>
-  <ol class=publications start=10>
+  <ol class=publications start=11>
    <li>
     <?php echo "$AY"; ?>:<br>
     <a class=title href="Yamada2022.pdf">Term orderings for non-reachability of (conditional) rewriting</a>
