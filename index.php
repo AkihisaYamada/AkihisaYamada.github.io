@@ -7,7 +7,11 @@
 <!--
   body { font-family:"Times New Roman","Times","serif","メイリオ"; }
   .bibinfo { display: inline-block; }
-  .author, .author a { text-decoration:none; color:maroon; }
+  .author, .author a { text-decoration:none; color:maroon; display: inline-block; }
+  .author:not(:last-child)::after { content: ", "; white-space: pre; }
+  .author:last-child::after { content: ":"; }
+  .authors.etal::after { content: "et al.:"; }
+  .etal>.author:not(:first-child) { display: none; }
   .title, .title a { text-decoration:none; color:navy; font-weight:bold; }
   .title::after { color: black; font-weight: normal; content: "."; }
   .booktitle, .booktitle a { text-decoration:none; color:black; font-style:italic; }
@@ -26,7 +30,7 @@
   .note:after { content: ")"; }
   ul.publications li { margin-bottom:1.5ex; }
   ol.publications li { margin-bottom:1.5ex; }
-  a:hover, .author a:hover, .booktitle a:hover, .note a:hover { text-decoration:underline; }
+  a:hover, ; author a:hover, .booktitle a:hover, .note a:hover { text-decoration:underline; }
   .toggle:hover { text-decoration:underline; }
   table th { vertical-align:top; }
 -->
@@ -57,6 +61,9 @@
   o.innerHTML = ahead;
   o.title = atitle;
   o.onclick = function() { toggle(o, t, bhead, btitle, bbody); };
+ }
+ function toggle_etal(o) {
+  o.classList.toggle("etal");
  }
 </script>
 <?php
@@ -92,48 +99,51 @@
 		abbrev("<a href='$url'>$full</a>",$short);
 		echo "</span>";
 	}
-	$AY = '<span class=author>Akihisa Yamada</span>';
-	$RT = '<a class=author href="http://cl-informatik.uibk.ac.at/users/thiemann/">Ren&eacute; Thiemann</a>';
-	$JoseD = '<a class=author href="http://www.unirioja.es/cu/jodivaso/">Jose Divas&oacute;n</a>';
-	$SJ = '<a class=author href="http://sjcjoosten.nl/">Sebastiaan J.C. Joosten</a>';
-	$CS = '<a class=author href="http://cl-informatik.uibk.ac.at/users/griff/">Christian Sternagel</a>';
-	$KK = '<a class=author href="http://www.ct.info.gifu-u.ac.jp/~kusakari/">Keiichirou Kusakari</a>';
-	$OK = '<a class=author href="http://www21.in.tum.de/~kuncar/">Ond&#345;ej Kun&#269;ar</a>';
-	$AB = '<a class=author href="http://fmv.jku.at/biere/">Armin Biere</a>';
-	$TK = '<a class=author href="https://staff.aist.go.jp/t.kitamura/">Takashi Kitamura</a>';
-	$EC = '<a class=author href="https://staff.aist.go.jp/e.choi/">Eun-He Choi</a>';
-	$CA = '<a class=author href="https://people.kth.se/~artho/">Cyrille Artho</a>';
-	$SW = '<a class=author href="http://cl-informatik.uibk.ac.at/users/swinkler/">Sarah Winkler</a>';
-	$AM = '<a class=author href="http://cl-informatik.uibk.ac.at/users/ami/">Aart Middeldorp</a>';
-	$NH = '<a class=author href="http://www.jaist.ac.jp/~hirokawa/">Nao Hirokawa</a>';
-	$GV = '<a class=author href="http://users.dsic.upv.es/~gvidal/">Germ&aacute;n Vidal</a>';
-	$NN = '<a class=author href="http://www.sakabe.i.is.nagoya-u.ac.jp/~nishida/">Naoki Nishida</a>';
-	$JI = '<span class=author>Jos&eacute; Iborra</span>';
-	$TS = '<a class=author href="http://www.sakabe.nuie.nagoya-u.ac.jp/~sakabe/">Toshiki Sakabe</a>';
-	$MS = '<a class=author href="http://www.sakabe.nuie.nagoya-u.ac.jp/~sakai/">Masahiko Sakai</a>';
-	$YO = '<a class=author href="https://staff.aist.go.jp/y.oiwa/">Yutaka Oiwa</a>';
-	$TH = '<a class=author href="http://www.sqlab.i.is.nagoya-u.ac.jp/~hamaguti/">Takeshi Hamaguchi</a>';
-	$MB = '<a class=author href="https://www.microsoft.com/en-us/research/people/mabrocks/">Marc Brockschmidt</a>';
-	$OM = '<a class=author href="http://se.is.kit.ac.jp/~o-mizuno/">Osamu Mizuno</a>';
-	$MA = '<a class=author href="http://cl-informatik.uibk.ac.at/users/zini/">Martin Avanzini</a>';
-	$UdL = '<a class=author href="http://www.cs.unibo.it/~dallago/">Ugo Dal Lago</a>';
-	$JG = '<a class=author href="https://verify.rwth-aachen.de/giesl/">J&uuml;rgen Giesl</a>';
-	$AR = '<a class=author href="http://www.lsi.upc.es/~albert/">Albert Rubio</a>';
-	$JW = '<a class=author href="http://www.imn.htwk-leipzig.de/~waldmann/">Johannes Waldmann</a>';
-	$DBayer = '<a class=author href="https://www.sosy-lab.org/people/beyer/">Dirk Bayer</a>';
-  $Juraj = '<a class=author href="http://www.lsv.fr/~kolcak/">Juraj Kol&#269;&aacute;k</a>';
-  $IH = '<a class=author href="http://group-mmm.org/~ichiro/">Ichiro Hasuo</a>';
-  $JDubut = '<a class=author href="http://group-mmm.org/~dubut/">J&eacute;r&eacute;my Dubut</a>';
-  $SK = '<a class=author href="http://group-mmm.org/~s-katsumata/">Shin&apos;ya Katsumata</a>';
-  $DSprunger = '<a class=author href="http://group-mmm.org/~sprunger/">David Sprunger</a>';
-  $NianZe = '<a class=author href="https://dblp.org/pers/hd/l/Lee:Nian=Ze">Nian-Ze Lee</a>';
-  $Clovis = '<a class=author href="http://group-mmm.org/~eberhart/">Clovis Eberhart</a>';
-  $Fuyuki = '<a class=author href="http://research.nii.ac.jp/~f-ishikawa/en/">Fuyuki Ishikawa</a>';
-  $RalphB = '<a class=author href="http://cl-informatik.uibk.ac.at/users/bottesch/">Ralph Bottesch</a>';
-  $MaxHaslbeck = '<a class=author href="http://cl-informatik.uibk.ac.at/users/mhaslbeck/">Max W. Haslbeck</a>';
-  $JonasS = '<a class=author href="https://dblp.org/pers/s/Sch=ouml=pf:Jonas.html">Jonas Sch&ouml;pf</a>';
-  $StefanK = '<a class=author href="https://klikovits.net/">Stefan Klikovits</a>';
-	$TsutomuK = '<a class=author href="https://researchmap.jp/tsutomu.kobayashi/">Tsutomu Kobayshi</a>';
+  function author($name) {
+    echo '<span class="author">'. $name.'</span>';
+  }
+	function AY() { echo '<span class=author>Akihisa Yamada</span>'; }
+	function RT() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/thiemann/">Ren&eacute; Thiemann</a>'; }
+	function JoseD() { echo '<a class=author href="http://www.unirioja.es/cu/jodivaso/">Jose Divas&oacute;n</a>'; }
+	function SJ() { echo '<a class=author href="http://sjcjoosten.nl/">Sebastiaan J.C. Joosten</a>'; }
+	function CS() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/griff/">Christian Sternagel</a>'; }
+	function KK() { echo '<a class=author href="http://www.ct.info.gifu-u.ac.jp/~kusakari/">Keiichirou Kusakari</a>'; }
+	function OK() { echo '<a class=author href="http://www21.in.tum.de/~kuncar/">Ond&#345;ej Kun&#269;ar</a>'; }
+	function AB() { echo '<a class=author href="http://fmv.jku.at/biere/">Armin Biere</a>'; }
+	function TK() { echo '<a class=author href="https://staff.aist.go.jp/t.kitamura/">Takashi Kitamura</a>'; }
+	function EC() { echo '<a class=author href="https://staff.aist.go.jp/e.choi/">Eun-He Choi</a>'; }
+	function CA() { echo '<a class=author href="https://people.kth.se/~artho/">Cyrille Artho</a>'; }
+	function SW() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/swinkler/">Sarah Winkler</a>'; }
+	function AM() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/ami/">Aart Middeldorp</a>'; }
+	function NH() { echo '<a class=author href="http://www.jaist.ac.jp/~hirokawa/">Nao Hirokawa</a>'; }
+	function GV() { echo '<a class=author href="http://users.dsic.upv.es/~gvidal/">Germ&aacute;n Vidal</a>'; }
+	function NN() { echo '<a class=author href="http://www.sakabe.i.is.nagoya-u.ac.jp/~nishida/">Naoki Nishida</a>'; }
+	function JI() { echo '<span class=author>Jos&eacute; Iborra</span>'; }
+	function TS() { echo '<a class=author href="http://www.sakabe.nuie.nagoya-u.ac.jp/~sakabe/">Toshiki Sakabe</a>'; }
+	function MS() { echo '<a class=author href="http://www.sakabe.nuie.nagoya-u.ac.jp/~sakai/">Masahiko Sakai</a>'; }
+	function YO() { echo '<a class=author href="https://staff.aist.go.jp/y.oiwa/">Yutaka Oiwa</a>'; }
+	function TH() { echo '<a class=author href="http://www.sqlab.i.is.nagoya-u.ac.jp/~hamaguti/">Takeshi Hamaguchi</a>'; }
+	function MB() { echo '<a class=author href="https://www.microsoft.com/en-us/research/people/mabrocks/">Marc Brockschmidt</a>'; }
+	function OM() { echo '<a class=author href="http://se.is.kit.ac.jp/~o-mizuno/">Osamu Mizuno</a>'; }
+	function MA() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/zini/">Martin Avanzini</a>'; }
+	function UdL() { echo '<a class=author href="http://www.cs.unibo.it/~dallago/">Ugo Dal Lago</a>'; }
+	function JG() { echo '<a class=author href="https://verify.rwth-aachen.de/giesl/">J&uuml;rgen Giesl</a>'; }
+	function AR() { echo '<a class=author href="http://www.lsi.upc.es/~albert/">Albert Rubio</a>'; }
+	function JW() { echo '<a class=author href="http://www.imn.htwk-leipzig.de/~waldmann/">Johannes Waldmann</a>'; }
+	function DBayer() { echo '<a class=author href="https://www.sosy-lab.org/people/beyer/">Dirk Bayer</a>'; }
+  function Juraj() { echo '<a class=author href="http://www.lsv.fr/~kolcak/">Juraj Kol&#269;&aacute;k</a>'; }
+  function IH() { echo '<a class=author href="http://group-mmm.org/~ichiro/">Ichiro Hasuo</a>'; }
+  function JDubut() { echo '<a class=author href="http://group-mmm.org/~dubut/">J&eacute;r&eacute;my Dubut</a>'; }
+  function SK() { echo '<a class=author href="http://group-mmm.org/~s-katsumata/">Shin&apos;ya Katsumata</a>'; }
+  function DSprunger() { echo '<a class=author href="http://group-mmm.org/~sprunger/">David Sprunger</a>'; }
+  function NianZe() { echo '<a class=author href="https://dblp.org/pers/hd/l/Lee:Nian=Ze">Nian-Ze Lee</a>'; }
+  function Clovis() { echo '<a class=author href="http://group-mmm.org/~eberhart/">Clovis Eberhart</a>'; }
+  function Fuyuki() { echo '<a class=author href="http://research.nii.ac.jp/~f-ishikawa/en/">Fuyuki Ishikawa</a>'; }
+  function RalphB() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/bottesch/">Ralph Bottesch</a>'; }
+  function MaxHaslbeck() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/mhaslbeck/">Max W. Haslbeck</a>'; }
+  function JonasS() { echo '<a class=author href="https://dblp.org/pers/s/Sch=ouml=pf:Jonas.html">Jonas Sch&ouml;pf</a>'; }
+  function StefanK() { echo '<a class=author href="https://klikovits.net/">Stefan Klikovits</a>'; }
+	function TsutomuK() { echo '<a class=author href="https://researchmap.jp/tsutomu.kobayashi/">Tsutomu Kobayshi</a>'; }
 	function JAR() {
         echo "<span class=booktitle>";
 		toggle( "JAR", "Journal of Automated Reasoning" );
@@ -154,6 +164,11 @@
         echo "<span class=booktitle>";
         toggle("LMCS", "Logical Methods in Computer Science");
         echo "</span>";
+    }
+    function IV() {
+      echo '<span class="booktitle">';
+      toggle('IEEE-IV', "IEEE Transactions on Intelligent Vehicles");
+      echo '</span>';
     }
 ?>
 </head>
@@ -223,14 +238,25 @@
  <h3>Journal Articles</h3>
   <ol class=publications>
    <li>
-    <?php echo "$AY"; ?>:<br/>
+    <div class="authors">
+     <?php AY(); ?>
+    </div>
     <a class="title" href="YamadaJAR2022.pdf">Tuple Interpretations for Termination of Term Rewriting</a>
     <span class="biblinfo">
      <?php JAR(); ?>
      <span class="note">Invited, special issue for CADE-28. To appear.</span>
     </span>
    <li>
-    <?php echo "$JDubut, $AY"; ?>:<br/>
+    <div class="authors etal" onclick="toggle_etal(this)">
+     <?php IH(); Clovis(); author("James Haydon"); JDubut(); author("Brandon Bohrer"); TsutomuK(); author("Sasinee Pruekprasert"); author("Xiao-Yi Zhang"); author("Erik Andre Pallas"); AY(); author("Kohei Suenaga"); Fuyuki(); author("Kenji Kamijo"); author("Yoshiyuki Shinya"); author("Takamasa Suetomi");?>
+    </div>
+    <a class="title" href="https://doi.org/10.1109/TIV.2022.3169762">Goal-Aware RSS for Complex Scenarios Via Program Logic</a>
+    <?PHP IV(); ?>
+    <span class="year">2022</span>
+   <li>
+    <div class="authors">
+     <?php JDubut(); AY(); ?>
+    </div>
     <a class="title" href="https://doi.org/10.46298/lmcs-18(1:30)2022">Fixed point theorems for non-transitive relations</a>
     <span class="bibinfo">
      <?php LMCS(); ?>
@@ -238,7 +264,9 @@
      <span class="year">2022</span>
     </span>
    <li>
-    <?php echo "$RT, $RalphB, $JoseD, $MaxHaslbeck, $SJ, $AY" ?>:<br>
+    <div class="authors">
+     <?php RT(); RalphB(); JoseD(); MaxHaslbeck(); SJ(); AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/s10817-020-09552-1">Formalizing the LLL basis reduction algorithm and the LLL factorization algorithm in Isabelle/HOL</a>
     <span class=bibinfo>
      <?php JAR(); ?>
@@ -249,7 +277,9 @@
     <span class=note>Invited, special issue for ITP 2018.</span>
     [<a href="TBDHJY20.pdf">authors&apos; version</a>]
    <li>
-    <?php echo "$MA, $UdL, $AY" ?>:<br/>
+    <div class="authors">
+     <?php MA(); UdL(); AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1016/j.scico.2019.102338">On probabilistic term rewriting</a>
     <span class=bibinfo>
      <?php SCP(); ?>
@@ -259,7 +289,9 @@
     <span class=note>Invited, special issue for FLOPS 2018, online.</span>
     [<a href="ADY19.pdf">authors&apos; version</a>]
    <li>
-    <?php echo "$JoseD, $SJ, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php JoseD(); SJ(); RT(); AY(); ?>
+    </div>
     <a class=title href='https://doi.org/10.1007/s10817-019-09526-y'
     >A verified implementation of the Berlekamp–Zassenhaus factorization algorithm</a>
     <span class=bibinfo>
@@ -270,7 +302,9 @@
     </span>
     [<a href="DJTY2019.pdf">authors&apos; version</a>]
    <li>
-    <?php echo "$SJ, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php SJ(); RT(); AY(); ?>
+    </div>
     <a class=title href='https://doi.org/10.1007/s10817-018-09504-w'>A verified implementation of algebraic numbers in Isabelle/HOL</a>
     <span class=bibinfo>
      <?php JAR(); ?>
@@ -279,7 +313,9 @@
      <span class=year>2020</span>
     </span>
    <li>
-    <?php echo "$JI, $NN, $GV, $AY" ?>:<br/>
+    <div class="authors">
+     <?php JI(); NN(); GV(); AY() ?>
+    </div>
     <a class=title href='http://link.springer.com/article/10.1007/s10817-016-9373-5'>Relative termination via dependency pairs</a>
     <span class=bibinfo>
      <?php JAR(); ?>
@@ -289,7 +325,9 @@
     </span>
     <span class=note>Invited, special issue for CADE 2015.</span>
    <li>
-    <?php echo "$AY, $SW, $NH, $AM" ?>:<br/>
+    <div class="authors">
+     <?php AY(); SW(); NH(); AM(); ?>
+    </div>
     <a class=title href='http://journals.cambridge.org/abstract_S1471068415000083'>AC-KBO revisited</a>
     <span class=bibinfo>
      <span class=booktitle>
@@ -304,7 +342,9 @@
     <?php errata( 'In Definition 7.1, "{ t<sub>1</sub>,...,t<sub>i-1</sub>,s<sub>j</sub>,t<sub>i+1</sub>,...,t<sub>n</sub> }" should be "{ t<sub>1</sub>,...,t<sub>i-1</sub> } &#8846; &nabla;<sub>f</sub> (s<sub>j</sub>) &#8846; { t<sub>i+1</sub>,...,t<sub>n</sub> }".');
     ?>
    <li>
-    <?php echo "$AY, $KK, $TS" ?>:<br/>
+    <div class="authors">
+     <?php AY(); KK(); TS(); ?>
+    </div>
     <a class=title href="http://dx.doi.org/10.1016/j.scico.2014.07.009">
     A unified ordering for termination proving</a>
     <span class=bibinfo>
@@ -316,7 +356,9 @@
     <span class=note>Invited, special issue for PPDP 2013.</span>
     [<a href='http://arxiv.org/abs/1404.6245/'>arXiv version</a>, <a href='https://www.trs.cm.is.nagoya-u.ac.jp/papers/SCP2014/'>expreiments</a>].
    <li>
-    <?php echo "$AY, $KK, $TS, $MS, $NN" ?>:<br/>
+    <div class="authors">
+     <?php AY(); KK(); TS(); MS(); NN(); ?>
+    </div>
     <a class=title href='https://www.jstage.jst.go.jp/article/ipsjtrans/5/0/5_0_96/_article/'>
      A sound type system for typing runtime errors</a>
     <span class=bibinfo>
@@ -327,16 +369,20 @@
     <span class=note>Awarded IPSJ Tokai-branch student paper prize for encouragement.</span>
   </ol>
  <h3>Conference Papers</h3>
-  <ol class=publications start=11>
+  <ol class=publications start=12>
    <li>
-    <?php echo "$AY"; ?>:<br>
+    <div class="authors">
+     <?php AY(); ?>
+    </div>
     <a class=title href="YamadaIJCAR2022.pdf">Term orderings for non-reachability of (conditional) rewriting</a>
     <span class=bibinfo>
      <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/") ?>,
     </span>
     <span class=note>to appear</span>
    <li>
-    <?php echo "$AY"; ?>:<br>
+    <div class="authors">
+     <?php AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-79876-5_16">Multi-dimensional interpretations for termination of term rewriting</a>
     <span class=bibinfo>
      <?php event("CADE-28", "Proc. 28th International Conference on Automated Deduction", "https://www.cs.cmu.edu/~mheule/CADE28/")?>,
@@ -346,7 +392,9 @@
      <span class=year>2021</span>
     </span>
    <li>
-    <?php echo "$Clovis, $AY, $StefanK, $SK, $TsutomuK, $IH, $Fuyuki"?>:<br>
+    <div class="authors">
+     <?php Clovis(); AY(); StefanK(); SK(); TsutomuK(); IH(); Fuyuki(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-79379-1_2">Architecture-guided test resource allocation via logic</a>
     <span class=bibinfo>
      <?php event("TAP 2021", "Proc. 15th International Conference on Tests and Proofs", "https://www.univ-orleans.fr/lifo/events/TAP2021/") ?>,
@@ -355,7 +403,9 @@
      <span class=pages>pp.&nbsp;22&ndash;38</span>,
      <span class=year>2021</span>
    <li>
-    <?php echo "$RT, $JonasS, $CS, $AY"?>:<br/>
+    <div class="authors">
+     <?php RT(); JonasS(); CS(); AY(); ?>
+    </div>
     <a class=title href="https://drops.dagstuhl.de/opus/volltexte/2020/12326/">Certifying the weighted path order (invited talk)</a>
     <span class=bibinfo>
      <?php event("IJCAR-FSCD 2020", "Proc. Joint 5th International Conference on Formal Structures for Computation and Deduction and 10th International Joint Conference on Automatic Reasoning", "https://fscd-ijcar-2020.org/")?>,
@@ -365,7 +415,9 @@
      <span class=year>2020</span>
     </span>
    <li>
-    <?php echo "$Juraj, $JDubut, $IH, $SK, $DSprunger, $AY" ?>:<br/>
+    <div class="authors">
+     <?php Juraj(); JDubut(); IH(); SK(); DSprunger(); AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-45190-5_11">Relational differential dynamic logic</a>
     <span class=bibinfo>
      <?php event("TACAS 2020", "Proc. 26th International Conference on Tools and Algorithms for the Construction and Analysis of Systems", "https://www.etaps.org/2020/tacas") ?>,
@@ -375,7 +427,9 @@
      <span class=year>2020</span>
     </span>
    <li>
-    <?php echo "$AY, $JDubut" ?>:<br/>
+    <div class="authors">
+     <?php AY(); JDubut(); ?>
+    </div>
     <a class=title href="http://dx.doi.org/10.4230/LIPIcs.ITP.2019.30">Complete non-orders and fixed points</a>
     <span class=bibinfo>
      <?php event( "ITP 2019", "Proc. 10th International Conference on Interactive Theorem Proving", "https://itp19.cecs.pdx.edu/" ) ?>,
@@ -385,7 +439,9 @@
      <span class=year>2019</span>
     </span>
    <li>
-    <?php echo "$DBayer et al."?>:<br/>
+    <div class="authors">
+     <?php author('DBayer et al.'); ?>
+    </div>
     <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_1'>TOOLympics 2019: An overview of competitions in formal methods</a>
     <span class=bibinfo>
      <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3),
@@ -394,7 +450,9 @@
      <span class=pages>pp.&nbsp;3&ndash;24</span>,
      <span class=year>2019</span>
    <li>
-    <?php echo "$JG, $AR, $CS, $JW, $AY"?>:<br/>
+    <div class="authors">
+     <?php JG(); AR(); CS(); JW(); AY(); ?>
+    </div>
     <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_10'>The termination and complexity competition</a>
     <span class=bibinfo>
      <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3),
@@ -403,7 +461,9 @@
      <span class=pages>pp.&nbsp;156&ndash;166</span>,
      <span class=year>2019</span>
    <li>
-    <?php echo "$CS, $AY" ?>:<br/>
+    <div class="authors">
+     <?php CS(); AY(); ?>
+    </div>
     <a class=title href='https://doi.org/10.1007/978-3-030-17462-0_15'>Reachability analysis for termination and confluence of rewriting</a>
     <span class=bibinfo>
      <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (1),
@@ -413,7 +473,9 @@
      <span class=year>2019</span>
     </span>
    <li>
-    <?php echo "$JoseD, $SJ, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php JoseD(); SJ(); RT(); AY(); ?>
+    </div>
     <a class=title href='https://doi.org/10.1007/978-3-319-94821-8_10'>A formalization of the LLL basis reduction algorithm</a>
     <span class=bibinfo>
      <?php event( "ITP 2018", "Proc. 9th International Conference on Interactive Theorem Proving", "https://itp2018.inria.fr") ?>,
@@ -423,7 +485,9 @@
      <span class=year>2018</span>
     </span>
    <li>
-    <?php echo "$MA, $UdL, $AY" ?>:<br/>
+    <div class="authors">
+     <?php MA(); UdL(); AY(); ?>
+    </div>
     <a class=title href='https://doi.org/10.1007/978-3-319-90686-7_9'>On probabilistic term rewriting</a>
     <span class=bibinfo>
      <?php event( "FLOPS 2018", "Proc. 14th International Symposium on Functional and Logic Programming", "http://www.sqlab.jp/FLOPS2018/") ?>,
@@ -434,7 +498,9 @@
     </span>
     [<a  href='ADY18.pdf'>preprint</a>]
    <li>
-    <?php echo "$JoseD, $SJ, $OK, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php JoseD(); SJ(); OK(); RT(); AY(); ?>
+    </div>
     <a class=title href='https://dl.acm.org/citation.cfm?doid=3167103'>Efficient certification of complexity proofs: formalizing the Perron&ndash;Frobenius theorem (invited talk paper)</a>
     <span class=bibinfo>
      <?php event( "CPP 2018", "Proc. 7th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl18.sigplan.org/track/CPP-2018") ?>,
@@ -442,7 +508,9 @@
      <span class=year>2018</span>
     </span>
    <li>
-    <?php echo "$TK, $AY, <span class=author>Goro Hatayama</span>, <span class=author>Shinya Sakuragi</span>, $EC, $CA" ?>:<br/>
+    <div class="authors">
+     <?php TK(); AY(); author("Goro Hatayama"); author("Shinya Sakuragi"); EC(); CA(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-319-66266-4_15">Classification tree method with parameter shielding</a>
     <span class=bibinfo>
      <?php event( "SAFECOMP 2017", "Proc. 36th International Conference on Computer Safety, Reliability, and Security", "http://safecomp17.fbk.eu/") ?>,
@@ -452,7 +520,9 @@
      <span class=year>2017</span>
     </span>
    <li>
-    <?php echo "$MB, $SJ, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php MB(); SJ(); RT(); AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-319-63046-5_28">Certifying safety and termination proofs for integer transition systems</a>
     <span class=bibinfo>
      <?php event( "CADE-26",
@@ -465,7 +535,9 @@
     </span>
     [<a href="http://cl-informatik.uibk.ac.at/users/ayamada/BJTY2017.pdf">preprint</a>]
    <li>
-    <?php echo "$JoseD, $SJ, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php JoseD(); SJ(); RT(); AY(); ?>
+    </div>
     <a class=title href="http://dl.acm.org/citation.cfm?doid=3018610.3018617">A formalization of the Berlekamp&ndash;Zassenhaus factorization algorithm</a>
     <span class=bibinfo>
      <?php event( "CPP 2017",
@@ -475,7 +547,9 @@
      <span class=year>2017</span>
     </span>
    <li>
-    <?php echo "$EC, $CA, $TK, $OM, $AY" ?>:<br/>
+    <div class="authors">
+     <?php EC(); CA(); TK(); OM(); AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1109/ISSRE.2016.26">Distance-integrated combinatorial testing</a>
     <span class=bibinfo>
      <?php event( "ISSRE 2016",
@@ -486,7 +560,9 @@
     </span>
     [<a href="http://deji.dip.jp/pman/pman3.cgi?D=48">preprint</a>]
    <li>
-    <?php echo "$AY, $AB, $CA, $TK, $EC" ?>:<br/>
+    <div class="authors">
+     <?php AY(); AB(); CA(); TK(); EC(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1145/2970276.2970335">Greedy combinatorial test case generation using unsatisfiable cores</a>
     <span class=bibinfo>
      <?php event( "ASE 2016",
@@ -497,7 +573,9 @@
     </span>
     [<a href="http://cl-informatik.uibk.ac.at/users/ayamada/YBAKC2016.pdf">preprint</a>]
    <li>
-    <?php echo "$AY, $CS, $RT, $KK" ?>:<br/>
+    <div class="authors">
+     <?php AY(); CS(); RT(); KK(); ?>
+    </div>
     <a class=title href='http://dx.doi.org/10.4230/LIPIcs.CSL.2016.8'>AC dependency pairs revisited</a>
     <span class=bibinfo>
      <?php event( "CSL 2016",
@@ -509,7 +587,9 @@
      <span class=year>2016</span>
     </span>
    <li>
-    <?php echo "$RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php RT(); AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-319-43144-4_24">Algebraic numbers in Isabelle/HOL</a>
     <span class=bibinfo>
      <?php event( "ITP 2016",
@@ -522,7 +602,9 @@
     </span>
     [<a href="http://cl-informatik.uibk.ac.at/users/ayamada/TY2016.pdf">preprint</a>]
    <li>
-    <?php echo "$RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php RT(); AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1145/2854065.2854073">Formalizing Jordan normal forms in Isabelle/HOL</a>
     <span class=bibinfo>
      <?php event( "CPP 2016",
@@ -531,7 +613,9 @@
      <span class=pages>pp.&nbsp;88&ndash;99</span>
     </span>
    <li>
-    <?php echo "$TK, $AY, <span class=author>Goro Hatayama</span>, $CA, $EC, <span class=author>Ngoc Thi Bich Do</span>, $YO, <span class=author>Shinya Sakuragi</span>:" ?><br/>
+    <div class="authors">
+     <?php TK(); AY(); author('Goro Hatayama'); CA(); EC(); author("Ngoc Thi Bich Do"); YO(); author('Shinya Sakuragi') ?>
+    </div>
     <a class=title href="https://doi.org/10.1109/QRS.2015.29">Combinatorial testing for tree-structured test models with constraints</a>
     <span class=bibinfo>
      <?php event( "QRS 2015",
@@ -542,7 +626,9 @@
     <span class=note>Best paper award!</span>
     [<a href="https://staff.aist.go.jp/t.kitamura/dl/QRS2015.pdf">preprint</a>]
    <li>
-    <?php echo "$JI, $NN, $GV, $AY" ?>:<br/>
+    <div class="authors">
+     <?php JI(); NN(); GV(); AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-319-21401-6_11">Reducing relative termination to dependency pair problems</a>
     <span class=bibinfo>
      <?php event(  "CADE-25",
@@ -557,7 +643,9 @@
      <a href="http://www.trs.cm.is.nagoya-u.ac.jp/papers/CADE2015">experiments</a>]
     <?php errata('In Definition 3, &#8827;<sub>R/B</sub> should be defined as (&rarr;<sub>R/B</sub>&middot;&#8885;)<sup>+</sup>, rather than (&rarr;<sub>R/B</sub>&cup;&#8883;)<sup>+</sup>, but then more workaround is required. Please see JAR version for more elegant solution.') ?>,
    <li>
-    <?php echo "$EC, $TK, $CA, $AY, $YO" ?>:<br/>
+    <div class="authors">
+     <?php EC(); TK(); CA(); AY(); YO(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1109/COMPSAC.2015.113">Priority integration for weighted combinatorial testing</a>
     <span class=bibinfo>
      <?php event( "COMPSAC 2015",
@@ -567,7 +655,9 @@
      <span class=year>2015</span>
     </span>
    <li>
-    <?php echo "$AY, $TK, $CA, $EC, $YO, $AB" ?>:<br/>
+    <div class="authors">
+     <?php AY(); TK(); CA(); EC(); YO(); AB(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1109/ICST.2015.7102599">Optimization of combinatorial testing by incremental SAT solving</a>
     <span class=bibinfo>
      <?php event( "ICST 2015",
@@ -578,7 +668,9 @@
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/~ayamada/YKACOB2015.pdf">preprint</a>]
    <li>
-    <?php echo "$AY, $KK, $TS" ?>:<br/>
+    <div class="authors">
+     <?php AY(); KK(); TS(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-319-08918-8_32">Nagoya Termination Tool</a>
     <span class=bibinfo>
      <?php event( "RTA-TLCA 2014",
@@ -591,9 +683,11 @@
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/papers/RTA-TLCA2014/paper.pdf">preprint</a>,
      <a href='http://arxiv.org/abs/1404.6626/'>full version</a>]
-    <?php errata( 'In p.472 line 2, "reset" should be removed from here; it is not specified in SMT-LIB 2.0, but a command supported by z3.'); ?>
+    <?php errata( 'In p.472 line 2, "reset" should be removed from here(); it is not specified in SMT-LIB 2.0, but a command supported by z3.'); ?>
    <li>
-    <?php echo "$AY, $SW, $NH, $AM" ?>:<br/>
+    <div class="authors">
+     <?php AY(); SW(); NH(); AM(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-319-07151-0_20">AC-KBO revisited</a>
     <span class=bibinfo>
      <?php event( "FLOPS 2014",
@@ -608,7 +702,9 @@
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/~ayamada/FLOPS2014/paper.pdf">preprint</a>,
      <a href="http://cl-informatik.uibk.ac.at/software/ackbo">experiments</a>]
    <li>
-    <?php echo "$AY, $KK, $TS" ?>:<br/>
+    <div class="authors">
+     <?php AY(); KK(); TS(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1145/2505879.2505885">
      Unifying the Knuth-Bendix, recursive path and polynomial orders</a>
     <span class=bibinfo>
@@ -651,13 +747,17 @@
  <h3>Workshop Papers / Others <?php hider("hider1", "others", "...", "&lt;&lt;&lt;", "Show", "Hide");?></h3>
   <ul class=publications id=others>
    <li>
-    <?php echo "$Juraj, $IH, $JDubut, $SK, $DSprunger, $AY" ?>:
+    <div class="authors">
+     <?php Juraj(); IH(); JDubut(); SK(); DSprunger(); AY(); ?>
+    </div>:
     <span class=title>Relational differential dynamic logic: poster abstract</span>
     <?php event( "HSCC 2019", "22nd ACM International Conference on Hybrid Systems: Computation and Control", "http://hscc2019.eecs.umich.edu/" ) ?>,
     <span class=pages>284&ndash;285</span>,
     <span class=year>2019</span>
    <li>
-    <?php echo "$AY, $Clovis, $Fuyuki, $NianZe" ?>:
+    <div class="authors">
+     <?php AY(); Clovis(); Fuyuki(); NianZe(); ?>
+    </div>:
     <span class=title>Scenario sampling for cyber physical systems using combinatorial testing</span>
     Poster presentation in
     <?php event( "IWCT 2019", "8th International Workshop on Combinatorial Testing", "https://iwct2019.sba-research.org/" ) ?>,
@@ -683,13 +783,17 @@
 	<span class=year>2018</span>
 	<span class=note>invited talk</span>
    <li>
-	<?php echo "$JoseD, $SJ, $RT, $AY" ?>:<br/>
+	<div class="authors">
+	 <?php JoseD(); SJ(); RT(); AY(); ?>
+	</div>
 	<span class=title>A Perron-Frobenius theorem for Jordan blocks for complexity proving</span>
 	<?php event( "WST 2018", "16th International Workshop on Termination", "http://wst2018.webs.upv.es/" ) ?>,
 	<span class=pages>pp.&nbsp;30&ndash;34</span>,
 	<span class=year>2018</span>
    <li>
-    <?php echo "$MA, $UdL, $AY" ?>:<br/>
+    <div class="authors">
+     <?php MA(); UdL(); AY(); ?>
+    </div>
     <span class=title>The interpretation method for probabilistic systems</span> 
     <?php event( "DICE 2018", "9th International Workshop on Developments in Implicit Computational Complexity", "http://cl-informatik.uibk.ac.at/users/zini/events/dice18/") ?>,
     @ <a class=event href='https://www.etaps.org/'>ETAPS</a>
@@ -720,7 +824,9 @@
      <span class=year>2016</span>
     </span>
    <li>
-    <?php echo "$SJ, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php SJ(); RT(); AY(); ?>
+    </div>
     <span class=title>CeTA &ndash; Certifying termination and complexity proofs in 2016</span>
     <span class=bibinfo>
      <?php event( "WST 2016",
@@ -730,7 +836,9 @@
      <span class=year>2016</span>
     </span>
    <li>
-    <?php echo "$MB, $SJ, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php MB(); SJ(); RT(); AY(); ?>
+    </div>
     <span class=title>Certifying safety and termination proofs for integer transition systems</span>
     <span class=bibinfo>
      <?php event( "WST 2016",
@@ -740,17 +848,23 @@
      <span class=year>2016</span>
     </span>
    <li>
-    <?php echo "$JoseD, $SJ, $OK, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php JoseD(); SJ(); OK(); RT(); AY(); ?>
+    </div>
     <span class=title>Certifying exact complexity bounds for matrix interpretations</span>
     <?php event( "LCC 2016",
      "16th International Workshop on Logic and Computational Complexity",
      "http://lcc2016.cs.unibo.it/" ) ?>.
    <li>
-    <?php echo "$JoseD, $SJ, $RT, $AY:" ?><br/>
+    <div class="authors">
+     <?php JoseD(); SJ(); RT(); AY(); ?>
+    </div><br/>
     <a class=title href='http://www.in.tum.de/~nipkow/Isabelle2016/Isabelle2016_6.pdf'>A formalization of Berlekamp's factorization algorithm</a>
     <a class=event href='http://www21.in.tum.de/~nipkow/Isabelle2016/'>Isabelle Workshop 2016</a>
    <li>
-    <?php echo "$JoseD, $OK, $RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php JoseD(); OK(); RT(); AY(); ?>
+    </div>
     <a class=title href='https://www.isa-afp.org/entries/Perron_Frobenius.shtml'>Perron-Frobenius theorem for spectral radius analysis</a>
     <span class=bibinfo>
      <span class=booktitle>Archive of Formal Proofs</span>,
@@ -758,7 +872,9 @@
      <span class=note>Formal proof development</span>
     </span>
    <li>
-    <?php echo "$RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php RT(); AY(); ?>
+    </div>
     <a class=title href='http://www.isa-afp.org/entries/Polynomial_Interpolation.shtml'>Polynomial interpolation</a>
     <span class=bibinfo>
      <span class=booktitle>Archive of Formal Proofs</span>,
@@ -766,7 +882,9 @@
      <span class=note>Formal proof development</span>
     </span>
    <li>
-    <?php echo "$RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php RT(); AY(); ?>
+    </div>
     <a class=title href='http://www.isa-afp.org/entries/Polynomial_Factorization.shtml'>Polynomial factorization</a>
     <span class=bibinfo>
      <span class=booktitle>Archive of Formal Proofs</span>,
@@ -774,7 +892,9 @@
      <span class=note>Formal proof development</span>
     </span>
    <li>
-    <?php echo "$RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php RT(); AY(); ?>
+    </div>
     <a class=title href='http://afp.sourceforge.net/entries/Algebraic_Numbers.shtml'>Algebraic numbers in Isabelle/HOL</a>
     <span class=bibinfo>
      <span class=booktitle>Archive of Formal Proofs</span>,
@@ -782,7 +902,9 @@
      <span class=note>Formal proof development</span>
     </span>
    <li>
-    <?php echo "$RT, $AY" ?>:<br/>
+    <div class="authors">
+     <?php RT(); AY(); ?>
+    </div>
     <a class=title href='http://afp.sf.net/entries/Jordan_Normal_Form.shtml'>Matrices, Jordan normal forms, and spectral radius theory</a>
     <span class=bibinfo>
      <span class=booktitle>Archive of Formal Proofs</span>,
@@ -790,7 +912,9 @@
      <span class=note>Formal proof development</span>
     </span>
    <li>
-    <?php echo "<span class=author>Takanori Omae</span>, $KK, $AY, $TS" ?>:<br/>
+    <div class="authors">
+     <?php echo author("Takanori Omae"); KK(); AY(); TS(); ?>
+    </div>
     <span class=title>Abstracting the weighted path order for proving termination of term rewriting systems</span>
     (<?php toggle("in Japanese", "項書換え系の停止性証明のための重み付き経路順序の抽象化") ?>).
     <span class=bibinfo>
@@ -798,7 +922,9 @@
      <span class=year>2015</span>
     </span>
    <li>
-    <?php echo "<span class=author>Koichi Ota</span>, $TH, $MS, $AY, $NN, $TS" ?>:<br/>
+    <div class="authors">
+     <?php echo author('Koichi Ota'); TH(); MS(); AY(); NN(); TS(); ?>
+    </div>
     <span class=title>Implementing a conditional dependency pair method for proving termination of functional programs with exception handling</span>
     (<?php toggle("in Japanese","例外処理を含む関数型プログラムの停止性証明のための条件付き依存対法の実現") ?>).
     <span class=bibinfo>
@@ -816,7 +942,9 @@
      <span class=year>2015</span>
     </span>
    <li>
-    <?php echo "$AY, $TK" ?>:<br/>
+    <div class="authors">
+     <?php AY(); TK(); ?>
+    </div>
     <span class=bibinfo>
      <span class=title>Towards developing the combinatorial testing tool Calot</span>
      (<?php toggle("in Japanese","組み合わせテストツール Calot の開発に向けて") ?>).
@@ -829,7 +957,9 @@
      <span class=year>2015</span>
     </span>
    <li>
-    <?php echo "$EC, $TK, $CA, $AY, $YO" ?>:<br/>
+    <div class="authors">
+     <?php EC(); TK(); CA(); AY(); YO(); ?>
+    </div>
     <span class=title>T-wise test construction improving (T+1)-way coverage</span>
     <span class=bibinfo>
      Poster Presentation in
@@ -859,7 +989,9 @@
      <span class=year>2014</span>
     </span>
    <li>
-    <?php echo "$AY, $KK, $TS" ?>:<br/>
+    <div class="authors">
+     <?php AY(); KK(); TS(); ?>
+    </div>
     <a class=title href='http://www.trs.cm.is.nagoya-u.ac.jp/papers/WST2013/paper.pdf'>Partial status for KBO</a>
     <span class=bibinfo>
      <?php event( "WST 2013",
@@ -887,7 +1019,9 @@
     </span>
     <span class=note>Joint work with Sarah Winkler, Nao Hirokawa, Aart Middeldorp</span>
    <li>
-    <?php echo "$AY, $KK, $TS, $MS, $NN" ?>:<br/>
+    <div class="authors">
+     <?php AY(); KK(); TS(); MS(); NN(); ?>
+    </div>
     <span class=title>A sound type system for typing runtime errors</span>
     <span class=bibinfo>
      <span class=event>86th Workshop of <a href='http://www.ipsj.or.jp/sig/pro/'>IPSJ SIGPRO</a></span>,
@@ -896,7 +1030,9 @@
      <span class=year>2011</span>
     </span>
    <li>
-    <?php echo "$AY, $KK, $TS, $MS, $NN" ?>:<br/>
+    <div class="authors">
+     <?php AY(); KK(); TS(); MS(); NN(); ?>
+    </div>
     <span class=bibinfo>
      <span class=title>Error detection with soft typing for dynamically typed languages</span>
     </span>
