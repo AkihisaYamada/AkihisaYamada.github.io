@@ -130,7 +130,7 @@
 	function JG() { echo '<a class=author href="https://verify.rwth-aachen.de/giesl/">J&uuml;rgen Giesl</a>'; }
 	function AR() { echo '<a class=author href="http://www.lsi.upc.es/~albert/">Albert Rubio</a>'; }
 	function JW() { echo '<a class=author href="http://www.imn.htwk-leipzig.de/~waldmann/">Johannes Waldmann</a>'; }
-	function DBayer() { echo '<a class=author href="https://www.sosy-lab.org/people/beyer/">Dirk Bayer</a>'; }
+	function DBeyer() { echo '<a class=author href="https://www.sosy-lab.org/people/beyer/">Dirk Beyer</a>'; }
   function Juraj() { echo '<a class=author href="http://www.lsv.fr/~kolcak/">Juraj Kol&#269;&aacute;k</a>'; }
   function IH() { echo '<a class=author href="http://group-mmm.org/~ichiro/">Ichiro Hasuo</a>'; }
   function JDubut() { echo '<a class=author href="http://group-mmm.org/~dubut/">J&eacute;r&eacute;my Dubut</a>'; }
@@ -439,8 +439,8 @@
      <span class=year>2019</span>
     </span>
    <li>
-    <div class="authors">
-     <?php author('DBayer et al.'); ?>
+    <div class="authors etal" onclick="toggle_etal(this)">
+     <?php DBeyer(); author('Ezio Bartocci'); author('Paul E. Black'); author('Grigory Fedyukovich'); author('Hubert Garavel'); author('Arnd Hartmanns'); author('Marieke Huisman'); author('Fabrice Kordon'); author('Julian Nagele'); author('Mihaela Sighireanu'); author('Bernhard Steffen'); author('Martin Suda'); author('Geoff Sutcliffe'); author('Tjark Weber'); author('Akihisa Yamada'); ?>
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_1'>TOOLympics 2019: An overview of competitions in formal methods</a>
     <span class=bibinfo>
