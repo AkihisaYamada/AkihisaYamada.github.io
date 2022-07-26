@@ -244,7 +244,8 @@
     <a class="title" href="https://doi.org/10.1007/s10817-022-09640-4">Tuple Interpretations for Termination of Term Rewriting</a>
     <span class="biblinfo">
      <?php JAR(); ?>
-     <span class="note">Invited, special issue for CADE-28. </span>
+     <span class="year">2022</span>
+     <span class="note">Invited, special issue for CADE-28.</span>
     </span>
     [<a href="YamadaJAR2022.pdf">Author&apos;s version</a>]
    <li>
