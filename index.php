@@ -241,11 +241,12 @@
     <div class="authors">
      <?php AY(); ?>
     </div>
-    <a class="title" href="YamadaJAR2022.pdf">Tuple Interpretations for Termination of Term Rewriting</a>
+    <a class="title" href="https://doi.org/10.1007/s10817-022-09640-4">Tuple Interpretations for Termination of Term Rewriting</a>
     <span class="biblinfo">
      <?php JAR(); ?>
-     <span class="note">Invited, special issue for CADE-28. To appear.</span>
+     <span class="note">Invited, special issue for CADE-28. </span>
     </span>
+    [<a href="YamadaJAR2022.pdf">Author&apos;s version</a>]
    <li>
     <div class="authors etal" onclick="toggle_etal(this)">
      <?php IH(); Clovis(); author("James Haydon"); JDubut(); author("Brandon Bohrer"); TsutomuK(); author("Sasinee Pruekprasert"); author("Xiao-Yi Zhang"); author("Erik Andre Pallas"); AY(); author("Kohei Suenaga"); Fuyuki(); author("Kenji Kamijo"); author("Yoshiyuki Shinya"); author("Takamasa Suetomi");?>
