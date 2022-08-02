@@ -436,7 +436,7 @@
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-319-90686-7_9'>On probabilistic term rewriting</a>
     <span class=bibinfo>
-     <?php event( "FLOPS 2018", "Proc. 14th International Symposium on Functional and Logic Programming", "http://www.sqlab.jp/FLOPS2018/") ?><span class=booktitle>LNCS</span><span class=volume>10818</span><span class=pages>pp.&nbsp;132&ndash;148</span><span class=year>2018</span>
+     <?php event( "FLOPS 2018", "Proc. 14th International Symposium on Functional and Logic Programming", "http://www.sqlab.jp/FLOPS2018/") ?><span class=series>LNCS</span><span class=volume>10818</span><span class=pages>pp.&nbsp;132&ndash;148</span><span class=year>2018</span>
     </span>
     [<a  href='ADY18.pdf'>preprint</a>]
    <li>
