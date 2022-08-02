@@ -26,13 +26,18 @@
   .doi:before { content: "DOI="; }
   .note { display: inline-block; }
   .note a { text-decoration:none; color:black; }
-  .note:before { content: "("; }
+  .note:before { content: " ("; white-space: pre; }
   .note:after { content: ")"; }
   ul.publications li { margin-bottom:1.5ex; }
   ol.publications li { margin-bottom:1.5ex; }
   a:hover, ; author a:hover, .booktitle a:hover, .note a:hover { text-decoration:underline; }
   .toggle:hover { text-decoration:underline; }
   table th { vertical-align:top; }
+  span+span.year::before { content: ", "; }
+  span+span.pages::before { content: " "; }
+  span+span.series::before { content: ", "; }
+  span.series+span.volume::before { content: " "; }
+  span.volume+span.pages::before { content: ", "; }
 -->
 </style>
 <script type="text/javascript">
@@ -186,7 +191,7 @@
    <tr>
     <th>Apr.&nbsp;2020<th>&mdash;<th>current
     <td>Senior researcher at
-     <span class=institute>Infrastructure Protection Security Research Team</span>,
+     <span class=institute>Infrastructure Protection Security Research Team</span>
      <a class=institute href='https://www.cpsec.aist.go.jp/'>Cyber Physical Security Research Center</a>,
      <a class=institute href='https://www.aist.go.jp/'>AIST</a>, Japan.
    <tr>
@@ -243,9 +248,7 @@
     </div>
     <a class="title" href="https://doi.org/10.1007/s10817-022-09640-4">Tuple Interpretations for Termination of Term Rewriting</a>
     <span class="biblinfo">
-     <?php JAR(); ?>
-     <span class="year">2022</span>
-     <span class="note">Invited, special issue for CADE-28.</span>
+     <?php JAR(); ?><span class="year">2022</span><span class="note">Invited, special issue for CADE-28.</span>
     </span>
     [<a href="YamadaJAR2022.pdf">Author&apos;s version</a>]
    <li>
@@ -253,17 +256,14 @@
      <?php IH(); Clovis(); author("James Haydon"); JDubut(); author("Brandon Bohrer"); TsutomuK(); author("Sasinee Pruekprasert"); author("Xiao-Yi Zhang"); author("Erik Andre Pallas"); AY(); author("Kohei Suenaga"); Fuyuki(); author("Kenji Kamijo"); author("Yoshiyuki Shinya"); author("Takamasa Suetomi");?>
     </div>
     <a class="title" href="https://doi.org/10.1109/TIV.2022.3169762">Goal-Aware RSS for Complex Scenarios Via Program Logic</a>
-    <?PHP IV(); ?>
-    <span class="year">2022</span>
+    <?PHP IV(); ?><span class="year">2022</span>
    <li>
     <div class="authors">
      <?php JDubut(); AY(); ?>
     </div>
     <a class="title" href="https://doi.org/10.46298/lmcs-18(1:30)2022">Fixed point theorems for non-transitive relations</a>
     <span class="bibinfo">
-     <?php LMCS(); ?>
-     <span class="pages">18(1:30)</span>
-     <span class="year">2022</span>
+     <?php LMCS(); ?><span class="pages">18(1:30)</span><span class="year">2022</span>
     </span>
    <li>
     <div class="authors">
@@ -271,12 +271,9 @@
     </div>
     <a class=title href="https://doi.org/10.1007/s10817-020-09552-1">Formalizing the LLL basis reduction algorithm and the LLL factorization algorithm in Isabelle/HOL</a>
     <span class=bibinfo>
-     <?php JAR(); ?>
-     <span class=pages>64: 827&ndash;856</span>
-     <?php Springer(); ?>
-     <span class=year>2020</span>
-    </span>
-    <span class=note>Invited, special issue for ITP 2018.</span>
+     <?php JAR(); ?><span class=pages>64: 827&ndash;856</span>
+     <?php Springer(); ?><span class=year>2020</span>
+    </span><span class=note>Invited, special issue for ITP 2018.</span>
     [<a href="TBDHJY20.pdf">authors&apos; version</a>]
    <li>
     <div class="authors">
@@ -284,11 +281,9 @@
     </div>
     <a class=title href="https://doi.org/10.1016/j.scico.2019.102338">On probabilistic term rewriting</a>
     <span class=bibinfo>
-     <?php SCP(); ?>
-     <span class=pages>185</span>,
+     <?php SCP(); ?><span class=pages>185</span>
      <?php Elsevier(); ?>.
-    </span>
-    <span class=note>Invited, special issue for FLOPS 2018, online.</span>
+    </span><span class=note>Invited, special issue for FLOPS 2018, online.</span>
     [<a href="ADY19.pdf">authors&apos; version</a>]
    <li>
     <div class="authors">
@@ -297,10 +292,8 @@
     <a class=title href='https://doi.org/10.1007/s10817-019-09526-y'
     >A verified implementation of the Berlekamp–Zassenhaus factorization algorithm</a>
     <span class=bibinfo>
-     <?php JAR(); ?>
-     <span class=pages>64(4): 699&ndash;735</span>,
-     <?php Springer(); ?>
-     <span class=year>2020</span>
+     <?php JAR(); ?><span class=pages>64(4): 699&ndash;735</span>
+     <?php Springer(); ?><span class=year>2020</span>
     </span>
     [<a href="DJTY2019.pdf">authors&apos; version</a>]
    <li>
@@ -309,10 +302,8 @@
     </div>
     <a class=title href='https://doi.org/10.1007/s10817-018-09504-w'>A verified implementation of algebraic numbers in Isabelle/HOL</a>
     <span class=bibinfo>
-     <?php JAR(); ?>
-     <span class=pages>64:363&ndash;389</span>,
-     <?php Springer(); ?>
-     <span class=year>2020</span>
+     <?php JAR(); ?><span class=pages>64:363&ndash;389</span>
+     <?php Springer(); ?><span class=year>2020</span>
     </span>
    <li>
     <div class="authors">
@@ -320,12 +311,9 @@
     </div>
     <a class=title href='http://link.springer.com/article/10.1007/s10817-016-9373-5'>Relative termination via dependency pairs</a>
     <span class=bibinfo>
-     <?php JAR(); ?>
-     <span class=pages>58(3):391&ndash;411</span>,
-     <?php Springer(); ?>
-     <span class=year>2017</span>
-    </span>
-    <span class=note>Invited, special issue for CADE 2015.</span>
+     <?php JAR(); ?><span class=pages>58(3):391&ndash;411</span>
+     <?php Springer(); ?><span class=year>2017</span>
+    </span><span class=note>Invited, special issue for CADE 2015.</span>
    <li>
     <div class="authors">
      <?php AY(); SW(); NH(); AM(); ?>
@@ -333,12 +321,8 @@
     <a class=title href='http://journals.cambridge.org/abstract_S1471068415000083'>AC-KBO revisited</a>
     <span class=bibinfo>
      <span class=booktitle>
-      <?php toggle( "TPLP", "Theory and Practice of Logic Programming") ?></span>
-     <span class=pages>16(2):163&ndash;188</span>,
-     <span class=publisher>Cambridge University Press</span>,
-     <span class=year>2016</span>
-    </span>
-    <span class=note>Invited, special issue for FLOPS 2014.
+      <?php toggle( "TPLP", "Theory and Practice of Logic Programming") ?></span><span class=pages>16(2):163&ndash;188</span><span class=publisher>Cambridge University Press</span><span class=year>2016</span>
+    </span><span class=note>Invited, special issue for FLOPS 2014.
      Also available as
      <a href='http://arxiv.org/abs/1403.0406'>CoRR abs/1403.0406</a></span>
     <?php errata( 'In Definition 7.1, "{ t<sub>1</sub>,...,t<sub>i-1</sub>,s<sub>j</sub>,t<sub>i+1</sub>,...,t<sub>n</sub> }" should be "{ t<sub>1</sub>,...,t<sub>i-1</sub> } &#8846; &nabla;<sub>f</sub> (s<sub>j</sub>) &#8846; { t<sub>i+1</sub>,...,t<sub>n</sub> }".');
@@ -350,12 +334,9 @@
     <a class=title href="http://dx.doi.org/10.1016/j.scico.2014.07.009">
     A unified ordering for termination proving</a>
     <span class=bibinfo>
-     <?php SCP();?>
-     <span class=pages>111:110&ndash;134</span>,
-     <?php Elsevier(); ?>
-     <span class=year>2015</span>
-    </span>
-    <span class=note>Invited, special issue for PPDP 2013.</span>
+     <?php SCP();?><span class=pages>111:110&ndash;134</span>
+     <?php Elsevier(); ?><span class=year>2015</span>
+    </span><span class=note>Invited, special issue for PPDP 2013.</span>
     [<a href='http://arxiv.org/abs/1404.6245/'>arXiv version</a>, <a href='https://www.trs.cm.is.nagoya-u.ac.jp/papers/SCP2014/'>expreiments</a>].
    <li>
     <div class="authors">
@@ -364,11 +345,8 @@
     <a class=title href='https://www.jstage.jst.go.jp/article/ipsjtrans/5/0/5_0_96/_article/'>
      A sound type system for typing runtime errors</a>
     <span class=bibinfo>
-     <span class=booktitle>IPSJ Transactions on Programming</span>
-     <span class=pages>5(2):16&ndash;24</span>,
-     <span class=year>2012</span>
-    </span>
-    <span class=note>Awarded IPSJ Tokai-branch student paper prize for encouragement.</span>
+     <span class=booktitle>IPSJ Transactions on Programming</span><span class=pages>5(2):16&ndash;24</span><span class=year>2012</span>
+    </span><span class=note>Awarded IPSJ Tokai-branch student paper prize for encouragement.</span>
   </ol>
  <h3>Conference Papers</h3>
   <ol class=publications start=12>
@@ -376,22 +354,17 @@
     <div class="authors">
      <?php AY(); ?>
     </div>
-    <a class=title href="YamadaIJCAR2022.pdf">Term orderings for non-reachability of (conditional) rewriting</a>
+    <a class=title href="https://doi.org/10.1007/978-3-031-10769-6_15">Term orderings for non-reachability of (conditional) rewriting</a>
     <span class=bibinfo>
-     <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/") ?>,
+     <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/") ?><span class=series>LNAI</span><span class=volume>13385</span><span class=pages>pp.&nbsp;248&ndash;267</span><span class=year>2022</span>
     </span>
-    <span class=note>to appear</span>
    <li>
     <div class="authors">
      <?php AY(); ?>
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-79876-5_16">Multi-dimensional interpretations for termination of term rewriting</a>
     <span class=bibinfo>
-     <?php event("CADE-28", "Proc. 28th International Conference on Automated Deduction", "https://www.cs.cmu.edu/~mheule/CADE28/")?>,
-     <span class=series>LNAI</span>
-     <span class=volume>12699</span>
-     <span class=pages>pp.&nbsp;273&ndash;290</span>
-     <span class=year>2021</span>
+     <?php event("CADE-28", "Proc. 28th International Conference on Automated Deduction", "https://www.cs.cmu.edu/~mheule/CADE28/")?><span class=series>LNAI</span><span class=volume>12699</span><span class=pages>pp.&nbsp;273&ndash;290</span><span class=year>2021</span>
     </span>
    <li>
     <div class="authors">
@@ -399,22 +372,14 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-79379-1_2">Architecture-guided test resource allocation via logic</a>
     <span class=bibinfo>
-     <?php event("TAP 2021", "Proc. 15th International Conference on Tests and Proofs", "https://www.univ-orleans.fr/lifo/events/TAP2021/") ?>,
-     <span class=series>LNCS</span>
-     <span class=volume>12740</span>,
-     <span class=pages>pp.&nbsp;22&ndash;38</span>,
-     <span class=year>2021</span>
+     <?php event("TAP 2021", "Proc. 15th International Conference on Tests and Proofs", "https://www.univ-orleans.fr/lifo/events/TAP2021/") ?><span class=series>LNCS</span><span class=volume>12740</span><span class=pages>pp.&nbsp;22&ndash;38</span><span class=year>2021</span>
    <li>
     <div class="authors">
      <?php RT(); JonasS(); CS(); AY(); ?>
     </div>
     <a class=title href="https://drops.dagstuhl.de/opus/volltexte/2020/12326/">Certifying the weighted path order (invited talk)</a>
     <span class=bibinfo>
-     <?php event("IJCAR-FSCD 2020", "Proc. Joint 5th International Conference on Formal Structures for Computation and Deduction and 10th International Joint Conference on Automatic Reasoning", "https://fscd-ijcar-2020.org/")?>,
-     <span class=series>LIPIcs</span>
-     <span class=volume>167</span>,
-     <span class=pages>4:1&ndash;4:20</span>,
-     <span class=year>2020</span>
+     <?php event("IJCAR-FSCD 2020", "Proc. Joint 5th International Conference on Formal Structures for Computation and Deduction and 10th International Joint Conference on Automatic Reasoning", "https://fscd-ijcar-2020.org/")?><span class=series>LIPIcs</span><span class=volume>167</span><span class=pages>4:1&ndash;4:20</span><span class=year>2020</span>
     </span>
    <li>
     <div class="authors">
@@ -422,11 +387,7 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-45190-5_11">Relational differential dynamic logic</a>
     <span class=bibinfo>
-     <?php event("TACAS 2020", "Proc. 26th International Conference on Tools and Algorithms for the Construction and Analysis of Systems", "https://www.etaps.org/2020/tacas") ?>,
-     <span class=series>LNCS</span>
-     <span class=volume>12078</span>,
-     <span class=pages>pp.&nbsp;191&ndash;208</span>,
-     <span class=year>2020</span>
+     <?php event("TACAS 2020", "Proc. 26th International Conference on Tools and Algorithms for the Construction and Analysis of Systems", "https://www.etaps.org/2020/tacas") ?><span class=series>LNCS</span><span class=volume>12078</span><span class=pages>pp.&nbsp;191&ndash;208</span><span class=year>2020</span>
     </span>
    <li>
     <div class="authors">
@@ -434,11 +395,7 @@
     </div>
     <a class=title href="http://dx.doi.org/10.4230/LIPIcs.ITP.2019.30">Complete non-orders and fixed points</a>
     <span class=bibinfo>
-     <?php event( "ITP 2019", "Proc. 10th International Conference on Interactive Theorem Proving", "https://itp19.cecs.pdx.edu/" ) ?>,
-     <span class=series>LIPIcs</span>
-     <span class=volume>141</span>,
-     <span class=pages>30:1&ndash;30:16</span>,
-     <span class=year>2019</span>
+     <?php event( "ITP 2019", "Proc. 10th International Conference on Interactive Theorem Proving", "https://itp19.cecs.pdx.edu/" ) ?><span class=series>LIPIcs</span><span class=volume>141</span><span class=pages>30:1&ndash;30:16</span><span class=year>2019</span>
     </span>
    <li>
     <div class="authors etal" onclick="toggle_etal(this)">
@@ -447,10 +404,7 @@
     <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_1'>TOOLympics 2019: An overview of competitions in formal methods</a>
     <span class=bibinfo>
      <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3),
-     <span class=series>LNCS</span>
-     <span class=volume>11429</span>,
-     <span class=pages>pp.&nbsp;3&ndash;24</span>,
-     <span class=year>2019</span>
+     <span class=series>LNCS</span><span class=volume>11429</span><span class=pages>pp.&nbsp;3&ndash;24</span><span class=year>2019</span>
    <li>
     <div class="authors">
      <?php JG(); AR(); CS(); JW(); AY(); ?>
@@ -458,10 +412,7 @@
     <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_10'>The termination and complexity competition</a>
     <span class=bibinfo>
      <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3),
-     <span class=series>LNCS</span>
-     <span class=volume>11429</span>,
-     <span class=pages>pp.&nbsp;156&ndash;166</span>,
-     <span class=year>2019</span>
+     <span class=series>LNCS</span><span class=volume>11429</span><span class=pages>pp.&nbsp;156&ndash;166</span><span class=year>2019</span>
    <li>
     <div class="authors">
      <?php CS(); AY(); ?>
@@ -469,10 +420,7 @@
     <a class=title href='https://doi.org/10.1007/978-3-030-17462-0_15'>Reachability analysis for termination and confluence of rewriting</a>
     <span class=bibinfo>
      <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (1),
-     <span class=seires>LNCS</span>
-     <span class=volume>11427</span>,
-     <span class=pages>pp.&nbsp;262&ndash;278</span>,
-     <span class=year>2019</span>
+     <span class=seires>LNCS</span><span class=volume>11427</span><span class=pages>pp.&nbsp;262&ndash;278</span><span class=year>2019</span>
     </span>
    <li>
     <div class="authors">
@@ -480,11 +428,7 @@
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-319-94821-8_10'>A formalization of the LLL basis reduction algorithm</a>
     <span class=bibinfo>
-     <?php event( "ITP 2018", "Proc. 9th International Conference on Interactive Theorem Proving", "https://itp2018.inria.fr") ?>,
-     <span class=series>LNCS</span>
-     <span class=volume>10895</span>,
-     <span class=pages>pp.&nbsp;160&ndash;177</span>
-     <span class=year>2018</span>
+     <?php event( "ITP 2018", "Proc. 9th International Conference on Interactive Theorem Proving", "https://itp2018.inria.fr") ?><span class=series>LNCS</span><span class=volume>10895</span><span class=pages>pp.&nbsp;160&ndash;177</span><span class=year>2018</span>
     </span>
    <li>
     <div class="authors">
@@ -492,11 +436,7 @@
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-319-90686-7_9'>On probabilistic term rewriting</a>
     <span class=bibinfo>
-     <?php event( "FLOPS 2018", "Proc. 14th International Symposium on Functional and Logic Programming", "http://www.sqlab.jp/FLOPS2018/") ?>,
-     <span class=booktitle>LNCS</span>
-     <span class=volume>10818</span>,
-     <span class=pages>pp.&nbsp;132&ndash;148</span>,
-     <span class=year>2018</span>
+     <?php event( "FLOPS 2018", "Proc. 14th International Symposium on Functional and Logic Programming", "http://www.sqlab.jp/FLOPS2018/") ?><span class=booktitle>LNCS</span><span class=volume>10818</span><span class=pages>pp.&nbsp;132&ndash;148</span><span class=year>2018</span>
     </span>
     [<a  href='ADY18.pdf'>preprint</a>]
    <li>
@@ -505,9 +445,7 @@
     </div>
     <a class=title href='https://dl.acm.org/citation.cfm?doid=3167103'>Efficient certification of complexity proofs: formalizing the Perron&ndash;Frobenius theorem (invited talk paper)</a>
     <span class=bibinfo>
-     <?php event( "CPP 2018", "Proc. 7th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl18.sigplan.org/track/CPP-2018") ?>,
-     <span class=pages>pp.&nbsp;2&ndash;13</span>,
-     <span class=year>2018</span>
+     <?php event( "CPP 2018", "Proc. 7th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl18.sigplan.org/track/CPP-2018") ?><span class=pages>pp.&nbsp;2&ndash;13</span><span class=year>2018</span>
     </span>
    <li>
     <div class="authors">
@@ -515,11 +453,7 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-319-66266-4_15">Classification tree method with parameter shielding</a>
     <span class=bibinfo>
-     <?php event( "SAFECOMP 2017", "Proc. 36th International Conference on Computer Safety, Reliability, and Security", "http://safecomp17.fbk.eu/") ?>,
-     <span class=series>LNCS</span>
-     <span class=volume>10488</span>,
-     <span class=pages>pp.&nbsp;230&ndash;241</span>,
-     <span class=year>2017</span>
+     <?php event( "SAFECOMP 2017", "Proc. 36th International Conference on Computer Safety, Reliability, and Security", "http://safecomp17.fbk.eu/") ?><span class=series>LNCS</span><span class=volume>10488</span><span class=pages>pp.&nbsp;230&ndash;241</span><span class=year>2017</span>
     </span>
    <li>
     <div class="authors">
@@ -529,11 +463,7 @@
     <span class=bibinfo>
      <?php event( "CADE-26",
        "Proc. 26th International Conference on Automated Deduction",
-       "http://www.cade-26.info/") ?>,
-     <span class=series>LNCS</span>
-     <span class=volume>10395</span>,
-     <span class=pages>pp.&nbsp;451&ndash;471</span>,
-     <span class=year>2017</span>
+       "http://www.cade-26.info/") ?><span class=series>LNCS</span><span class=volume>10395</span><span class=pages>pp.&nbsp;451&ndash;471</span><span class=year>2017</span>
     </span>
     [<a href="http://cl-informatik.uibk.ac.at/users/ayamada/BJTY2017.pdf">preprint</a>]
    <li>
@@ -544,9 +474,7 @@
     <span class=bibinfo>
      <?php event( "CPP 2017",
       "Proc. 6th ACM SIGPLAN Conference on Certified Programs and Proofs",
-      "http://cpp2017.mpi-sws.org/" ) ?>,
-     <span class=pages>pp.&nbsp;17&ndash;29</span>,
-     <span class=year>2017</span>
+      "http://cpp2017.mpi-sws.org/" ) ?><span class=pages>pp.&nbsp;17&ndash;29</span><span class=year>2017</span>
     </span>
    <li>
     <div class="authors">
@@ -556,9 +484,7 @@
     <span class=bibinfo>
      <?php event( "ISSRE 2016",
       "Proc. 27th International Symposium on Software Reliability Engineering",
-      "http://issre.net/" ) ?>,
-     <span class=pages>pp.&nbsp;93&ndash;104</span>,
-     <span class=year>2016</span>
+      "http://issre.net/" ) ?><span class=pages>pp.&nbsp;93&ndash;104</span><span class=year>2016</span>
     </span>
     [<a href="http://deji.dip.jp/pman/pman3.cgi?D=48">preprint</a>]
    <li>
@@ -569,9 +495,7 @@
     <span class=bibinfo>
      <?php event( "ASE 2016",
       "Proc. 31st IEEE/ACM International Conference on Automated Software Engineering",
-      "http://www.ase2016.org/" ) ?>,
-     <span class=pages>pp.&nbsp;614&ndash;624</span>,
-     <span class=year>2016</span>
+      "http://www.ase2016.org/" ) ?><span class=pages>pp.&nbsp;614&ndash;624</span><span class=year>2016</span>
     </span>
     [<a href="http://cl-informatik.uibk.ac.at/users/ayamada/YBAKC2016.pdf">preprint</a>]
    <li>
@@ -582,11 +506,7 @@
     <span class=bibinfo>
      <?php event( "CSL 2016",
       "Proc. 25th EACSL Annual Conference on Computer Science Logic",
-      "http://csl16.lif.univ-mrs.fr/" ) ?>,
-     <span class=series>LIPIcs</span>
-     <span class=volume>62</span>,
-     <span class=pages>pp.&nbsp;8:1&ndash;8:16</span>,
-     <span class=year>2016</span>
+      "http://csl16.lif.univ-mrs.fr/" ) ?><span class=series>LIPIcs</span><span class=volume>62</span><span class=pages>pp.&nbsp;8:1&ndash;8:16</span><span class=year>2016</span>
     </span>
    <li>
     <div class="authors">
@@ -596,11 +516,7 @@
     <span class=bibinfo>
      <?php event( "ITP 2016",
       "Proc. 7th International Conference on Interactive Theorem Proving",
-      "https://itp2016.inria.fr/") ?>,
-     <span class=series>LNCS</span>
-     <span class=volume>9807</span>,
-     <span class=pages>pp.&nbsp;391&ndash;408</span>,
-     <span class=year>2016</span>
+      "https://itp2016.inria.fr/") ?><span class=series>LNCS</span><span class=volume>9807</span><span class=pages>pp.&nbsp;391&ndash;408</span><span class=year>2016</span>
     </span>
     [<a href="http://cl-informatik.uibk.ac.at/users/ayamada/TY2016.pdf">preprint</a>]
    <li>
@@ -611,8 +527,7 @@
     <span class=bibinfo>
      <?php event( "CPP 2016",
       "Proc. 5th ACM SIGPLAN Conference on Certified Programs and Proofs",
-      "https://people.csail.mit.edu/adamc/cpp16/" ) ?>,
-     <span class=pages>pp.&nbsp;88&ndash;99</span>
+      "https://people.csail.mit.edu/adamc/cpp16/" ) ?><span class=pages>pp.&nbsp;88&ndash;99</span>
     </span>
    <li>
     <div class="authors">
@@ -622,10 +537,8 @@
     <span class=bibinfo>
      <?php event( "QRS 2015",
       "Proc. 2015 IEEE International Conference on Software Quality, Reliability &amp; Security",
-      "http://paris.utdallas.edu/qrs15/" ) ?>,
-      <span class=pages>pp.&nbsp;141&ndash;150</span>
-    </span>
-    <span class=note>Best paper award!</span>
+      "http://paris.utdallas.edu/qrs15/" ) ?><span class=pages>pp.&nbsp;141&ndash;150</span>
+    </span><span class=note>Best paper award!</span>
     [<a href="https://staff.aist.go.jp/t.kitamura/dl/QRS2015.pdf">preprint</a>]
    <li>
     <div class="authors">
@@ -635,10 +548,7 @@
     <span class=bibinfo>
      <?php event(  "CADE-25",
       "Proc. 25th International Conference on Automated Deduction",
-      "http://conference.mi.fu-berlin.de/cade-25/" ) ?>,
-     <span class=series>LNCS (LNAI)</span>
-     <span class=volume>9195</span>,
-     <span class=pages>pp.&nbsp;163&ndash;178</span>,
+      "http://conference.mi.fu-berlin.de/cade-25/" ) ?><span class=series>LNCS (LNAI)</span><span class=volume>9195</span><span class=pages>pp.&nbsp;163&ndash;178</span>
      2015.
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/papers/CADE2015/paper.pdf">preprint</a>,
@@ -652,9 +562,7 @@
     <span class=bibinfo>
      <?php event( "COMPSAC 2015",
       "Proc. 39th Annual International Computers, Software &amp; Applications Conference",
-      "http://www.computer.org/web/COMPSAC/" ) ?>,
-     <span class=pages>pp.&nbsp;242&ndash;247</span>,
-     <span class=year>2015</span>
+      "http://www.computer.org/web/COMPSAC/" ) ?><span class=pages>pp.&nbsp;242&ndash;247</span><span class=year>2015</span>
     </span>
    <li>
     <div class="authors">
@@ -664,9 +572,7 @@
     <span class=bibinfo>
      <?php event( "ICST 2015",
       "Proc. 8th IEEE International Conference on Software Testing, Verification, and Validation",
-      "http://icst2015.ist.tu-graz.ac.at/" ) ?>,
-     <span class=pages>pp.&nbsp;1&ndash;10</span>,
-     <span class=year>2015</span>
+      "http://icst2015.ist.tu-graz.ac.at/" ) ?><span class=pages>pp.&nbsp;1&ndash;10</span><span class=year>2015</span>
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/~ayamada/YKACOB2015.pdf">preprint</a>]
    <li>
@@ -677,11 +583,7 @@
     <span class=bibinfo>
      <?php event( "RTA-TLCA 2014",
      "Proc. Joint 25th International Conference on Rewriting Techniques and Applications and 12th International Conference on Typed Lambda Calculi and Applications",
-     "http://vsl2014.at/rta-tlca" ) ?>,
-     <span class=series>LNCS</span>
-     <span class=volume>8560</span>,
-     <span class=pages>pp.&nbsp;466&ndash;475</span>,
-     <span class=year>2014</span>
+     "http://vsl2014.at/rta-tlca" ) ?><span class=series>LNCS</span><span class=volume>8560</span><span class=pages>pp.&nbsp;466&ndash;475</span><span class=year>2014</span>
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/papers/RTA-TLCA2014/paper.pdf">preprint</a>,
      <a href='http://arxiv.org/abs/1404.6626/'>full version</a>]
@@ -694,12 +596,7 @@
     <span class=bibinfo>
      <?php event( "FLOPS 2014",
       "Proc. 12th International Symposium on Functional and Logic Programming",
-      "http://www.jaist.ac.jp/flops2014/" ) ?>,
-     <span class=series>LNCS</span>
-     <span class=volume>8475</span>,
-     <span class=pages>pp.&nbsp;319&ndash;335</span>,
-     <span class=year>2014</span>
-     <span class=note>Superseded by the TPLP article.</span>
+      "http://www.jaist.ac.jp/flops2014/" ) ?><span class=series>LNCS</span><span class=volume>8475</span><span class=pages>pp.&nbsp;319&ndash;335</span><span class=year>2014</span><span class=note>Superseded by the TPLP article.</span>
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/~ayamada/FLOPS2014/paper.pdf">preprint</a>,
      <a href="http://cl-informatik.uibk.ac.at/software/ackbo">experiments</a>]
@@ -712,9 +609,7 @@
     <span class=bibinfo>
      <?php event( "PPDP 2013",
       "Proc. 15th International Symposium on Principles and Practice of Declarative Programming",
-      "https://people.cs.kuleuven.be/~tom.schrijvers/PPDP2013/" ) ?>,
-     <span class=pages>pp.&nbsp;181&ndash;192</span>,
-     <span class=year>2013</span>
+      "https://people.cs.kuleuven.be/~tom.schrijvers/PPDP2013/" ) ?><span class=pages>pp.&nbsp;181&ndash;192</span><span class=year>2013</span>
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/papers/PPDP2013/paper.pdf">preprint</a>,
      <a href="http://www.trs.cm.is.nagoya-u.ac.jp/papers/PPDP2013/">experiments</a>]
@@ -724,26 +619,20 @@
    <li>
     <a href='http://www.trs.cm.is.nagoya-u.ac.jp/~ayamada/thesis.pdf' class=title>The weighted path order for termination of term rewriting</a>
     <span class=bibinfo>
-     <span class=booktitle>Ph.D. thesis</span>,
-     <span class=institute>Graduate School of Information Science, Nagoya University</span>,
-     <span class=year>2014</span>
+     <span class=booktitle>Ph.D. thesis</span><span class=institute>Graduate School of Information Science, Nagoya University</span><span class=year>2014</span>
     </span>
    </li>
    <li>
     <a href='http://www.trs.cm.is.nagoya-u.ac.jp/~ayamada/master.pdf' class=title>An extension of soft typing for static detection of runtime type errors</a>
     <span class=bibinfo>
-     <span class=booktitle>Master's thesis</span>,
-     <span class=institute>Graduate School of Information Science, Nagoya University</span>,
-     <span class=year>2008</span>
+     <span class=booktitle>Master's thesis</span><span class=institute>Graduate School of Information Science, Nagoya University</span><span class=year>2008</span>
     </span>
    </li>
    <li>
     <a href='http://www.trs.cm.is.nagoya-u.ac.jp/~ayamada/bachelor.pdf' class=title>On termination proving of higher order rewrite systems by transformations</a>
     (<?php toggle( "in Japanese", "高階書換え系の変換による停止性証明法に関する研究") ?>).
     <span class=bibinfo>
-     <span class=booktitle>Bachelor's thesis</span>,
-     <span class=institute>School of Engineering, Nagoya University</span>,
-     <span class=year>2006</span>
+     <span class=booktitle>Bachelor's thesis</span><span class=institute>School of Engineering, Nagoya University</span><span class=year>2006</span>
     </span>
   </ul>
  <h3>Workshop Papers / Others <?php hider("hider1", "others", "...", "&lt;&lt;&lt;", "Show", "Hide");?></h3>
@@ -753,17 +642,14 @@
      <?php Juraj(); IH(); JDubut(); SK(); DSprunger(); AY(); ?>
     </div>:
     <span class=title>Relational differential dynamic logic: poster abstract</span>
-    <?php event( "HSCC 2019", "22nd ACM International Conference on Hybrid Systems: Computation and Control", "http://hscc2019.eecs.umich.edu/" ) ?>,
-    <span class=pages>284&ndash;285</span>,
-    <span class=year>2019</span>
+    <?php event( "HSCC 2019", "22nd ACM International Conference on Hybrid Systems: Computation and Control", "http://hscc2019.eecs.umich.edu/" ) ?><span class=pages>284&ndash;285</span><span class=year>2019</span>
    <li>
     <div class="authors">
      <?php AY(); Clovis(); Fuyuki(); NianZe(); ?>
     </div>:
     <span class=title>Scenario sampling for cyber physical systems using combinatorial testing</span>
     Poster presentation in
-    <?php event( "IWCT 2019", "8th International Workshop on Combinatorial Testing", "https://iwct2019.sba-research.org/" ) ?>,
-    <span class=year>2019</span>
+    <?php event( "IWCT 2019", "8th International Workshop on Combinatorial Testing", "https://iwct2019.sba-research.org/" ) ?><span class=year>2019</span>
     [<a href="YEIL2019.pdf">abstract</a>]
    <li>
     <span class=title>Formalizing cyber physical systems in Isabelle/HOL</span>
@@ -780,18 +666,13 @@
     <span class=year>2018</span>
    <li>
     <a class=title href='wst2018.pdf'>Towards unified method for termination</a>
-	<?php event( "WST 2018", "16th International Workshop on Termination", "http://wst2018.webs.upv.es/" ) ?>,
-	<span class=pages>pp.&nbsp;2&ndash;6</span>,
-	<span class=year>2018</span>
-	<span class=note>invited talk</span>
+	<?php event( "WST 2018", "16th International Workshop on Termination", "http://wst2018.webs.upv.es/" ) ?><span class=pages>pp.&nbsp;2&ndash;6</span><span class=year>2018</span><span class=note>invited talk</span>
    <li>
 	<div class="authors">
 	 <?php JoseD(); SJ(); RT(); AY(); ?>
 	</div>
 	<span class=title>A Perron-Frobenius theorem for Jordan blocks for complexity proving</span>
-	<?php event( "WST 2018", "16th International Workshop on Termination", "http://wst2018.webs.upv.es/" ) ?>,
-	<span class=pages>pp.&nbsp;30&ndash;34</span>,
-	<span class=year>2018</span>
+	<?php event( "WST 2018", "16th International Workshop on Termination", "http://wst2018.webs.upv.es/" ) ?><span class=pages>pp.&nbsp;30&ndash;34</span><span class=year>2018</span>
    <li>
     <div class="authors">
      <?php MA(); UdL(); AY(); ?>
@@ -817,37 +698,28 @@
     <a class=event href='http://cl-informatik.uibk.ac.at/events/ajsw-2016/'>4th Austria&ndash;Japan Summer Workshop on Term Rewriting (45th TRS meeting)</a>
     <span class=year>2016</span> [<a href='http://cl-informatik.uibk.ac.at/~ayamada/AJSW2016-slides.pdf'>slides</a>]
    <li>
-    <span class=title>TermComp 2016 participant: NaTT</span>
-    <span class=bibinfo>
+    <span class=title>TermComp 2016 participant: NaTT</span><span class=bibinfo>
      <?php event( "WST 2016",
       "15th International Workshop on Termination",
-      "http://cl-informatik.uibk.ac.at/events/wst-2016/") ?>,
-     <span class=pages>p.&nbsp;25:1</span>,
-     <span class=year>2016</span>
+      "http://cl-informatik.uibk.ac.at/events/wst-2016/") ?><span class=pages>p.&nbsp;25:1</span><span class=year>2016</span>
     </span>
    <li>
     <div class="authors">
      <?php SJ(); RT(); AY(); ?>
     </div>
-    <span class=title>CeTA &ndash; Certifying termination and complexity proofs in 2016</span>
-    <span class=bibinfo>
+    <span class=title>CeTA &ndash; Certifying termination and complexity proofs in 2016</span><span class=bibinfo>
      <?php event( "WST 2016",
       "15th International Workshop on Termination",
-      "http://cl-informatik.uibk.ac.at/events/wst-2016/") ?>,
-     <span class=pages>p.&nbsp;20:1</span>,
-     <span class=year>2016</span>
+      "http://cl-informatik.uibk.ac.at/events/wst-2016/") ?><span class=pages>p.&nbsp;20:1</span><span class=year>2016</span>
     </span>
    <li>
     <div class="authors">
      <?php MB(); SJ(); RT(); AY(); ?>
     </div>
-    <span class=title>Certifying safety and termination proofs for integer transition systems</span>
-    <span class=bibinfo>
+    <span class=title>Certifying safety and termination proofs for integer transition systems</span><span class=bibinfo>
      <?php event( "WST 2016",
       "15th International Workshop on Termination",
-      "http://cl-informatik.uibk.ac.at/events/wst-2016/") ?>,
-     <span class=pages>pp.&nbsp;4:1&ndash;4:5</span>,
-     <span class=year>2016</span>
+      "http://cl-informatik.uibk.ac.at/events/wst-2016/") ?><span class=pages>pp.&nbsp;4:1&ndash;4:5</span><span class=year>2016</span>
     </span>
    <li>
     <div class="authors">
@@ -869,9 +741,7 @@
     </div>
     <a class=title href='https://www.isa-afp.org/entries/Perron_Frobenius.shtml'>Perron-Frobenius theorem for spectral radius analysis</a>
     <span class=bibinfo>
-     <span class=booktitle>Archive of Formal Proofs</span>,
-     <span class=year>2016</span>
-     <span class=note>Formal proof development</span>
+     <span class=booktitle>Archive of Formal Proofs</span><span class=year>2016</span><span class=note>Formal proof development</span>
     </span>
    <li>
     <div class="authors">
@@ -879,9 +749,7 @@
     </div>
     <a class=title href='http://www.isa-afp.org/entries/Polynomial_Interpolation.shtml'>Polynomial interpolation</a>
     <span class=bibinfo>
-     <span class=booktitle>Archive of Formal Proofs</span>,
-     <span class=year>2016</span>
-     <span class=note>Formal proof development</span>
+     <span class=booktitle>Archive of Formal Proofs</span><span class=year>2016</span><span class=note>Formal proof development</span>
     </span>
    <li>
     <div class="authors">
@@ -889,9 +757,7 @@
     </div>
     <a class=title href='http://www.isa-afp.org/entries/Polynomial_Factorization.shtml'>Polynomial factorization</a>
     <span class=bibinfo>
-     <span class=booktitle>Archive of Formal Proofs</span>,
-     <span class=year>2016</span>
-     <span class=note>Formal proof development</span>
+     <span class=booktitle>Archive of Formal Proofs</span><span class=year>2016</span><span class=note>Formal proof development</span>
     </span>
    <li>
     <div class="authors">
@@ -899,9 +765,7 @@
     </div>
     <a class=title href='http://afp.sourceforge.net/entries/Algebraic_Numbers.shtml'>Algebraic numbers in Isabelle/HOL</a>
     <span class=bibinfo>
-     <span class=booktitle>Archive of Formal Proofs</span>,
-     <span class=year>2015</span>
-     <span class=note>Formal proof development</span>
+     <span class=booktitle>Archive of Formal Proofs</span><span class=year>2015</span><span class=note>Formal proof development</span>
     </span>
    <li>
     <div class="authors">
@@ -909,9 +773,7 @@
     </div>
     <a class=title href='http://afp.sf.net/entries/Jordan_Normal_Form.shtml'>Matrices, Jordan normal forms, and spectral radius theory</a>
     <span class=bibinfo>
-     <span class=booktitle>Archive of Formal Proofs</span>,
-     <span class=year>2015</span>
-     <span class=note>Formal proof development</span>
+     <span class=booktitle>Archive of Formal Proofs</span><span class=year>2015</span><span class=note>Formal proof development</span>
     </span>
    <li>
     <div class="authors">
@@ -920,8 +782,7 @@
     <span class=title>Abstracting the weighted path order for proving termination of term rewriting systems</span>
     (<?php toggle("in Japanese", "項書換え系の停止性証明のための重み付き経路順序の抽象化") ?>).
     <span class=bibinfo>
-     <span class=event>LA Symposium, 2014 Winter</span>,
-     <span class=year>2015</span>
+     <span class=event>LA Symposium, 2014 Winter</span><span class=year>2015</span>
     </span>
    <li>
     <div class="authors">
@@ -930,18 +791,13 @@
     <span class=title>Implementing a conditional dependency pair method for proving termination of functional programs with exception handling</span>
     (<?php toggle("in Japanese","例外処理を含む関数型プログラムの停止性証明のための条件付き依存対法の実現") ?>).
     <span class=bibinfo>
-     <span class=booktitle>IEICE Technical Report SS2014-42</span>,
-     <span class=pages>Vol.&nbsp;114, No.&nbsp;416, pp.&nbsp;55-60</span>,
-     <span class=year>2015</span>
+     <span class=booktitle>IEICE Technical Report SS2014-42</span><span class=pages>Vol.&nbsp;114, No.&nbsp;416, pp.&nbsp;55-60</span><span class=year>2015</span>
     </span>
    <li>
-    <span class=title>SAT solvers in combinatorial testing</span>
-    <span class=bibinfo>
+    <span class=title>SAT solvers in combinatorial testing</span><span class=bibinfo>
      <a class=event href='http://www.math.s.chiba-u.ac.jp/~neguchi/42trsmeeting/'>
       42nd TRS meeting</a>,
-     <span class=place>Tokyo, Japan</span>,
-     <span class=month>February</span>
-     <span class=year>2015</span>
+     <span class=place>Tokyo, Japan</span><span class=month>February</span><span class=year>2015</span>
     </span>
    <li>
     <div class="authors">
@@ -950,26 +806,19 @@
     <span class=bibinfo>
      <span class=title>Towards developing the combinatorial testing tool Calot</span>
      (<?php toggle("in Japanese","組み合わせテストツール Calot の開発に向けて") ?>).
-    </span>
-    <span class=bibinfo>
+    </span><span class=bibinfo>
      <span class=booktitle>
-      <a href='http://wws.sigse.jp/2015/'>IPSJ SIGSE Winter Workshop 2015 in Ginowan</a></span>,
-     <span class=pages>pp.&nbsp;53&ndash;54</span>
-     <span class=month>January</span>
-     <span class=year>2015</span>
+      <a href='http://wws.sigse.jp/2015/'>IPSJ SIGSE Winter Workshop 2015 in Ginowan</a></span><span class=pages>pp.&nbsp;53&ndash;54</span><span class=month>January</span><span class=year>2015</span>
     </span>
    <li>
     <div class="authors">
      <?php EC(); TK(); CA(); AY(); YO(); ?>
     </div>
-    <span class=title>T-wise test construction improving (T+1)-way coverage</span>
-    <span class=bibinfo>
+    <span class=title>T-wise test construction improving (T+1)-way coverage</span><span class=bibinfo>
      Poster Presentation in
      <?php event( "IWESEP 2014",
       "6th International Workshop of Software Engineering in Practice",
-      "http://iwesep2014.naist.jp/" ) ?>,
-     <span class=month>November</span>
-     <span class=year>2014</span>
+      "http://iwesep2014.naist.jp/" ) ?><span class=month>November</span><span class=year>2014</span>
     </span>
    <li>
     <span class=title>SAT solvers and combinatorial testing</span>
@@ -978,17 +827,13 @@
      <a class=event href='http://ses.sigse.jp/2014/workshop.html#ws2'>Formal Methods Workshop</a>
      @
      <a class=event href='http://ses.sigse.jp/2014/'>IPSJ Software Engineering Symposium (SES 2014)</a>,
-     <span class=month>September</span>
-     <span class=year>2014</span>
+     <span class=month>September</span><span class=year>2014</span>
     </span>
    </li>
    <li>
-    <span class=title>Towards dependency pairs for relative termination</span>
-    <span class=bibinfo>
+    <span class=title>Towards dependency pairs for relative termination</span><span class=bibinfo>
      <a class=event href='http://www.pu-toyama.ac.jp/IS/MN/trsmeeting40.html'>40th TRS meeting</a>,
-     <span class=place>Unazuki, Japan</span>,
-     <span class=month>March</span>
-     <span class=year>2014</span>
+     <span class=place>Unazuki, Japan</span><span class=month>March</span><span class=year>2014</span>
     </span>
    <li>
     <div class="authors">
@@ -998,38 +843,25 @@
     <span class=bibinfo>
      <?php event( "WST 2013",
       "Proc. 13th International Workshop on Termination",
-      "http://www.imn.htwk-leipzig.de/WST2013/" ) ?>,
-      <span class=pages>pp.&nbsp;74&ndash;78</span>,
-     <span class=year>2013</span>
+      "http://www.imn.htwk-leipzig.de/WST2013/" ) ?><span class=pages>pp.&nbsp;74&ndash;78</span><span class=year>2013</span>
      <a href='http://www.trs.cm.is.nagoya-u.ac.jp/papers/WST2013/'>Experiments</a>
     </span>
    <li>
-    <span class=title>Unifying KBO, LPO and polynomial orders</span>
-    <span class=bibinfo>
+    <span class=title>Unifying KBO, LPO and polynomial orders</span><span class=bibinfo>
      <a class=event href='http://www.trs.cm.is.nagoya-u.ac.jp/event/38thTRSmeeting/'>38th TRS meeting</a>,
-     <span class=place>Kofu, Japan</span>,
-     <span class=month>April</span>
-     <span class=year>2013</span>
+     <span class=place>Kofu, Japan</span><span class=month>April</span><span class=year>2013</span>
     </span>
    <li>
-    <span class=title>On AC-compatible Knuth-Bendix orderings</span>
-    <span class=bibinfo>
+    <span class=title>On AC-compatible Knuth-Bendix orderings</span><span class=bibinfo>
      <a class=event href='http://www.nue.riec.tohoku.ac.jp/trs-meeting12/'>37th TRS meeting</a>,
-     <span class=place>Sendai, Japan</span>,
-     <span class=month>November</span>
-     <span class=year>2012</span>
-    </span>
-    <span class=note>Joint work with Sarah Winkler, Nao Hirokawa, Aart Middeldorp</span>
+     <span class=place>Sendai, Japan</span><span class=month>November</span><span class=year>2012</span>
+    </span><span class=note>Joint work with Sarah Winkler, Nao Hirokawa, Aart Middeldorp</span>
    <li>
     <div class="authors">
      <?php AY(); KK(); TS(); MS(); NN(); ?>
     </div>
-    <span class=title>A sound type system for typing runtime errors</span>
-    <span class=bibinfo>
-     <span class=event>86th Workshop of <a href='http://www.ipsj.or.jp/sig/pro/'>IPSJ SIGPRO</a></span>,
-     <span class=place>Yokohama, Japan</span>,
-     <span class=month>November</span>
-     <span class=year>2011</span>
+    <span class=title>A sound type system for typing runtime errors</span><span class=bibinfo>
+     <span class=event>86th Workshop of <a href='http://www.ipsj.or.jp/sig/pro/'>IPSJ SIGPRO</a></span><span class=place>Yokohama, Japan</span><span class=month>November</span><span class=year>2011</span>
     </span>
    <li>
     <div class="authors">
@@ -1037,12 +869,8 @@
     </div>
     <span class=bibinfo>
      <span class=title>Error detection with soft typing for dynamically typed languages</span>
-    </span>
-    <span class=bibinfo>
-     <span class=event><a href='http://www.washi.cs.waseda.ac.jp/sigss/'>IEICE SIGSS</a></span>,
-     <span class=place>Nagasaki, Japan</span>,
-     <span class=month>March</span>
-     <span class=year>2008</span>
+    </span><span class=bibinfo>
+     <span class=event><a href='http://www.washi.cs.waseda.ac.jp/sigss/'>IEICE SIGSS</a></span><span class=place>Nagasaki, Japan</span><span class=month>March</span><span class=year>2008</span>
     </span>
   </ul>
  <h2>E-mail</h2>
