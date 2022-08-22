@@ -640,13 +640,13 @@
    <li>
     <div class="authors">
      <?php Juraj(); IH(); JDubut(); SK(); DSprunger(); AY(); ?>
-    </div>:
+    </div>
     <span class=title>Relational differential dynamic logic: poster abstract</span>
     <?php event( "HSCC 2019", "22nd ACM International Conference on Hybrid Systems: Computation and Control", "http://hscc2019.eecs.umich.edu/" ) ?><span class=pages>284&ndash;285</span><span class=year>2019</span>
    <li>
     <div class="authors">
      <?php AY(); Clovis(); Fuyuki(); NianZe(); ?>
-    </div>:
+    </div>
     <span class=title>Scenario sampling for cyber physical systems using combinatorial testing</span>
     Poster presentation in
     <?php event( "IWCT 2019", "8th International Workshop on Combinatorial Testing", "https://iwct2019.sba-research.org/" ) ?><span class=year>2019</span>
@@ -702,6 +702,7 @@
      <?php event( "WST 2016",
       "15th International Workshop on Termination",
       "http://cl-informatik.uibk.ac.at/events/wst-2016/") ?><span class=pages>p.&nbsp;25:1</span><span class=year>2016</span>
+      [<a href="NaTT2016.pptx">slides</a>]
     </span>
    <li>
     <div class="authors">
