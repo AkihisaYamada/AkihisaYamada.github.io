@@ -246,7 +246,7 @@
     <div class="authors">
      <?php AY(); ?>
     </div>
-    <a class="title" href="https://doi.org/10.1007/s10817-022-09640-4">Tuple Interpretations for Termination of Term Rewriting</a>
+    <a class="title" href="https://doi.org/10.1007/s10817-022-09640-4">Tuple interpretations for termination of term rewriting</a>
     <span class="biblinfo">
      <?php JAR(); ?><span class="year">2022</span><span class="note">Invited, special issue for CADE-28.</span>
     </span>
@@ -255,7 +255,7 @@
     <div class="authors etal" onclick="toggle_etal(this)">
      <?php IH(); Clovis(); author("James Haydon"); JDubut(); author("Brandon Bohrer"); TsutomuK(); author("Sasinee Pruekprasert"); author("Xiao-Yi Zhang"); author("Erik Andre Pallas"); AY(); author("Kohei Suenaga"); Fuyuki(); author("Kenji Kamijo"); author("Yoshiyuki Shinya"); author("Takamasa Suetomi");?>
     </div>
-    <a class="title" href="https://doi.org/10.1109/TIV.2022.3169762">Goal-Aware RSS for Complex Scenarios Via Program Logic</a>
+    <a class="title" href="https://doi.org/10.1109/TIV.2022.3169762">Goal-aware RSS for complex scenarios via program logic</a>
     <?PHP IV(); ?><span class="year">2022</span>
    <li>
     <div class="authors">
