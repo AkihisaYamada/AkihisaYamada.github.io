@@ -253,7 +253,7 @@
     [<a href="YamadaJAR2022.pdf">Author&apos;s version</a>]
    <li>
     <div class="authors etal" onclick="toggle_etal(this)">
-     <?php IH(); Clovis(); author("James Haydon"); JDubut(); author("Brandon Bohrer"); TsutomuK(); author("Sasinee Pruekprasert"); author("Xiao-Yi Zhang"); author("Erik Andre Pallas"); AY(); author("Kohei Suenaga"); Fuyuki(); author("Kenji Kamijo"); author("Yoshiyuki Shinya"); author("Takamasa Suetomi");?>
+     <?php IH(); Clovis(); author("James Haydon"); JDubut(); author("Rose Bohrer"); TsutomuK(); author("Sasinee Pruekprasert"); author("Xiao-Yi Zhang"); author("Erik Andre Pallas"); AY(); author("Kohei Suenaga"); Fuyuki(); author("Kenji Kamijo"); author("Yoshiyuki Shinya"); author("Takamasa Suetomi");?>
     </div>
     <a class="title" href="https://doi.org/10.1109/TIV.2022.3169762">Goal-aware RSS for complex scenarios via program logic</a>
     <?PHP IV(); ?><span class="year">2022</span>
