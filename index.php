@@ -355,6 +355,13 @@
     <div class="authors">
      <?php AY(); ?>
     </div>
+    <a class="title" href="https://drops.dagstuhl.de/opus/volltexte/2023/17988/">Termination of Term Rewriting: Foundation, Formalization, Implementation, and Competition (invited talk)</a>
+    <?php event( "FSCD 2023", "8th International Conference on Formal Structures for Computation and Deduction", "https://easyconferences.eu/fscd2023/"); ?>
+    [<a href="fscd.pptx">slides</a>]
+   <li>
+    <div class="authors">
+     <?php AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-031-10769-6_15">Term orderings for non-reachability of (conditional) rewriting</a>
     <span class=bibinfo>
      <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/") ?><span class=series>LNAI</span><span class=volume>13385</span><span class=pages>pp.&nbsp;248&ndash;267</span><span class=year>2022</span>
