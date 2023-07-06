@@ -15,6 +15,7 @@
   .title, .title a { text-decoration:none; color:navy; font-weight:bold; }
   .title::after { color: black; font-weight: normal; content: "."; }
   .booktitle, .booktitle a { text-decoration:none; color:black; font-style:italic; }
+  .booktitle+span::before { content: ", "; }
   .institute, .institute a { text-decoration:none; color:black; font-style:italic; }
   .publisher, .publisher a { text-decoration:none; color:black; font-style:italic; }
   .series {}
@@ -30,14 +31,14 @@
   .note:after { content: ")"; }
   ul.publications li { margin-bottom:1.5ex; }
   ol.publications li { margin-bottom:1.5ex; }
-  a:hover, ; author a:hover, .booktitle a:hover, .note a:hover { text-decoration:underline; }
+  a:hover, author a:hover, .booktitle a:hover, .note a:hover { text-decoration:underline; }
   .toggle:hover { text-decoration:underline; }
   table th { vertical-align:top; }
-  span+span.year::before { content: ", "; }
-  span+span.pages::before { content: " "; }
-  span+span.series::before { content: ", "; }
-  span.series+span.volume::before { content: " "; }
-  span.volume+span.pages::before { content: ", "; }
+  span+.year::before, a+.year::before { content: ", "; }
+  span+.pages::before { content: " "; }
+  span+.series::before { content: ", "; }
+  .series+.volume::before { content: " "; }
+  .volume+.pages::before { content: ", "; }
 -->
 </style>
 <script type="text/javascript">
@@ -191,7 +192,7 @@
    <tr>
     <th>Apr.&nbsp;2020<th>&mdash;<th>current
     <td>Senior researcher at
-     <span class=institute>Infrastructure Protection Security Research Team</span>
+     <span class=institute>Infrastructure Protection Security Research Team</span>,
      <a class=institute href='https://www.cpsec.aist.go.jp/'>Cyber Physical Security Research Center</a>,
      <a class=institute href='https://www.aist.go.jp/'>AIST</a>, Japan.
    <tr>
