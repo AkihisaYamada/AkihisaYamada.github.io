@@ -362,6 +362,14 @@
     <div class="authors">
      <?php AY(); ?>
     </div>
+    <a class="title" href="https://doi.org/10.4230/LIPIcs.ITP.2023.34">Formalizing Results on Directed Sets in Isabelle/HOL (Proof Pearl)</a>
+    <span class="bibinfo">
+     <?php event( "ITP 2023", "14th International Conference on Interactive Theorem Proving, ITP 2023", "https://mizar.uwb.edu.pl/ITP2023/" ); ?><span class="series">LPIcs</span><span class="volume">268</span><span class="pages">pp.&nbsp;34:1&ndash;34:13</span><span class="year">2023</span>
+    </span>
+   <li>
+    <div class="authors">
+     <?php AY(); ?>
+    </div>
     <a class=title href="https://doi.org/10.1007/978-3-031-10769-6_15">Term orderings for non-reachability of (conditional) rewriting</a>
     <span class=bibinfo>
      <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/") ?><span class=series>LNAI</span><span class=volume>13385</span><span class=pages>pp.&nbsp;248&ndash;267</span><span class=year>2022</span>
