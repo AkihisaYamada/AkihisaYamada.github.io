@@ -14,8 +14,8 @@
   .etal>.author:not(:first-child) { display: none; }
   .title, .title a { text-decoration:none; color:navy; font-weight:bold; }
   .title::after { color: black; font-weight: normal; content: "."; }
+  .journal, .journal a { text-decoration:none; color:black; font-style:italic; }
   .booktitle, .booktitle a { text-decoration:none; color:black; font-style:italic; }
-  .booktitle+span::before { content: ", "; }
   .institute, .institute a { text-decoration:none; color:black; font-style:italic; }
   .publisher, .publisher a { text-decoration:none; color:black; font-style:italic; }
   .series {}
@@ -37,72 +37,54 @@
   span+.year::before, a+.year::before { content: ", "; }
   span+.pages::before { content: " "; }
   span+.series::before { content: ", "; }
+  span+.publisher::before { content: ", "; }
   .series+.volume::before { content: " "; }
+  .journal+.volume::before { content: " "; }
+  .journal+.number::before { content: " "; }
+  span.issue::before { content: "("; }
+  span.issue::after { content: ")"; }
+  .number+.pages::before { content: ": "; }
   .volume+.pages::before { content: ", "; }
+  .hidden { display: none; }
 -->
 </style>
 <script type="text/javascript">
- function toggle(o,a,b) {
-  o.title = a;
-  o.innerHTML = b;
-  o.onclick = function() { toggle(o,b,a); };
+ function toggle(o,c="hidden") {
+  o.classList.toggle(c);
  }
- function unabbrev_prev(o,full,short) {
-  o.previousSibling.innerHTML = full;
-  o.innerHTML = ' (' + short + ')';
-  o.title = 'Click to abbreviate';
-  o.onclick = function() { abbrev_prev(o,full,short); };
+ function toggle_id(id) {
+  toggle(document.getElementById(id));
  }
- function abbrev_prev(o,full,short) {
-  o.previousSibling.innerHTML = '';
-  o.innerHTML = short;
-  o.title = 'Click to show full name';
-  o.onclick = function() { unabbrev_prev(o,full,short); };
+ function toggle_with(a,b) {
+  toggle(a);
+  toggle(b);
  }
- function toggle(o, t, ahead, atitle, abody) {
-  var bbody = t.innerHTML;
-  var bhead = o.innerHTML;
-  var btitle = o.title;
-  t.innerHTML = abody;
-  o.innerHTML = ahead;
-  o.title = atitle;
-  o.onclick = function() { toggle(o, t, bhead, btitle, bbody); };
+ function toggle_with_previous(o) {
+  toggle_with(o,o.previousSibling);
  }
- function toggle_etal(o) {
-  o.classList.toggle("etal");
+ function toggle_with_next(o) {
+  toggle_with(o,o.nextSibling);
  }
 </script>
 <?php
 	function esc($str) {
 		return addslashes(htmlspecialchars($str));
 	}
-	function toggler_attr($bhead, $btitle, $bbody) {
-		return "class=toggle onclick=\"toggle(this, this.nextSibling, '".
-			esc($bhead)."', '".esc($btitle)."', '".esc($bbody)."')\"";
-	}
-	function hider($selfid, $id, $ahead, $bhead, $atitle, $btitle) {
-		echo "<span id='$selfid' class=toggle title='".esc($btitle).
-			 "' onclick=\"toggle(this, getElementById('$id'), '".
-			 esc($ahead)."', '".esc($atitle)."', '')\">".
-			 $bhead. "</span>";
-	}
 	function errata($body) {
-		echo "<span class=errata>(<span ".
-			toggler_attr("errata", "Hide", ": $body").
-			" title='Show'>errata</span><span></span>)</span>";
-	}
-	function abbrev($full,$short) {
-		echo "<span></span><span class=toggle onclick=\"unabbrev_prev(this, '".
-			esc($full) ."', '". esc($short) ."')\" title='Click to show full name'>$short</span>";
+		echo '<span class="note">';
+		echo '<span class="errata" onclick="toggle(this.nextSibling)">errata</span>';
+		echo '<span class="hidden">: '.$body.'</span>';
+    echo '</span>';
 	}
 	function toggle($a,$b) {
-		echo "<span class=toggle
-		 onclick=\"toggle(this, '$a', '$b')\"
-		 title='$b'>$a</span>";
+		echo '<span onclick="toggle_with_next(this)">'.$a.'</span>';
+		echo '<span onclick="toggle_with_previous(this)" class="hidden">'.$b.'</span>';
 	}
 	function event($short,$full,$url) {
-		echo "<span class=booktitle>";
-		abbrev("<a href='$url'>$full</a>",$short);
+		echo '<span class="booktitle">';
+		echo '<span class="hidden"><a href="'.$url.'">'.$full.'</a>';
+		echo ' <span onclick="toggle_with_next(this.parentElement)">('.$short.')</span></span>';
+		echo '<span onclick="toggle_with_previous(this)">'.$short.'</span>';
 		echo "</span>";
 	}
   function author($name) {
@@ -151,29 +133,29 @@
   function StefanK() { echo '<a class=author href="https://klikovits.net/">Stefan Klikovits</a>'; }
 	function TsutomuK() { echo '<a class=author href="https://researchmap.jp/tsutomu.kobayashi/">Tsutomu Kobayshi</a>'; }
 	function JAR() {
-        echo "<span class=booktitle>";
-		toggle( "JAR", "Journal of Automated Reasoning" );
-        echo "</span>";
+        echo '<span class="journal">';
+		toggle( 'JAR', 'Journal of Automated Reasoning' );
+        echo '</span>';
 	}
     function Springer() {
-        echo "<span class=publisher>Springer</span>";
+        echo '<span class="publisher">Springer</span>';
     }
     function SCP() {
-        echo "<span class=booktitle>";
-        toggle("SCP", "Science of Computer Programming");
-        echo "</span>";
+        echo '<span class="journal">';
+        toggle( 'SCP', 'Science of Computer Programming' );
+        echo '</span>';
     }
     function Elsevier() {
-        echo "<span class=publisher>Elsevier</span>";
+        echo '<span class="publisher">Elsevier</span>';
     }
     function LMCS() {
-        echo "<span class=booktitle>";
-        toggle("LMCS", "Logical Methods in Computer Science");
-        echo "</span>";
+        echo '<span class="journal">';
+        toggle('LMCS', 'Logical Methods in Computer Science');
+        echo '</span>';
     }
     function IV() {
-      echo '<span class="booktitle">';
-      toggle('IEEE-IV', "IEEE Transactions on Intelligent Vehicles");
+      echo '<span class="journal">';
+      toggle('IEEE-IV', 'IEEE Transactions on Intelligent Vehicles');
       echo '</span>';
     }
 ?>
@@ -249,15 +231,16 @@
     </div>
     <a class="title" href="https://doi.org/10.1007/s10817-022-09640-4">Tuple interpretations for termination of term rewriting</a>
     <span class="biblinfo">
-     <?php JAR(); ?><span class="year">2022</span><span class="note">Invited, special issue for CADE-28.</span>
+     <?php JAR(); ?><span class="number">66</span><span class="pages">667&ndash;688</span><span class="year">2022</span><span class="note">Invited, special issue for CADE-28.</span>
     </span>
     [<a href="YamadaJAR2022.pdf">Author&apos;s version</a>]
    <li>
-    <div class="authors etal" onclick="toggle_etal(this)">
+    <div class="authors etal" onclick="toggle(this,'etal')">
      <?php IH(); Clovis(); author("James Haydon"); JDubut(); author("Rose Bohrer"); TsutomuK(); author("Sasinee Pruekprasert"); author("Xiao-Yi Zhang"); author("Erik Andre Pallas"); AY(); author("Kohei Suenaga"); Fuyuki(); author("Kenji Kamijo"); author("Yoshiyuki Shinya"); author("Takamasa Suetomi");?>
     </div>
     <a class="title" href="https://doi.org/10.1109/TIV.2022.3169762">Goal-aware RSS for complex scenarios via program logic</a>
-    <?PHP IV(); ?><span class="year">2022</span>
+    <span class="bibinfo">
+     <?PHP IV(); ?><span class="volume">8</span><span class="issue">4</span><span class="pages">3040&ndash;3072</span><span class="year">2022</span>
    <li>
     <div class="authors">
      <?php JDubut(); AY(); ?>
@@ -272,8 +255,7 @@
     </div>
     <a class=title href="https://doi.org/10.1007/s10817-020-09552-1">Formalizing the LLL basis reduction algorithm and the LLL factorization algorithm in Isabelle/HOL</a>
     <span class=bibinfo>
-     <?php JAR(); ?><span class=pages>64: 827&ndash;856</span>
-     <?php Springer(); ?><span class=year>2020</span>
+     <?php JAR(); ?><span class=pages>64: 827&ndash;856</span><?php Springer(); ?><span class=year>2020</span>
     </span><span class=note>Invited, special issue for ITP 2018.</span>
     [<a href="TBDHJY20.pdf">authors&apos; version</a>]
    <li>
@@ -282,8 +264,7 @@
     </div>
     <a class=title href="https://doi.org/10.1016/j.scico.2019.102338">On probabilistic term rewriting</a>
     <span class=bibinfo>
-     <?php SCP(); ?><span class=pages>185</span>
-     <?php Elsevier(); ?>.
+     <?php SCP(); ?><span class=pages>185</span><?php Elsevier(); ?>.
     </span><span class=note>Invited, special issue for FLOPS 2018, online.</span>
     [<a href="ADY19.pdf">authors&apos; version</a>]
    <li>
@@ -293,8 +274,7 @@
     <a class=title href='https://doi.org/10.1007/s10817-019-09526-y'
     >A verified implementation of the Berlekamp–Zassenhaus factorization algorithm</a>
     <span class=bibinfo>
-     <?php JAR(); ?><span class=pages>64(4): 699&ndash;735</span>
-     <?php Springer(); ?><span class=year>2020</span>
+     <?php JAR(); ?><span class=pages>64(4): 699&ndash;735</span><?php Springer(); ?><span class=year>2020</span>
     </span>
     [<a href="DJTY2019.pdf">authors&apos; version</a>]
    <li>
@@ -303,8 +283,7 @@
     </div>
     <a class=title href='https://doi.org/10.1007/s10817-018-09504-w'>A verified implementation of algebraic numbers in Isabelle/HOL</a>
     <span class=bibinfo>
-     <?php JAR(); ?><span class=pages>64:363&ndash;389</span>
-     <?php Springer(); ?><span class=year>2020</span>
+     <?php JAR(); ?><span class=pages>64:363&ndash;389</span><?php Springer(); ?><span class=year>2020</span>
     </span>
    <li>
     <div class="authors">
@@ -312,8 +291,7 @@
     </div>
     <a class=title href='http://link.springer.com/article/10.1007/s10817-016-9373-5'>Relative termination via dependency pairs</a>
     <span class=bibinfo>
-     <?php JAR(); ?><span class=pages>58(3):391&ndash;411</span>
-     <?php Springer(); ?><span class=year>2017</span>
+     <?php JAR(); ?><span class=pages>58(3):391&ndash;411</span><?php Springer(); ?><span class=year>2017</span>
     </span><span class=note>Invited, special issue for CADE 2015.</span>
    <li>
     <div class="authors">
@@ -335,8 +313,7 @@
     <a class=title href="http://dx.doi.org/10.1016/j.scico.2014.07.009">
     A unified ordering for termination proving</a>
     <span class=bibinfo>
-     <?php SCP();?><span class=pages>111:110&ndash;134</span>
-     <?php Elsevier(); ?><span class=year>2015</span>
+     <?php SCP();?><span class=pages>111:110&ndash;134</span><?php Elsevier(); ?><span class=year>2015</span>
     </span><span class=note>Invited, special issue for PPDP 2013.</span>
     [<a href='http://arxiv.org/abs/1404.6245/'>arXiv version</a>, <a href='https://www.trs.cm.is.nagoya-u.ac.jp/papers/SCP2014/'>expreiments</a>].
    <li>
@@ -356,15 +333,17 @@
      <?php AY(); ?>
     </div>
     <a class="title" href="https://drops.dagstuhl.de/opus/volltexte/2023/17988/">Termination of Term Rewriting: Foundation, Formalization, Implementation, and Competition (invited talk)</a>
-    <?php event( "FSCD 2023", "8th International Conference on Formal Structures for Computation and Deduction", "https://easyconferences.eu/fscd2023/"); ?>
+    <span class="bibinfo">
+     <?php event( "FSCD 2023", "8th International Conference on Formal Structures for Computation and Deduction", "https://easyconferences.eu/fscd2023/"); ?><span class="series">LIPIcs</span><span class="volume">260</span><span class="pages">4:1&ndash;4:5</span><span class="year">2023</span>
+    </span>
     [<a href="fscd.pptx">slides</a>]
    <li>
     <div class="authors">
-     <?php AY(); ?>
+     <?php AY(); JDubut(); ?>
     </div>
     <a class="title" href="https://doi.org/10.4230/LIPIcs.ITP.2023.34">Formalizing Results on Directed Sets in Isabelle/HOL (Proof Pearl)</a>
     <span class="bibinfo">
-     <?php event( "ITP 2023", "14th International Conference on Interactive Theorem Proving, ITP 2023", "https://mizar.uwb.edu.pl/ITP2023/" ); ?><span class="series">LPIcs</span><span class="volume">268</span><span class="pages">pp.&nbsp;34:1&ndash;34:13</span><span class="year">2023</span>
+     <?php event( "ITP 2023", "14th International Conference on Interactive Theorem Proving", "https://mizar.uwb.edu.pl/ITP2023/" ); ?><span class="series">LIPIcs</span><span class="volume">268</span><span class="pages">pp.&nbsp;34:1&ndash;34:13</span><span class="year">2023</span>
     </span>
    <li>
     <div class="authors">
@@ -372,7 +351,7 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-031-10769-6_15">Term orderings for non-reachability of (conditional) rewriting</a>
     <span class=bibinfo>
-     <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/") ?><span class=series>LNAI</span><span class=volume>13385</span><span class=pages>pp.&nbsp;248&ndash;267</span><span class=year>2022</span>
+     <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/"); ?><span class=series>LNAI</span><span class=volume>13385</span><span class=pages>pp.&nbsp;248&ndash;267</span><span class=year>2022</span>
     </span>
    <li>
     <div class="authors">
@@ -380,7 +359,7 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-79876-5_16">Multi-dimensional interpretations for termination of term rewriting</a>
     <span class=bibinfo>
-     <?php event("CADE-28", "Proc. 28th International Conference on Automated Deduction", "https://www.cs.cmu.edu/~mheule/CADE28/")?><span class=series>LNAI</span><span class=volume>12699</span><span class=pages>pp.&nbsp;273&ndash;290</span><span class=year>2021</span>
+     <?php event("CADE-28", "Proc. 28th International Conference on Automated Deduction", "https://www.cs.cmu.edu/~mheule/CADE28/"); ?><span class=series>LNAI</span><span class=volume>12699</span><span class=pages>pp.&nbsp;273&ndash;290</span><span class=year>2021</span>
     </span>
    <li>
     <div class="authors">
@@ -395,7 +374,7 @@
     </div>
     <a class=title href="https://drops.dagstuhl.de/opus/volltexte/2020/12326/">Certifying the weighted path order (invited talk)</a>
     <span class=bibinfo>
-     <?php event("IJCAR-FSCD 2020", "Proc. Joint 5th International Conference on Formal Structures for Computation and Deduction and 10th International Joint Conference on Automatic Reasoning", "https://fscd-ijcar-2020.org/")?><span class=series>LIPIcs</span><span class=volume>167</span><span class=pages>4:1&ndash;4:20</span><span class=year>2020</span>
+     <?php event("IJCAR-FSCD 2020", "Proc. Joint 5th International Conference on Formal Structures for Computation and Deduction and 10th International Joint Conference on Automatic Reasoning", "https://fscd-ijcar-2020.org/"); ?><span class=series>LIPIcs</span><span class=volume>167</span><span class=pages>4:1&ndash;4:20</span><span class=year>2020</span>
     </span>
    <li>
     <div class="authors">
@@ -414,21 +393,19 @@
      <?php event( "ITP 2019", "Proc. 10th International Conference on Interactive Theorem Proving", "https://itp19.cecs.pdx.edu/" ) ?><span class=series>LIPIcs</span><span class=volume>141</span><span class=pages>30:1&ndash;30:16</span><span class=year>2019</span>
     </span>
    <li>
-    <div class="authors etal" onclick="toggle_etal(this)">
+    <div class="authors etal" onclick="toggle(this,'etal')">
      <?php DBeyer(); author('Ezio Bartocci'); author('Paul E. Black'); author('Grigory Fedyukovich'); author('Hubert Garavel'); author('Arnd Hartmanns'); author('Marieke Huisman'); author('Fabrice Kordon'); author('Julian Nagele'); author('Mihaela Sighireanu'); author('Bernhard Steffen'); author('Martin Suda'); author('Geoff Sutcliffe'); author('Tjark Weber'); author('Akihisa Yamada'); ?>
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_1'>TOOLympics 2019: An overview of competitions in formal methods</a>
     <span class=bibinfo>
-     <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3),
-     <span class=series>LNCS</span><span class=volume>11429</span><span class=pages>pp.&nbsp;3&ndash;24</span><span class=year>2019</span>
+     <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3)<span class=series>LNCS</span><span class=volume>11429</span><span class=pages>pp.&nbsp;3&ndash;24</span><span class=year>2019</span>
    <li>
     <div class="authors">
      <?php JG(); AR(); CS(); JW(); AY(); ?>
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_10'>The termination and complexity competition</a>
     <span class=bibinfo>
-     <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3),
-     <span class=series>LNCS</span><span class=volume>11429</span><span class=pages>pp.&nbsp;156&ndash;166</span><span class=year>2019</span>
+     <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3)<span class=series>LNCS</span><span class=volume>11429</span><span class=pages>pp.&nbsp;156&ndash;166</span><span class=year>2019</span>
    <li>
     <div class="authors">
      <?php CS(); AY(); ?>
@@ -651,8 +628,9 @@
      <span class=booktitle>Bachelor's thesis</span><span class=institute>School of Engineering, Nagoya University</span><span class=year>2006</span>
     </span>
   </ul>
- <h3>Workshop Papers / Others <?php hider("hider1", "others", "...", "&lt;&lt;&lt;", "Show", "Hide");?></h3>
-  <ul class=publications id=others>
+ <h3>Workshop Papers / Others
+ <span class="toggler" onclick="toggle_id('others')">...</span></h3>
+  <ul class="publications hidden" id="others">
    <li>
     <div class="authors">
      <?php Juraj(); IH(); JDubut(); SK(); DSprunger(); AY(); ?>
@@ -893,7 +871,4 @@
  <h2>E-mail</h2>
   akihisa.yamada<b>&lt;at&gt;</b>aist.go.jp
 </body>
-<script>
-document.getElementById("hider1").click();
-</script>
 </html>
