@@ -6,6 +6,8 @@
               https://akihisayamada.github.io/trs60/
 ======================================================================
 
+Invited Speaker: Tobias Nipkow (TUM)
+
 The Term Rewriting Meeting (TRS Meeting) is a biannual informal
 workshop that aims at promoting the research on rewriting and related
 areas. All participants are requested to present their recent
