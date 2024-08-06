@@ -13,7 +13,7 @@
   .authors.etal::after { content: "et al.:"; }
   .etal>.author:not(:first-child) { display: none; }
   .title, .title a { text-decoration:none; color:navy; font-weight:bold; }
-  .title::after { color: black; font-weight: normal; content: "."; }
+  .title::after { color: black; font-weight: normal; content: ". "; }
   .journal, .journal a { text-decoration:none; color:black; font-style:italic; }
   .booktitle, .booktitle a { text-decoration:none; color:black; font-style:italic; }
   .institute, .institute a { text-decoration:none; color:black; font-style:italic; }
@@ -631,6 +631,10 @@
  <h3>Workshop Papers / Others
  <span class="toggler" onclick="toggle_id('others')">...</span></h3>
   <ul class="publications hidden" id="others">
+   <li>
+    <span class="title">岩村の補題、超限帰納法と Isabelle/HOL</span><?php event( "PPL 2024", "第26回プログラミングおよびプログラミング言語ワークショップ", "https://jssst-ppl.org/workshop/2024/" ) ?><span class="note">invited talk</span>
+   <li>
+    <span class="title">証明支援システムIsabelle/HOLによる暗号検証</span><a class="event" href="https://www.iwsec.org/fws/2023/">形式検証とセキュリティワークショップ (FWS2023)</a><span class="note">invited talk</span>
    <li>
     <div class="authors">
      <?php Juraj(); IH(); JDubut(); SK(); DSprunger(); AY(); ?>

@@ -13,7 +13,7 @@
   .authors.etal::after { content: "et al.:"; }
   .etal>.author:not(:first-child) { display: none; }
   .title, .title a { text-decoration:none; color:navy; font-weight:bold; }
-  .title::after { color: black; font-weight: normal; content: "."; }
+  .title::after { color: black; font-weight: normal; content: ". "; }
   .journal, .journal a { text-decoration:none; color:black; font-style:italic; }
   .booktitle, .booktitle a { text-decoration:none; color:black; font-style:italic; }
   .institute, .institute a { text-decoration:none; color:black; font-style:italic; }
@@ -467,6 +467,10 @@
  <h3>Workshop Papers / Others
  <span class="toggler" onclick="toggle_id('others')">...</span></h3>
   <ul class="publications hidden" id="others">
+   <li>
+    <span class="title">岩村の補題、超限帰納法と Isabelle/HOL</span><span class="booktitle"><span class="hidden"><a href="https://jssst-ppl.org/workshop/2024/">第26回プログラミングおよびプログラミング言語ワークショップ</a> <span onclick="toggle_with_next(this.parentElement)">(PPL 2024)</span></span><span onclick="toggle_with_previous(this)">PPL 2024</span></span><span class="note">invited talk</span>
+   <li>
+    <span class="title">証明支援システムIsabelle/HOLによる暗号検証</span><a class="event" href="https://www.iwsec.org/fws/2023/">形式検証とセキュリティワークショップ (FWS2023)</a><span class="note">invited talk</span>
    <li>
     <div class="authors">
      <a class=author href="http://www.lsv.fr/~kolcak/">Juraj Kol&#269;&aacute;k</a><a class=author href="http://group-mmm.org/~ichiro/">Ichiro Hasuo</a><a class=author href="http://group-mmm.org/~dubut/">J&eacute;r&eacute;my Dubut</a><a class=author href="http://group-mmm.org/~s-katsumata/">Shin&apos;ya Katsumata</a><a class=author href="http://group-mmm.org/~sprunger/">David Sprunger</a><span class=author>Akihisa Yamada</span>    </div>
