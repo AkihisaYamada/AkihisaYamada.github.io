@@ -329,6 +329,12 @@
  <h3>Conference Papers</h3>
   <ol class=publications start=12>
    <li>
+    <div class="authors"><?php RT(); AY();?></div>
+    <a class="title" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSCD.2024.27">A Verified Algorithm for Deciding Pattern Completeness</a>
+    <span class="bibinfo">
+     <?php event("FSCD 2024", "9th International Conference on Formal Structures for Computation and Deduction", "https://cs.ioc.ee/fscd24/"); ?><span class="series">LIPIcs</span><span class="volume">299</span><span class="pages">27:1-27:17</span><span class="year">2024</span>
+    </span>
+   <li>
     <div class="authors">
      <?php AY(); ?>
     </div>
