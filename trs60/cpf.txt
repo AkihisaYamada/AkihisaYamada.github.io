@@ -6,8 +6,6 @@
               https://akihisayamada.github.io/trs60/
 ======================================================================
 
-Invited Speaker: Tobias Nipkow (TUM)
-
 The Term Rewriting Meeting (TRS Meeting) is a biannual informal
 workshop that aims at promoting the research on rewriting and related
 areas. All participants are requested to present their recent
@@ -16,6 +14,10 @@ however, is not required to be one's original result; for example, it
 is perfectly acceptable to explain a paper of your interest or a tool
 that you're developing.
 See http://www.jaist.ac.jp/~hirokawa/trs-meeting/ for further information.
+
+* Invited Speaker
+
+Tobias Nipkow (TUM)
 
 * Basic information
 
@@ -27,7 +29,7 @@ Registration Fee: Free
 * Registration
 
 Please send the registration form below to Akihisa Yamada
-(akihisa.yamada@aist.go.jp) no later than October 1 (Tue), 2024.
+(akihisa.yamada@aist.go.jp) no later than September 23 (Mon), 2024.
 
 ----------------------------------------------------------------------
               Registration Form of the 60th TRS meeting
