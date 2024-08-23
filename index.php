@@ -132,6 +132,7 @@
   function JonasS() { echo '<a class=author href="https://dblp.org/pers/s/Sch=ouml=pf:Jonas.html">Jonas Sch&ouml;pf</a>'; }
   function StefanK() { echo '<a class=author href="https://klikovits.net/">Stefan Klikovits</a>'; }
 	function TsutomuK() { echo '<a class=author href="https://researchmap.jp/tsutomu.kobayashi/">Tsutomu Kobayshi</a>'; }
+  function TTsukada() { echo '<a class="author" href="https://takeshi-tsukada.github.io/">Takeshi Tsukada</a>'; }
 	function JAR() {
         echo '<span class="journal">';
 		toggle( 'JAR', 'Journal of Automated Reasoning' );
@@ -328,6 +329,13 @@
   </ol>
  <h3>Conference Papers</h3>
   <ol class=publications start=12>
+   <li>
+    <div class="authors"><?php AY(); JDubut(); TTsukada(); ?></div>
+    <a class="title" href="YDT24.pdf">Hedge automata revisited:
+Transforming texts to and from XML</a>
+    <span class="bibinfo">
+     <?php event("ATVA 2024", "22nd International Symposium on Automated Technology for Verification and Analysis", "https://atva-conference.org/2024/");?><span class="year">2024</span>
+    </span><span class="note">to appear</span>
    <li>
     <div class="authors"><?php RT(); AY();?></div>
     <a class="title" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSCD.2024.27">A Verified Algorithm for Deciding Pattern Completeness</a>
