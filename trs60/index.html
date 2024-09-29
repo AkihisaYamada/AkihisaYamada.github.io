@@ -52,8 +52,8 @@ dd { margin-left: 15ch; margin-bottom: 1em; }
 .program td { padding: .5ex .2ex .5ex 2ex;  }
 .time      { color: black; white-space: nowrap }
 .speaker   { color: #a00; }
-.title     { color: #00a; font-weight: 600; margin-right: 1ex; }
-.abstract  { color: black;  }
+.title     { color: #00a; font-weight: 600; margin-right: 1ex; display: block; }
+.abstract  { color: black; font-weight:normal; }
 .break     { color: #060; font-weight: 600; }
 .event     { color: #06e; font-weight: 600; }
 .session { font-weight: bold; }
@@ -97,6 +97,7 @@ October 7 &ndash; October 9, 2024<br>
 <section>
 <h2>News</h2>
 <ul class='news'>
+<li>September 29, 2024: Added the title and abstract of the invited talk, and tentative program.
 <li>July 1, 2024: Announced invited speaker.
 <li>June 6, 2024: This page is created.
 </ul>
@@ -106,9 +107,119 @@ October 7 &ndash; October 9, 2024<br>
 <h2> Invited Talk </h2>
 <dl>
  <dt>Speaker<dd>Tobias Nipkow
- <dt>Title<dd>TBA
- <dt>Abstract<dd>TBA
+ <dt>Title<dd><span class="title">Alpha-Beta Pruning Explored, Extended and Verified</span>
+ <dt>Abstract
+ <dt><span class="abstract">
+Alpha-beta pruning is an efficient search strategy for two-player game trees. It was invented in the late 1950s and is at the heart of most implementations of combinatorial game playing programs. In this talk I will survey my recent formalizations and verifications of a number of standard variations of alpha-beta pruning. Findings include:
+<ul>
+<li>Basic variants already having a property ascribed to an improved version
+<li>Authors being confused about which algebraic structure they actually work in
+<li>Generalizations to new algebraic structures
+<li>The implementation in a famous paper is flawed 
+</ul>
+</span>
 </dl>
+
+</section>
+
+<section>
+<h2>Program</h2>
+<h3>October 7 (Mon)</h3>
+<table class="program">
+<tr><td class="time">14:30 &ndash; 15:30
+ <td><span class="session">Invited Talk</span>
+<tr>
+ <td><td>
+ <span class="title">Alpha-Beta Pruning Explored, Extended and Verified</span>
+ <span class="speaker">Tobias Nipkow</span>
+ <span class="affiliation"></span>
+
+<tr><td class="time">15:30 &ndash; 15:50<td><span class="break">Break</span>
+
+<tr><td class="time">15:50 &ndash; 16:30<td>
+ <span class="title">TBA</span>
+ <span class="speaker">Naoki Nishida</span>
+ <span class="affiliation">Nagoya U.</span>
+
+<tr><td class="time">16:30 &ndash; 17:20<td>
+ <span class="title">On algorithms to solve Quadratic Diophantine equation</span>
+ <span class="speaker">Yuto Nakamura</span>
+ <span class="affiliation">JAIST</span>
+
+<tr><td class="time">17:20 &ndash; 18:00<td>
+ <span class="title">What I formalized in Isabelle/HOL</span>
+ <span class="speaker">Yasuhiko Minamide</span>
+ <span class="affiliation">Science Tokyo</span>
+
+<tr><td class="time">18:30 &ndash;<td><span class="break">Dinner</span>
+</table>
+<h3>October 8 (Tue)</h3>
+<table class="program">
+
+<tr><td class="time">10:00 &ndash; 10:40<td>
+<span class="title">Formalizing Logically Constrained Rewriting in Isabelle/HOL</span>
+<span class="speaker">Akihisa Yamada</span>
+<span class="affiliation">AIST</span>
+
+<tr><td class="time">10:40 &ndash; 11:20<td>
+<span class="title">TBA</span>
+<span class="speaker">Tetsuya Sato</span>
+<span class="affiliation">Science Tokyo</span>
+
+<tr><td class="time">11:20 &ndash; 12:00<td>
+ <span class="title">A Formalization of the Lévy-Prokhorov Metric in Isabelle/HOL</span>
+ <span class="speaker">Michikazu Hirata</span>
+ <span class="affiliation">Science Tokyo</span>
+
+<tr><td class="time">12:00 &ndash; 14:00<td><span class="break">Lunch Break</span>
+
+<tr><td class="time">14:00 &ndash; 14:50<td>
+ <span class="title">TBA</span>
+ <span class="speaker">Aart Middeldorp</span>
+ <span class="affiliation">U. Innsbruck</span> (online)
+
+<tr><td class="time">14:50 &ndash; 15:30<td>
+<span class="title">TBA</span>
+<span class="speaker">Munehiro Iwami</span>
+<span class="affiliation">Shimane U.</span> (online)
+
+<tr><td class="time">15:30 &ndash; 15:50<td><span class="break">Break</span>
+
+<tr><td class="time">15:50 &ndash; 16:30<td>
+<span class="title">Proof Automation Based On Completion In Coq</span>
+<span class="speaker">Soichi Yajima</span>
+<span class="affiliation">Kyoto U.</span>
+
+<tr><td class="time">16:30 &ndash; 17:10<td>
+<span class="title">Lexicographic Combinations of Reduction Pairs</span>
+<span class="speaker">Nao Hirokawa</span>
+<span class="affiliation">JAIST</span>
+
+<tr><td class="time">17:10 &ndash;<td><span class="break">Business Meeting</span>
+
+<tr><td class="time">18:00 &ndash;<td><span class="break">Dinner</span>
+
+</table>
+
+<h3>October 9 (Wed)</h3>
+<table class="program">
+
+<tr><td class="time">10:00 &ndash; 10:40<td>
+<span class="title">TBA</span>
+<span class="speaker">Teppei Saito</span>
+<span class="affiliation">JAIST</span>
+
+<tr><td class="time">10:40 &ndash; 11:20<td>
+<span class="title">TBA</span>
+<span class="speaker">Mirai Ikebuchi</span>
+<span class="affiliation">Kyoto U.</span>
+
+<tr><td class="time">11:20 &ndash; 12:00<td>
+ <span class="title">Applicative Multiset Path Orders</span>
+ <span class="speaker">Wataru Yachi</span>
+ <span class="affiliation">JAIST</span>
+
+</table>
 </section>
 
 <section>
@@ -162,7 +273,7 @@ The items marked with * can be sent later.
 <li>Naoki Nishida (Nagoya U., hybrid)</li>
 <li>Soichi Yajima (Kyoto U.)</li>
 <li>Teppei Saito (JAIST)</li>
-<li>Tetsuya Saito (Science Tokyo)</li>
+<li>Tetsuya Sato (Science Tokyo)</li>
 <li>Tobias Nipkow</li>
 <li>Wataru Yachi (JAIST)</li>
 <li>Yasuhiko Minamide (Science Tokyo)</li>
