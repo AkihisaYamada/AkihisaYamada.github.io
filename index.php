@@ -213,7 +213,7 @@
  <h2>Tools</h2>
   I am the developer of
   <ul>
-   <li><a href="https://github.com/AkihisaYamada/TXtruct">TXtruct</a>,
+   <li>the text-to/from-XML transformer <a href="https://github.com/AkihisaYamada/TXtruct">TXtruct</a>,
    <li><a href="http://www.trs.cm.is.nagoya-u.ac.jp/NaTT">the Nagoya Termination Tool</a>, and
    <li>the combinatorial testing tool Calot,
   </ul>
