@@ -19,7 +19,7 @@
   .institute, .institute a { text-decoration:none; color:black; font-style:italic; }
   .publisher, .publisher a { text-decoration:none; color:black; font-style:italic; }
   .series {}
-  .place {}
+  .place:before { content: ". "; }
   .month {}
   .year {}
   .errata { display: inline-block; }
@@ -35,6 +35,7 @@
   .toggle:hover { text-decoration:underline; }
   table th { vertical-align:top; }
   span+.year::before, a+.year::before { content: ", "; }
+  span+.month::before { content: ". "; }
   span+.series::before { content: ", "; }
   span+.publisher::before { content: ", "; }
   .series+.volume::before { content: " "; }
@@ -333,15 +334,13 @@
   <ol class="publications" start=12>
    <li>
     <div class="authors"><?php DohanK(); TeppeiS(); RT(); AY(); ?></div>
-    <a class="title">An Isabelle formalization of co-rewrite pairs for
-non-reachability in term rewriting</a>
+    <a class="title">An Isabelle formalization of co-rewrite pairs for non-reachability in term rewriting</a>
     <span class="bibinfo">
      <?php event("CPP 2025", "14th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl25.sigplan.org/home/CPP-2025"); ?><span class="pages">272&ndash;282</span>
     </span>
    <li>
     <div class="authors"><?php AY(); JDubut(); TTsukada(); ?></div>
-    <a class="title" href="YDT24.pdf">Hedge automata revisited:
-Transforming texts to and from XML</a>
+    <a class="title" href="YDT24.pdf">Hedge automata revisited: Transforming texts to and from XML</a>
     <span class="bibinfo">
      <?php event("ATVA 2024", "22nd International Symposium on Automated Technology for Verification and Analysis", "https://atva-conference.org/2024/");?><span class="year">2024</span>
     </span><span class="note">to appear</span>
@@ -651,13 +650,32 @@ Transforming texts to and from XML</a>
      <span class=booktitle>Bachelor's thesis</span><span class=institute>School of Engineering, Nagoya University</span><span class=year>2006</span>
     </span>
   </ul>
- <h3>Workshop Papers / Others
- <span class="toggler" onclick="toggle_id('others')">...</span></h3>
+ <h3 class="toggler" onclick="toggle_id('others')">Workshop Talks...</h3>
   <ul class="publications hidden" id="others">
+   <li>
+    <span class="title">Formalizing Logically Constrained Rewriting in Isabelle/HOL</span><span class="event">60th TRS Meeting</span><span class="year">2024</span>
    <li>
     <span class="title">岩村の補題、超限帰納法と Isabelle/HOL</span><?php event( "PPL 2024", "第26回プログラミングおよびプログラミング言語ワークショップ", "https://jssst-ppl.org/workshop/2024/" ) ?><span class="note">invited talk</span>
    <li>
     <span class="title">証明支援システムIsabelle/HOLによる暗号検証</span><a class="event" href="https://www.iwsec.org/fws/2023/">形式検証とセキュリティワークショップ (FWS2023)</a><span class="note">invited talk</span>
+   <li>
+    <span class="title">Satisfiability in Rewriting</span><span class="event">59th TRS Meeting</span><span class="year">2023</span>
+   <li>
+    <span class="title">Iwamura's Lemma: Induction on uncountable cardinality in Isabelle/HOL</span><span class="event">58th TRS Meeting</span><span class="year">2023</span>
+   <li>
+    <span class="title">Hedge Transducers</span><span class="event">57th TRS Meeting</span><span class="year">2022</span>
+   <li>
+    <span class="title">Term Ordering for Non-Reachability of (Conditional) Rewriting</span><span class="event">56th TRS Meeting</span><span class="year">2022</span>
+   <li>
+    <span class="title">Sub-Birkhoff in Isabelle/HOL</span><span class="event">55th TRS Meeting</span><span class="year">2021</span>
+   <li>
+    <span class="title">Multi-Dimensional Interpretation Method 2</span><span class="event">54th TRS Meeting</span><span class="year">2021</span>
+   <li>
+    <span class="title">Multi-Dimensional Interpretation Method</span><span class="event">53th TRS Meeting</span><span class="year">2020</span>
+   <li>
+    <span class="title">An Isabelle Formalization of Sorted Algebra, Logic, and Constrained Rewriting</span><span class="event">52th TRS Meeting</span><span class="year">2020</span>
+   <li>
+    <span class="title">Productivity in Finitary Rewriting</span><span class="event">51th TRS Meeting</span><span class="year">2019</span>
    <li>
     <div class="authors">
      <?php Juraj(); IH(); JDubut(); SK(); DSprunger(); AY(); ?>
@@ -685,7 +703,7 @@ Transforming texts to and from XML</a>
     <a class=event href="http://www.cs.gunma-u.ac.jp/~fujita/TRS49/trs49.html">49th TRS meeting</a><span class=year>2018</span>
    <li>
     <a class=title href='wst2018.pdf'>Towards unified method for termination</a>
-	<?php event( "WST 2018", "16th International Workshop on Termination", "http://wst2018.webs.upv.es/" ) ?><span class=pages>2&ndash;6</span><span class=year>2018</span><span class=note>invited talk</span>
+    <?php event( "WST 2018", "16th International Workshop on Termination", "http://wst2018.webs.upv.es/" ) ?><span class=pages>2&ndash;6</span><span class=year>2018</span><span class=note>invited talk</span>
    <li>
 	<div class="authors">
 	 <?php JoseD(); SJ(); RT(); AY(); ?>
@@ -717,7 +735,7 @@ Transforming texts to and from XML</a>
     <span class=title>TermComp 2016 participant: NaTT</span><span class=bibinfo>
      <?php event( "WST 2016",
       "15th International Workshop on Termination",
-      "http://cl-informatik.uibk.ac.at/events/wst-2016/") ?><span class=pages>p.&nbsp;25:1</span><span class=year>2016</span>
+      "http://cl-informatik.uibk.ac.at/events/wst-2016/") ?><span class=pages>25:1</span><span class=year>2016</span>
       [<a href="NaTT2016.pptx">slides</a>]
     </span>
    <li>
@@ -749,7 +767,7 @@ Transforming texts to and from XML</a>
    <li>
     <div class="authors">
      <?php JoseD(); SJ(); RT(); AY(); ?>
-    </div><br/>
+    </div>
     <a class=title href='http://www.in.tum.de/~nipkow/Isabelle2016/Isabelle2016_6.pdf'>A formalization of Berlekamp's factorization algorithm</a>
     <a class=event href='http://www21.in.tum.de/~nipkow/Isabelle2016/'>Isabelle Workshop 2016</a>
    <li>
@@ -813,8 +831,7 @@ Transforming texts to and from XML</a>
    <li>
     <span class=title>SAT solvers in combinatorial testing</span><span class=bibinfo>
      <a class=event href='http://www.math.s.chiba-u.ac.jp/~neguchi/42trsmeeting/'>
-      42nd TRS meeting</a>,
-     <span class=place>Tokyo, Japan</span><span class=month>February</span><span class=year>2015</span>
+      42nd TRS meeting</a><span class=place>Tokyo, Japan</span><span class=month>February</span><span class=year>2015</span>
     </span>
    <li>
     <div class="authors">
@@ -849,8 +866,7 @@ Transforming texts to and from XML</a>
    </li>
    <li>
     <span class=title>Towards dependency pairs for relative termination</span><span class=bibinfo>
-     <a class=event href='http://www.pu-toyama.ac.jp/IS/MN/trsmeeting40.html'>40th TRS meeting</a>,
-     <span class=place>Unazuki, Japan</span><span class=month>March</span><span class=year>2014</span>
+     <a class=event href='http://www.pu-toyama.ac.jp/IS/MN/trsmeeting40.html'>40th TRS meeting</a><span class=place>Unazuki, Japan</span><span class=month>March</span><span class=year>2014</span>
     </span>
    <li>
     <div class="authors">
@@ -865,13 +881,11 @@ Transforming texts to and from XML</a>
     </span>
    <li>
     <span class=title>Unifying KBO, LPO and polynomial orders</span><span class=bibinfo>
-     <a class=event href='http://www.trs.cm.is.nagoya-u.ac.jp/event/38thTRSmeeting/'>38th TRS meeting</a>,
-     <span class=place>Kofu, Japan</span><span class=month>April</span><span class=year>2013</span>
+     <a class=event href='http://www.trs.cm.is.nagoya-u.ac.jp/event/38thTRSmeeting/'>38th TRS meeting</a><span class=place>Kofu, Japan</span><span class=month>April</span><span class=year>2013</span>
     </span>
    <li>
     <span class=title>On AC-compatible Knuth-Bendix orderings</span><span class=bibinfo>
-     <a class=event href='http://www.nue.riec.tohoku.ac.jp/trs-meeting12/'>37th TRS meeting</a>,
-     <span class=place>Sendai, Japan</span><span class=month>November</span><span class=year>2012</span>
+     <a class=event href='http://www.nue.riec.tohoku.ac.jp/trs-meeting12/'>37th TRS meeting</a><span class=place>Sendai, Japan</span><span class=month>November</span><span class=year>2012</span>
     </span><span class=note>Joint work with Sarah Winkler, Nao Hirokawa, Aart Middeldorp</span>
    <li>
     <div class="authors">
