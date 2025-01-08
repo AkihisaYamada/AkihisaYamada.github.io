@@ -340,13 +340,13 @@
     </span>
    <li>
     <div class="authors"><?php AY(); JDubut(); TTsukada(); ?></div>
-    <a class="title" href="YDT24.pdf">Hedge automata revisited: Transforming texts to and from XML</a>
+    <a class="title" href="YDT24.pdf">Hedge automata revisited: transforming texts to and from XML</a>
     <span class="bibinfo">
      <?php event("ATVA 2024", "22nd International Symposium on Automated Technology for Verification and Analysis", "https://atva-conference.org/2024/");?><span class="year">2024</span>
     </span><span class="note">to appear</span>
    <li>
     <div class="authors"><?php RT(); AY();?></div>
-    <a class="title" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSCD.2024.27">A Verified Algorithm for Deciding Pattern Completeness</a>
+    <a class="title" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSCD.2024.27">A verified algorithm for deciding pattern completeness</a>
     <span class="bibinfo">
      <?php event("FSCD 2024", "9th International Conference on Formal Structures for Computation and Deduction", "https://cs.ioc.ee/fscd24/"); ?><span class="series">LIPIcs</span><span class="volume">299</span><span class="pages">27:1-27:17</span><span class="year">2024</span>
     </span>
@@ -354,7 +354,7 @@
     <div class="authors">
      <?php AY(); ?>
     </div>
-    <a class="title" href="https://drops.dagstuhl.de/opus/volltexte/2023/17988/">Termination of Term Rewriting: Foundation, Formalization, Implementation, and Competition (invited talk)</a>
+    <a class="title" href="https://drops.dagstuhl.de/opus/volltexte/2023/17988/">Termination of term rewriting: foundation, formalization, implementation, and competition (invited talk)</a>
     <span class="bibinfo">
      <?php event( "FSCD 2023", "8th International Conference on Formal Structures for Computation and Deduction", "https://easyconferences.eu/fscd2023/"); ?><span class="series">LIPIcs</span><span class="volume">260</span><span class="pages">4:1&ndash;4:5</span><span class="year">2023</span>
     </span>
@@ -363,7 +363,7 @@
     <div class="authors">
      <?php AY(); JDubut(); ?>
     </div>
-    <a class="title" href="https://doi.org/10.4230/LIPIcs.ITP.2023.34">Formalizing Results on Directed Sets in Isabelle/HOL (Proof Pearl)</a>
+    <a class="title" href="https://doi.org/10.4230/LIPIcs.ITP.2023.34">Formalizing results on directed sets in Isabelle/HOL (Proof Pearl)</a>
     <span class="bibinfo">
      <?php event( "ITP 2023", "14th International Conference on Interactive Theorem Proving", "https://mizar.uwb.edu.pl/ITP2023/" ); ?><span class="series">LIPIcs</span><span class="volume">268</span><span class="pages">34:1&ndash;34:13</span><span class="year">2023</span>
     </span>
@@ -418,7 +418,7 @@
     <div class="authors etal" onclick="toggle(this,'etal')">
      <?php DBeyer(); author('Ezio Bartocci'); author('Paul E. Black'); author('Grigory Fedyukovich'); author('Hubert Garavel'); author('Arnd Hartmanns'); author('Marieke Huisman'); author('Fabrice Kordon'); author('Julian Nagele'); author('Mihaela Sighireanu'); author('Bernhard Steffen'); author('Martin Suda'); author('Geoff Sutcliffe'); author('Tjark Weber'); author('Akihisa Yamada'); ?>
     </div>
-    <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_1'>TOOLympics 2019: An overview of competitions in formal methods</a>
+    <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_1'>TOOLympics 2019: an overview of competitions in formal methods</a>
     <span class=bibinfo>
      <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3)<span class=series>LNCS</span><span class=volume>11429</span><span class=pages>3&ndash;24</span><span class=year>2019</span>
    <li>
@@ -653,29 +653,29 @@
  <h3 class="toggler" onclick="toggle_id('others')">Workshop Talks...</h3>
   <ul class="publications hidden" id="others">
    <li>
-    <span class="title">Formalizing Logically Constrained Rewriting in Isabelle/HOL</span><span class="event">60th TRS Meeting</span><span class="year">2024</span>
+    <span class="title">Formalizing logically constrained rewriting in Isabelle/HOL</span><span class="event">60th TRS Meeting</span><span class="year">2024</span>
    <li>
     <span class="title">岩村の補題、超限帰納法と Isabelle/HOL</span><?php event( "PPL 2024", "第26回プログラミングおよびプログラミング言語ワークショップ", "https://jssst-ppl.org/workshop/2024/" ) ?><span class="note">invited talk</span>
    <li>
     <span class="title">証明支援システムIsabelle/HOLによる暗号検証</span><a class="event" href="https://www.iwsec.org/fws/2023/">形式検証とセキュリティワークショップ (FWS2023)</a><span class="note">invited talk</span>
    <li>
-    <span class="title">Satisfiability in Rewriting</span><span class="event">59th TRS Meeting</span><span class="year">2023</span>
+    <span class="title">Satisfiability in rewriting</span><span class="event">59th TRS Meeting</span><span class="year">2023</span>
    <li>
-    <span class="title">Iwamura's Lemma: Induction on uncountable cardinality in Isabelle/HOL</span><span class="event">58th TRS Meeting</span><span class="year">2023</span>
+    <span class="title">Iwamura's lemma: Induction on uncountable cardinality in Isabelle/HOL</span><span class="event">58th TRS Meeting</span><span class="year">2023</span>
    <li>
-    <span class="title">Hedge Transducers</span><span class="event">57th TRS Meeting</span><span class="year">2022</span>
+    <span class="title">Hedge transducers</span><span class="event">57th TRS Meeting</span><span class="year">2022</span>
    <li>
-    <span class="title">Term Ordering for Non-Reachability of (Conditional) Rewriting</span><span class="event">56th TRS Meeting</span><span class="year">2022</span>
+    <span class="title">Term ordering for non-reachability of (conditional) rewriting</span><span class="event">56th TRS Meeting</span><span class="year">2022</span>
    <li>
     <span class="title">Sub-Birkhoff in Isabelle/HOL</span><span class="event">55th TRS Meeting</span><span class="year">2021</span>
    <li>
-    <span class="title">Multi-Dimensional Interpretation Method 2</span><span class="event">54th TRS Meeting</span><span class="year">2021</span>
+    <span class="title">Multi-dimensional interpretation method 2</span><span class="event">54th TRS Meeting</span><span class="year">2021</span>
    <li>
-    <span class="title">Multi-Dimensional Interpretation Method</span><span class="event">53th TRS Meeting</span><span class="year">2020</span>
+    <span class="title">Multi-dimensional interpretation method</span><span class="event">53th TRS Meeting</span><span class="year">2020</span>
    <li>
-    <span class="title">An Isabelle Formalization of Sorted Algebra, Logic, and Constrained Rewriting</span><span class="event">52th TRS Meeting</span><span class="year">2020</span>
+    <span class="title">An Isabelle formalization of sorted algebra, logic, and constrained rewriting</span><span class="event">52th TRS Meeting</span><span class="year">2020</span>
    <li>
-    <span class="title">Productivity in Finitary Rewriting</span><span class="event">51th TRS Meeting</span><span class="year">2019</span>
+    <span class="title">Productivity in finitary rewriting</span><span class="event">51th TRS Meeting</span><span class="year">2019</span>
    <li>
     <div class="authors">
      <?php Juraj(); IH(); JDubut(); SK(); DSprunger(); AY(); ?>
