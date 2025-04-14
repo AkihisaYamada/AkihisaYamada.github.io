@@ -667,7 +667,7 @@
    <li>
     <span class="title">Term ordering for non-reachability of (conditional) rewriting</span><span class="event">56th TRS Meeting</span><span class="year">2022</span>
    <li>
-    <span class="title">Transforming Text to (and from) XML</span><?php event("WPTE 2022","9th International Workshop on Rewriting Techniques for Program Transformations and Evaluation","https://wpte2022.github.io/"); ?><span class="year">2022</span><span class="note">invited talk</span>
+    <span class="title">Transforming text to (and from) XML</span><?php event("WPTE 2022","9th International Workshop on Rewriting Techniques for Program Transformations and Evaluation","https://wpte2022.github.io/"); ?><span class="year">2022</span><span class="note">invited talk</span>
    <li>
     <span class="title">Sub-Birkhoff in Isabelle/HOL</span><span class="event">55th TRS Meeting</span><span class="year">2021</span>
    <li>
@@ -676,6 +676,9 @@
     <span class="title">Multi-dimensional interpretation method</span><span class="event">53th TRS Meeting</span><span class="year">2020</span>
    <li>
     <span class="title">An Isabelle formalization of sorted algebra, logic, and constrained rewriting</span><span class="event">52th TRS Meeting</span><span class="year">2020</span>
+   <li>
+    <span class="title">Isabelle/HOL formalizations of logically constrained rewriting,
+  sub-Birkoff and isomorphism theorems</span><span class="event">IFIP WG 1.6 Meeting</span><span class="year">2020</span><span class="note">invited talk</span>
    <li>
     <span class="title">Productivity in finitary rewriting</span><span class="event">51th TRS Meeting</span><span class="year">2019</span>
    <li>
