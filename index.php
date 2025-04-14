@@ -653,6 +653,8 @@
  <h3 class="toggler" onclick="toggle_id('others')">Workshop Talks...</h3>
   <ul class="publications hidden" id="others">
    <li>
+    <span class="title">Avoiding Russel's Paradox without Types</span><span class="event">61st TRS Meeting</span><span class="year">2025</span>
+   <li>
     <span class="title">Formalizing logically constrained rewriting in Isabelle/HOL</span><span class="event">60th TRS Meeting</span><span class="year">2024</span>
    <li>
     <span class="title">岩村の補題、超限帰納法と Isabelle/HOL</span><?php event( "PPL 2024", "第26回プログラミングおよびプログラミング言語ワークショップ", "https://jssst-ppl.org/workshop/2024/" ) ?><span class="note">invited talk</span>
