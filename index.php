@@ -667,6 +667,8 @@
    <li>
     <span class="title">Term ordering for non-reachability of (conditional) rewriting</span><span class="event">56th TRS Meeting</span><span class="year">2022</span>
    <li>
+    <span class="title">Transforming Text to (and from) XML</span><?php event("WPTE 2022","9th International Workshop on Rewriting Techniques for Program Transformations and Evaluation","https://wpte2022.github.io/"); ?><span class="year">2022</span><span class="note">invited talk</span>
+   <li>
     <span class="title">Sub-Birkhoff in Isabelle/HOL</span><span class="event">55th TRS Meeting</span><span class="year">2021</span>
    <li>
     <span class="title">Multi-dimensional interpretation method 2</span><span class="event">54th TRS Meeting</span><span class="year">2021</span>
