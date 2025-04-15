@@ -343,7 +343,7 @@
     <a class="title" href="https://doi.org/10.1007/978-3-031-78750-8_6">Hedge automata revisited: transforming texts to and from XML</a>
     <span class="bibinfo">
      <?php event("ATVA 2024", "22nd International Symposium on Automated Technology for Verification and Analysis", "https://atva-conference.org/2024/");?><span class="year">2024</span>
-    </span>[<a href="YDT24.pdf">authors&apos; version</a>]
+    </span> [<a href="YDT24.pdf">authors&apos; version</a>]
    <li>
     <div class="authors"><?php RT(); AY();?></div>
     <a class="title" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSCD.2024.27">A verified algorithm for deciding pattern completeness</a>
