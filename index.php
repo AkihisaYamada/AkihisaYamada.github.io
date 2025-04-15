@@ -336,13 +336,13 @@
     <div class="authors"><?php DohanK(); TeppeiS(); RT(); AY(); ?></div>
     <a class="title" href="https://doi.org/10.1145/3703595.3705889">An Isabelle formalization of co-rewrite pairs for non-reachability in term rewriting</a>
     <span class="bibinfo">
-     <?php event("CPP 2025", "14th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl25.sigplan.org/home/CPP-2025"); ?><span class="pages">272&ndash;282</span>
+     <?php event("CPP 2025", "14th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl25.sigplan.org/home/CPP-2025"); ?><span class="pages">272&ndash;282</span><span class="year">2025</span>
     </span>
    <li>
     <div class="authors"><?php AY(); JDubut(); TTsukada(); ?></div>
     <a class="title" href="https://doi.org/10.1007/978-3-031-78750-8_6">Hedge automata revisited: transforming texts to and from XML</a>
     <span class="bibinfo">
-     <?php event("ATVA 2024", "22nd International Symposium on Automated Technology for Verification and Analysis", "https://atva-conference.org/2024/");?><span class="year">2024</span>
+     <?php event("ATVA 2024", "22nd International Symposium on Automated Technology for Verification and Analysis", "https://atva-conference.org/2024/");?><span class="series">LNCS</span><span class="volume">15055</span><span class="pages">117–136</span><span class="year">2024</span>
     </span> [<a href="YDT24.pdf">authors&apos; version</a>]
    <li>
     <div class="authors"><?php RT(); AY();?></div>
