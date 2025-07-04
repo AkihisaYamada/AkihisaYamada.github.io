@@ -92,7 +92,7 @@
 	function AY() { echo '<span class=author>Akihisa Yamada</span>'; }
 	function RT() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/thiemann/">Ren&eacute; Thiemann</a>'; }
 	function JoseD() { echo '<a class=author href="http://www.unirioja.es/cu/jodivaso/">Jose Divas&oacute;n</a>'; }
-	function SJ() { echo '<a class=author href="http://sjcjoosten.nl/">Sebastiaan J.C. Joosten</a>'; }
+	function SJ() { echo '<a class=author href="http://sjcjoosten.nl/">Sebastiaan J.C.&nbsp;Joosten</a>'; }
 	function CS() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/griff/">Christian Sternagel</a>'; }
 	function KK() { echo '<a class=author href="http://www.ct.info.gifu-u.ac.jp/~kusakari/">Keiichirou Kusakari</a>'; }
 	function OK() { echo '<a class=author href="http://www21.in.tum.de/~kuncar/">Ond&#345;ej Kun&#269;ar</a>'; }
@@ -333,22 +333,28 @@
  <h3>Conference Papers</h3>
   <ol class="publications" start=12>
    <li>
+    <div class="authors"><?php MA(); AY(); ?></div>
+    <a class="title">Weighted Rewriting</a>
+    <span class="bibinfo">
+     <?php event("FroCoS 2025", "Proc.&nbsp;15th International Symposium on Frontiers of Combining Systems", "https://icetcs.github.io/frocos-itp-tableaux25/frocos/"); ?><span class="year">2025</span></span>
+    <span class="note">to appear</span>
+   <li>
     <div class="authors"><?php DohanK(); TeppeiS(); RT(); AY(); ?></div>
     <a class="title" href="https://doi.org/10.1145/3703595.3705889">An Isabelle formalization of co-rewrite pairs for non-reachability in term rewriting</a>
     <span class="bibinfo">
-     <?php event("CPP 2025", "14th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl25.sigplan.org/home/CPP-2025"); ?><span class="pages">272&ndash;282</span><span class="year">2025</span>
+     <?php event("CPP 2025", "Proc.&nbsp;14th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl25.sigplan.org/home/CPP-2025"); ?><span class="pages">272&ndash;282</span><span class="year">2025</span>
     </span>
    <li>
     <div class="authors"><?php AY(); JDubut(); TTsukada(); ?></div>
     <a class="title" href="https://doi.org/10.1007/978-3-031-78750-8_6">Hedge automata revisited: transforming texts to and from XML</a>
     <span class="bibinfo">
-     <?php event("ATVA 2024", "22nd International Symposium on Automated Technology for Verification and Analysis", "https://atva-conference.org/2024/");?><span class="series">LNCS</span><span class="volume">15055</span><span class="pages">117–136</span><span class="year">2024</span>
+     <?php event("ATVA 2024", "Proc.&nbsp;22nd International Symposium on Automated Technology for Verification and Analysis", "https://atva-conference.org/2024/");?><span class="series">LNCS</span><span class="volume">15055</span><span class="pages">117–136</span><span class="year">2024</span>
     </span> [<a href="YDT24.pdf">authors&apos; version</a>]
    <li>
     <div class="authors"><?php RT(); AY();?></div>
     <a class="title" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSCD.2024.27">A verified algorithm for deciding pattern completeness</a>
     <span class="bibinfo">
-     <?php event("FSCD 2024", "9th International Conference on Formal Structures for Computation and Deduction", "https://cs.ioc.ee/fscd24/"); ?><span class="series">LIPIcs</span><span class="volume">299</span><span class="pages">27:1-27:17</span><span class="year">2024</span>
+     <?php event("FSCD 2024", "Proc.&nbsp;9th International Conference on Formal Structures for Computation and Deduction", "https://cs.ioc.ee/fscd24/"); ?><span class="series">LIPIcs</span><span class="volume">299</span><span class="pages">27:1-27:17</span><span class="year">2024</span>
     </span>
    <li>
     <div class="authors">
@@ -356,7 +362,7 @@
     </div>
     <a class="title" href="https://drops.dagstuhl.de/opus/volltexte/2023/17988/">Termination of term rewriting: foundation, formalization, implementation, and competition (invited talk)</a>
     <span class="bibinfo">
-     <?php event( "FSCD 2023", "8th International Conference on Formal Structures for Computation and Deduction", "https://easyconferences.eu/fscd2023/"); ?><span class="series">LIPIcs</span><span class="volume">260</span><span class="pages">4:1&ndash;4:5</span><span class="year">2023</span>
+     <?php event( "FSCD 2023", "Proc.&nbsp;8th International Conference on Formal Structures for Computation and Deduction", "https://easyconferences.eu/fscd2023/"); ?><span class="series">LIPIcs</span><span class="volume">260</span><span class="pages">4:1&ndash;4:5</span><span class="year">2023</span>
     </span>
     [<a href="fscd.pptx">slides</a>]
    <li>
@@ -365,7 +371,7 @@
     </div>
     <a class="title" href="https://doi.org/10.4230/LIPIcs.ITP.2023.34">Formalizing results on directed sets in Isabelle/HOL (Proof Pearl)</a>
     <span class="bibinfo">
-     <?php event( "ITP 2023", "14th International Conference on Interactive Theorem Proving", "https://mizar.uwb.edu.pl/ITP2023/" ); ?><span class="series">LIPIcs</span><span class="volume">268</span><span class="pages">34:1&ndash;34:13</span><span class="year">2023</span>
+     <?php event( "ITP 2023", "Proc.&nbsp;14th International Conference on Interactive Theorem Proving", "https://mizar.uwb.edu.pl/ITP2023/" ); ?><span class="series">LIPIcs</span><span class="volume">268</span><span class="pages">34:1&ndash;34:13</span><span class="year">2023</span>
     </span>
    <li>
     <div class="authors">
@@ -373,7 +379,7 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-031-10769-6_15">Term orderings for non-reachability of (conditional) rewriting</a>
     <span class=bibinfo>
-     <?php event("IJCAR 2022", "Proc. 11th International Joint Conference on Automated Reasoning", "https://ijcar.org/"); ?><span class=series>LNAI</span><span class=volume>13385</span><span class=pages>248&ndash;267</span><span class=year>2022</span>
+     <?php event("IJCAR 2022", "Proc.&nbsp;11th International Joint Conference on Automated Reasoning", "https://ijcar.org/"); ?><span class=series>LNAI</span><span class=volume>13385</span><span class=pages>248&ndash;267</span><span class=year>2022</span>
     </span>
    <li>
     <div class="authors">
@@ -381,7 +387,7 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-79876-5_16">Multi-dimensional interpretations for termination of term rewriting</a>
     <span class=bibinfo>
-     <?php event("CADE-28", "Proc. 28th International Conference on Automated Deduction", "https://www.cs.cmu.edu/~mheule/CADE28/"); ?><span class=series>LNAI</span><span class=volume>12699</span><span class=pages>273&ndash;290</span><span class=year>2021</span>
+     <?php event("CADE-28", "Proc.&nbsp;28th International Conference on Automated Deduction", "https://www.cs.cmu.edu/~mheule/CADE28/"); ?><span class=series>LNAI</span><span class=volume>12699</span><span class=pages>273&ndash;290</span><span class=year>2021</span>
     </span>
    <li>
     <div class="authors">
@@ -389,14 +395,14 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-79379-1_2">Architecture-guided test resource allocation via logic</a>
     <span class=bibinfo>
-     <?php event("TAP 2021", "Proc. 15th International Conference on Tests and Proofs", "https://www.univ-orleans.fr/lifo/events/TAP2021/") ?><span class=series>LNCS</span><span class=volume>12740</span><span class=pages>22&ndash;38</span><span class=year>2021</span>
+     <?php event("TAP 2021", "Proc.&nbsp;15th International Conference on Tests and Proofs", "https://www.univ-orleans.fr/lifo/events/TAP2021/") ?><span class=series>LNCS</span><span class=volume>12740</span><span class=pages>22&ndash;38</span><span class=year>2021</span>
    <li>
     <div class="authors">
      <?php RT(); JonasS(); CS(); AY(); ?>
     </div>
     <a class=title href="https://drops.dagstuhl.de/opus/volltexte/2020/12326/">Certifying the weighted path order (invited talk)</a>
     <span class=bibinfo>
-     <?php event("IJCAR-FSCD 2020", "Proc. Joint 5th International Conference on Formal Structures for Computation and Deduction and 10th International Joint Conference on Automatic Reasoning", "https://fscd-ijcar-2020.org/"); ?><span class=series>LIPIcs</span><span class=volume>167</span><span class=pages>4:1&ndash;4:20</span><span class=year>2020</span>
+     <?php event("IJCAR-FSCD 2020", "Proc.&nbsp;Joint 5th International Conference on Formal Structures for Computation and Deduction and 10th International Joint Conference on Automatic Reasoning", "https://fscd-ijcar-2020.org/"); ?><span class=series>LIPIcs</span><span class=volume>167</span><span class=pages>4:1&ndash;4:20</span><span class=year>2020</span>
     </span>
    <li>
     <div class="authors">
@@ -404,7 +410,7 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-030-45190-5_11">Relational differential dynamic logic</a>
     <span class=bibinfo>
-     <?php event("TACAS 2020", "Proc. 26th International Conference on Tools and Algorithms for the Construction and Analysis of Systems", "https://www.etaps.org/2020/tacas") ?><span class=series>LNCS</span><span class=volume>12078</span><span class=pages>191&ndash;208</span><span class=year>2020</span>
+     <?php event("TACAS 2020", "Proc.&nbsp;26th International Conference on Tools and Algorithms for the Construction and Analysis of Systems", "https://www.etaps.org/2020/tacas") ?><span class=series>LNCS</span><span class=volume>12078</span><span class=pages>191&ndash;208</span><span class=year>2020</span>
     </span>
    <li>
     <div class="authors">
@@ -412,7 +418,7 @@
     </div>
     <a class=title href="http://dx.doi.org/10.4230/LIPIcs.ITP.2019.30">Complete non-orders and fixed points</a>
     <span class=bibinfo>
-     <?php event( "ITP 2019", "Proc. 10th International Conference on Interactive Theorem Proving", "https://itp19.cecs.pdx.edu/" ) ?><span class=series>LIPIcs</span><span class=volume>141</span><span class=pages>30:1&ndash;30:16</span><span class=year>2019</span>
+     <?php event( "ITP 2019", "Proc.&nbsp;10th International Conference on Interactive Theorem Proving", "https://itp19.cecs.pdx.edu/" ) ?><span class=series>LIPIcs</span><span class=volume>141</span><span class=pages>30:1&ndash;30:16</span><span class=year>2019</span>
     </span>
    <li>
     <div class="authors etal" onclick="toggle(this,'etal')">
@@ -420,21 +426,21 @@
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_1'>TOOLympics 2019: an overview of competitions in formal methods</a>
     <span class=bibinfo>
-     <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3)<span class=series>LNCS</span><span class=volume>11429</span><span class=pages>3&ndash;24</span><span class=year>2019</span>
+     <?php event( "TACAS 2019", "Proc.&nbsp;25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3)<span class=series>LNCS</span><span class=volume>11429</span><span class=pages>3&ndash;24</span><span class=year>2019</span>
    <li>
     <div class="authors">
      <?php JG(); AR(); CS(); JW(); AY(); ?>
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-030-17502-3_10'>The termination and complexity competition</a>
     <span class=bibinfo>
-     <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3)<span class=series>LNCS</span><span class=volume>11429</span><span class=pages>156&ndash;166</span><span class=year>2019</span>
+     <?php event( "TACAS 2019", "Proc.&nbsp;25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (3)<span class=series>LNCS</span><span class=volume>11429</span><span class=pages>156&ndash;166</span><span class=year>2019</span>
    <li>
     <div class="authors">
      <?php CS(); AY(); ?>
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-030-17462-0_15'>Reachability analysis for termination and confluence of rewriting</a>
     <span class=bibinfo>
-     <?php event( "TACAS 2019", "Proc. 25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (1),
+     <?php event( "TACAS 2019", "Proc.&nbsp;25th International Conference on Tools and Algorithms for Construction and Analysis of Systems", "https://conf.researchr.org/home/tacas-2019") ?> (1),
      <span class=seires>LNCS</span><span class=volume>11427</span><span class=pages>262&ndash;278</span><span class=year>2019</span>
     </span>
    <li>
@@ -443,7 +449,7 @@
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-319-94821-8_10'>A formalization of the LLL basis reduction algorithm</a>
     <span class=bibinfo>
-     <?php event( "ITP 2018", "Proc. 9th International Conference on Interactive Theorem Proving", "https://itp2018.inria.fr") ?><span class=series>LNCS</span><span class=volume>10895</span><span class=pages>160&ndash;177</span><span class=year>2018</span>
+     <?php event( "ITP 2018", "Proc.&nbsp;9th International Conference on Interactive Theorem Proving", "https://itp2018.inria.fr") ?><span class=series>LNCS</span><span class=volume>10895</span><span class=pages>160&ndash;177</span><span class=year>2018</span>
     </span>
    <li>
     <div class="authors">
@@ -451,7 +457,7 @@
     </div>
     <a class=title href='https://doi.org/10.1007/978-3-319-90686-7_9'>On probabilistic term rewriting</a>
     <span class=bibinfo>
-     <?php event( "FLOPS 2018", "Proc. 14th International Symposium on Functional and Logic Programming", "http://www.sqlab.jp/FLOPS2018/") ?><span class=series>LNCS</span><span class=volume>10818</span><span class=pages>132&ndash;148</span><span class=year>2018</span>
+     <?php event( "FLOPS 2018", "Proc.&nbsp;14th International Symposium on Functional and Logic Programming", "http://www.sqlab.jp/FLOPS2018/") ?><span class=series>LNCS</span><span class=volume>10818</span><span class=pages>132&ndash;148</span><span class=year>2018</span>
     </span>
     [<a href='ADY18.pdf'>preprint</a>]
    <li>
@@ -460,7 +466,7 @@
     </div>
     <a class=title href='https://dl.acm.org/citation.cfm?doid=3167103'>Efficient certification of complexity proofs: formalizing the Perron&ndash;Frobenius theorem (invited talk paper)</a>
     <span class=bibinfo>
-     <?php event( "CPP 2018", "Proc. 7th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl18.sigplan.org/track/CPP-2018") ?><span class=pages>2&ndash;13</span><span class=year>2018</span>
+     <?php event( "CPP 2018", "Proc.&nbsp;7th ACM SIGPLAN International Conference on Certified Programs and Proofs", "https://popl18.sigplan.org/track/CPP-2018") ?><span class=pages>2&ndash;13</span><span class=year>2018</span>
     </span>
    <li>
     <div class="authors">
@@ -468,7 +474,7 @@
     </div>
     <a class=title href="https://doi.org/10.1007/978-3-319-66266-4_15">Classification tree method with parameter shielding</a>
     <span class=bibinfo>
-     <?php event( "SAFECOMP 2017", "Proc. 36th International Conference on Computer Safety, Reliability, and Security", "http://safecomp17.fbk.eu/") ?><span class=series>LNCS</span><span class=volume>10488</span><span class=pages>230&ndash;241</span><span class=year>2017</span>
+     <?php event( "SAFECOMP 2017", "Proc.&nbsp;36th International Conference on Computer Safety, Reliability, and Security", "http://safecomp17.fbk.eu/") ?><span class=series>LNCS</span><span class=volume>10488</span><span class=pages>230&ndash;241</span><span class=year>2017</span>
     </span>
    <li>
     <div class="authors">
@@ -477,7 +483,7 @@
     <a class=title href="https://doi.org/10.1007/978-3-319-63046-5_28">Certifying safety and termination proofs for integer transition systems</a>
     <span class=bibinfo>
      <?php event( "CADE-26",
-       "Proc. 26th International Conference on Automated Deduction",
+       "Proc.&nbsp;26th International Conference on Automated Deduction",
        "http://www.cade-26.info/") ?><span class=series>LNCS</span><span class=volume>10395</span><span class=pages>451&ndash;471</span><span class=year>2017</span>
     </span>
     [<a href="http://cl-informatik.uibk.ac.at/users/ayamada/BJTY2017.pdf">preprint</a>]
@@ -488,7 +494,7 @@
     <a class=title href="http://dl.acm.org/citation.cfm?doid=3018610.3018617">A formalization of the Berlekamp&ndash;Zassenhaus factorization algorithm</a>
     <span class=bibinfo>
      <?php event( "CPP 2017",
-      "Proc. 6th ACM SIGPLAN Conference on Certified Programs and Proofs",
+      "Proc.&nbsp;6th ACM SIGPLAN Conference on Certified Programs and Proofs",
       "http://cpp2017.mpi-sws.org/" ) ?><span class=pages>17&ndash;29</span><span class=year>2017</span>
     </span>
    <li>
@@ -498,7 +504,7 @@
     <a class=title href="https://doi.org/10.1109/ISSRE.2016.26">Distance-integrated combinatorial testing</a>
     <span class=bibinfo>
      <?php event( "ISSRE 2016",
-      "Proc. 27th International Symposium on Software Reliability Engineering",
+      "Proc.&nbsp;27th International Symposium on Software Reliability Engineering",
       "http://issre.net/" ) ?><span class=pages>93&ndash;104</span><span class=year>2016</span>
     </span>
     [<a href="http://deji.dip.jp/pman/pman3.cgi?D=48">preprint</a>]
@@ -509,7 +515,7 @@
     <a class=title href="https://doi.org/10.1145/2970276.2970335">Greedy combinatorial test case generation using unsatisfiable cores</a>
     <span class=bibinfo>
      <?php event( "ASE 2016",
-      "Proc. 31st IEEE/ACM International Conference on Automated Software Engineering",
+      "Proc.&nbsp;31st IEEE/ACM International Conference on Automated Software Engineering",
       "http://www.ase2016.org/" ) ?><span class=pages>614&ndash;624</span><span class=year>2016</span>
     </span>
     [<a href="http://cl-informatik.uibk.ac.at/users/ayamada/YBAKC2016.pdf">preprint</a>]
@@ -520,7 +526,7 @@
     <a class=title href='http://dx.doi.org/10.4230/LIPIcs.CSL.2016.8'>AC dependency pairs revisited</a>
     <span class=bibinfo>
      <?php event( "CSL 2016",
-      "Proc. 25th EACSL Annual Conference on Computer Science Logic",
+      "Proc.&nbsp;25th EACSL Annual Conference on Computer Science Logic",
       "http://csl16.lif.univ-mrs.fr/" ) ?><span class=series>LIPIcs</span><span class=volume>62</span><span class=pages>8:1&ndash;8:16</span><span class=year>2016</span>
     </span>
    <li>
@@ -530,7 +536,7 @@
     <a class=title href="https://doi.org/10.1007/978-3-319-43144-4_24">Algebraic numbers in Isabelle/HOL</a>
     <span class=bibinfo>
      <?php event( "ITP 2016",
-      "Proc. 7th International Conference on Interactive Theorem Proving",
+      "Proc.&nbsp;7th International Conference on Interactive Theorem Proving",
       "https://itp2016.inria.fr/") ?><span class=series>LNCS</span><span class=volume>9807</span><span class=pages>391&ndash;408</span><span class=year>2016</span>
     </span>
     [<a href="http://cl-informatik.uibk.ac.at/users/ayamada/TY2016.pdf">preprint</a>]
@@ -541,7 +547,7 @@
     <a class=title href="https://doi.org/10.1145/2854065.2854073">Formalizing Jordan normal forms in Isabelle/HOL</a>
     <span class=bibinfo>
      <?php event( "CPP 2016",
-      "Proc. 5th ACM SIGPLAN Conference on Certified Programs and Proofs",
+      "Proc.&nbsp;5th ACM SIGPLAN Conference on Certified Programs and Proofs",
       "https://people.csail.mit.edu/adamc/cpp16/" ) ?><span class=pages>88&ndash;99</span>
     </span>
    <li>
@@ -551,7 +557,7 @@
     <a class=title href="https://doi.org/10.1109/QRS.2015.29">Combinatorial testing for tree-structured test models with constraints</a>
     <span class=bibinfo>
      <?php event( "QRS 2015",
-      "Proc. 2015 IEEE International Conference on Software Quality, Reliability &amp; Security",
+      "Proc.&nbsp;2015 IEEE International Conference on Software Quality, Reliability &amp; Security",
       "http://paris.utdallas.edu/qrs15/" ) ?><span class=pages>141&ndash;150</span>
     </span><span class=note>Best paper award!</span>
     [<a href="https://staff.aist.go.jp/t.kitamura/dl/QRS2015.pdf">preprint</a>]
@@ -562,7 +568,7 @@
     <a class=title href="https://doi.org/10.1007/978-3-319-21401-6_11">Reducing relative termination to dependency pair problems</a>
     <span class=bibinfo>
      <?php event(  "CADE-25",
-      "Proc. 25th International Conference on Automated Deduction",
+      "Proc.&nbsp;25th International Conference on Automated Deduction",
       "http://conference.mi.fu-berlin.de/cade-25/" ) ?><span class=series>LNCS (LNAI)</span><span class=volume>9195</span><span class=pages>163&ndash;178</span>
      2015.
     </span>
@@ -576,7 +582,7 @@
     <a class=title href="https://doi.org/10.1109/COMPSAC.2015.113">Priority integration for weighted combinatorial testing</a>
     <span class=bibinfo>
      <?php event( "COMPSAC 2015",
-      "Proc. 39th Annual International Computers, Software &amp; Applications Conference",
+      "Proc.&nbsp;39th Annual International Computers, Software &amp; Applications Conference",
       "http://www.computer.org/web/COMPSAC/" ) ?><span class=pages>242&ndash;247</span><span class=year>2015</span>
     </span>
    <li>
@@ -586,7 +592,7 @@
     <a class=title href="https://doi.org/10.1109/ICST.2015.7102599">Optimization of combinatorial testing by incremental SAT solving</a>
     <span class=bibinfo>
      <?php event( "ICST 2015",
-      "Proc. 8th IEEE International Conference on Software Testing, Verification, and Validation",
+      "Proc.&nbsp;8th IEEE International Conference on Software Testing, Verification, and Validation",
       "http://icst2015.ist.tu-graz.ac.at/" ) ?><span class=pages>1&ndash;10</span><span class=year>2015</span>
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/~ayamada/YKACOB2015.pdf">preprint</a>]
@@ -597,7 +603,7 @@
     <a class=title href="https://doi.org/10.1007/978-3-319-08918-8_32">Nagoya Termination Tool</a>
     <span class=bibinfo>
      <?php event( "RTA-TLCA 2014",
-     "Proc. Joint 25th International Conference on Rewriting Techniques and Applications and 12th International Conference on Typed Lambda Calculi and Applications",
+     "Proc.&nbsp;Joint 25th International Conference on Rewriting Techniques and Applications and 12th International Conference on Typed Lambda Calculi and Applications",
      "http://vsl2014.at/rta-tlca" ) ?><span class=series>LNCS</span><span class=volume>8560</span><span class=pages>466&ndash;475</span><span class=year>2014</span>
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/papers/RTA-TLCA2014/paper.pdf">preprint</a>,
@@ -610,7 +616,7 @@
     <a class=title href="https://doi.org/10.1007/978-3-319-07151-0_20">AC-KBO revisited</a>
     <span class=bibinfo>
      <?php event( "FLOPS 2014",
-      "Proc. 12th International Symposium on Functional and Logic Programming",
+      "Proc.&nbsp;12th International Symposium on Functional and Logic Programming",
       "http://www.jaist.ac.jp/flops2014/" ) ?><span class=series>LNCS</span><span class=volume>8475</span><span class=pages>319&ndash;335</span><span class=year>2014</span><span class=note>Superseded by the TPLP article.</span>
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/~ayamada/FLOPS2014/paper.pdf">preprint</a>,
@@ -623,7 +629,7 @@
      Unifying the Knuth-Bendix, recursive path and polynomial orders</a>
     <span class=bibinfo>
      <?php event( "PPDP 2013",
-      "Proc. 15th International Symposium on Principles and Practice of Declarative Programming",
+      "Proc.&nbsp;15th International Symposium on Principles and Practice of Declarative Programming",
       "https://people.cs.kuleuven.be/~tom.schrijvers/PPDP2013/" ) ?><span class=pages>181&ndash;192</span><span class=year>2013</span>
     </span>
     [<a href="http://www.trs.cm.is.nagoya-u.ac.jp/papers/PPDP2013/paper.pdf">preprint</a>,
@@ -882,7 +888,7 @@
     <a class=title href='http://www.trs.cm.is.nagoya-u.ac.jp/papers/WST2013/paper.pdf'>Partial status for KBO</a>
     <span class=bibinfo>
      <?php event( "WST 2013",
-      "Proc. 13th International Workshop on Termination",
+      "Proc.&nbsp;13th International Workshop on Termination",
       "http://www.imn.htwk-leipzig.de/WST2013/" ) ?><span class=pages>74&ndash;78</span><span class=year>2013</span>
      <a href='http://www.trs.cm.is.nagoya-u.ac.jp/papers/WST2013/'>Experiments</a>
     </span>
