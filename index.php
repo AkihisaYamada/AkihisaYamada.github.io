@@ -334,7 +334,7 @@
   <ol class="publications" start=12>
    <li>
     <div class="authors"><?php MA(); AY(); ?></div>
-    <a class="title">Weighted Rewriting</a>
+    <a class="title" href="AY2025.pdf">Weighted Rewriting</a>
     <span class="bibinfo">
      <?php event("FroCoS 2025", "Proc.&nbsp;15th International Symposium on Frontiers of Combining Systems", "https://icetcs.github.io/frocos-itp-tableaux25/frocos/"); ?><span class="year">2025</span></span>
     <span class="note">to appear</span>
