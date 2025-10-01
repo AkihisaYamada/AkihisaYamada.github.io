@@ -337,7 +337,7 @@
     <a class="title" href="https://doi.org/10.1007/978-3-032-04167-8_11">Weighted Rewriting</a>
     <span class="bibinfo">
      <?php event("FroCoS 2025", "Proc.&nbsp;15th International Symposium on Frontiers of Combining Systems", "https://icetcs.github.io/frocos-itp-tableaux25/frocos/"); ?><span class="pages">191&ndash;208</span><span class="year">2025</span></span>
-    <?php errata('In Section 1, our classification of van Oostrom and Toyama [18] is incorrect. Their steps are <i>first-class citizens</i> not just pairs of states, and thus they are actually more general than the ternary relation formulation. Nevertheless, our evaluation on the nature of weights (measures) remains valid. Thanks goes to Vincent.'); ?>
+    <?php errata('In Section 1, our classification of van Oostrom and Toyama [18] is incorrect. Their steps are <i>first-class citizens</i> not just pairs of states, and thus they are actually more general than the ternary relation formulation. Nevertheless, our evaluation on the nature of weights (measures) remains valid. Thanks go to Vincent.'); ?>
    <li>
     <div class="authors"><?php DohanK(); TeppeiS(); RT(); AY(); ?></div>
     <a class="title" href="https://doi.org/10.1145/3703595.3705889">An Isabelle formalization of co-rewrite pairs for non-reachability in term rewriting</a>
