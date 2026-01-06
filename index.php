@@ -918,6 +918,6 @@
     </span>
   </ul>
  <h2>E-mail</h2>
-  akihisa.yamada<b>&lt;at&gt;</b>aist.go.jp
+  akih.yamada<b>&lt;at&gt;</b>gmail.com
 </body>
 </html>
