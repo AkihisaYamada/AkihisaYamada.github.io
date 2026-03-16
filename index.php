@@ -175,7 +175,9 @@
  <h2>Affiliation</h2>
   <table>
    <tr>
-    <th>Apr.&nbsp;2020<th>&mdash;<th>current
+    <th>Mar.&nbsp;2026<th>&mdash;<th>current<td>Independent Researcher
+   <tr>
+    <th>Apr.&nbsp;2020<th>&mdash;<th>Mar.&nbsp;2026
     <td>Senior researcher at
      <span class=institute>Infrastructure Protection Security Research Team</span>,
      <a class=institute href='https://www.cpsec.aist.go.jp/'>Cyber Physical Security Research Center</a>,
