@@ -135,6 +135,11 @@
   function DohanK() { echo '<a class="author" href="http://cl-informatik.uibk.ac.at/users/dkim/">Dohan Kim</a>'; }
   function TeppeiS() { echo '<a class="author" href="https://jaist.ac.jp/~s2320025/">Teppei Saito</a>'; }
 
+	function JLAMP() {
+        echo '<span class="journal">';
+		toggle( 'JLAMP', 'Journal of Logical and Algebraic Methods in Programming' );
+        echo '</span>';
+	}
 	function JAR() {
         echo '<span class="journal">';
 		toggle( 'JAR', 'Journal of Automated Reasoning' );
@@ -232,11 +237,15 @@
  <h3>Journal Articles</h3>
   <ol class=publications>
    <li>
+    <div class="authors"><?php RT(); AY(); ?></div>
+    <a class="title" href="https://doi.org/10.1016/j.jlamp.2026.101129">A verified algorithm for deciding pattern completeness with optimal asymptotic complexity</a>
+    <span class="bibinfo"><?php JLAMP();?><span class="note">to appear</span></span>
+   <li>
     <div class="authors">
      <?php AY(); ?>
     </div>
     <a class="title" href="https://doi.org/10.1007/s10817-022-09640-4">Tuple interpretations for termination of term rewriting</a>
-    <span class="biblinfo">
+    <span class="bibinfo">
      <?php JAR(); ?><span class="volume">66</span><span class="pages">667&ndash;688</span><span class="year">2022</span><span class="note">Invited, special issue for CADE-28.</span>
     </span>
     [<a href="YamadaJAR2022.pdf">author&apos;s version</a>]
@@ -333,7 +342,16 @@
     </span><span class=note>Awarded IPSJ Tokai-branch student paper prize for encouragement.</span>
   </ol>
  <h3>Conference Papers</h3>
-  <ol class="publications" start=12>
+  <ol class="publications" start=13>
+   <li>
+    <div class="authors">
+     <a class="author" href="https://www21.in.tum.de/~nipkow/">Tobias Nipkow</a>
+     <span class="author">Fabian Lehr</span>
+     <span class="author">Moritz Roos</span>
+     <span class="author">Akihisa Yamada</span>
+    </div>
+    <span class="title">A Unified Formalization of Context-Free Grammar Theory</span>
+    <span class="bibinfo"><?php event("IJCAR 2026","Proc.&nbsp;13th International Joint Conference on Automated Reasoning","https://www.floc26.org/ijcar")?><span class="year">2026<span><span class="note">to appear</span></span>
    <li>
     <div class="authors"><?php MA(); AY(); ?></div>
     <a class="title" href="https://doi.org/10.1007/978-3-032-04167-8_11">Weighted Rewriting</a>
@@ -661,7 +679,11 @@
  <h3 class="toggler" onclick="toggle_id('others')">Workshop Talks...</h3>
   <ul class="publications hidden" id="others">
    <li>
-    <span class="title">Avoiding Russel's Paradox without Types</span><span class="event">61st TRS Meeting</span><span class="year">2025</span>
+    <span class="title">Naive Logic Tool: Formalizing paradoxes</span><span class="event">63th TRS Meeting</span><span class="year">2026</span>
+   <li>
+    <span class="title">Quantitative extensions of rewriting</span><span class="event">62th TRS Meeting</span><span class="year">2025</span>
+   <li>
+    <span class="title">Avoiding Russel's paradox without types</span><span class="event">61st TRS Meeting</span><span class="year">2025</span>
    <li>
     <span class="title">Formalizing logically constrained rewriting in Isabelle/HOL</span><span class="event">60th TRS Meeting</span><span class="year">2024</span>
    <li>
