@@ -37,7 +37,7 @@
   span+.year::before, a+.year::before { content: ", "; }
   span+.month::before { content: ". "; }
   span+.series::before { content: ", "; }
-  span+.publisher::before { content: ", "; }
+  span+.publisher::before, a+.publisher::before { content: ", "; }
   .series+.volume::before { content: " "; }
   .journal+.volume::before { content: " "; }
   span.issue::before { content: "("; }
@@ -130,10 +130,11 @@
   function MaxHaslbeck() { echo '<a class=author href="http://cl-informatik.uibk.ac.at/users/mhaslbeck/">Max W. Haslbeck</a>'; }
   function JonasS() { echo '<a class=author href="https://dblp.org/pers/s/Sch=ouml=pf:Jonas.html">Jonas Sch&ouml;pf</a>'; }
   function StefanK() { echo '<a class=author href="https://klikovits.net/">Stefan Klikovits</a>'; }
-	function TsutomuK() { echo '<a class=author href="https://researchmap.jp/tsutomu.kobayashi/">Tsutomu Kobayshi</a>'; }
+  function TsutomuK() { echo '<a class=author href="https://researchmap.jp/tsutomu.kobayashi/">Tsutomu Kobayshi</a>'; }
   function TTsukada() { echo '<a class="author" href="https://takeshi-tsukada.github.io/">Takeshi Tsukada</a>'; }
   function DohanK() { echo '<a class="author" href="http://cl-informatik.uibk.ac.at/users/dkim/">Dohan Kim</a>'; }
   function TeppeiS() { echo '<a class="author" href="https://jaist.ac.jp/~s2320025/">Teppei Saito</a>'; }
+  function RBohrer() { echo '<a class="author" href="https://researchmap.jp/r-bohrer">Rose Bohrer</a>'; }
 
 	function JLAMP() {
         echo '<span class="journal">';
@@ -234,12 +235,20 @@
   <a href="https://scholar.google.com/citations?hl=en&user=S3oRBFEAAAAJ">Google Scholar</a>,
   <a href="https://www.researchgate.net/profile/Akihisa_Yamada">Research Gate</a>,
   <a href="https://researchmap.jp/akihisayamada">researchmap</a>
+ <h3>Book Chapter</h3>
+  <ol class="publications">
+   <li>
+    <div class="authors"><?php TsutomuK(); StefanK(); RBohrer(); AY(); IH(); ?></div>
+    <a class="title" href="https://doi.org/10.1201/9781003093350-9">Theorem Proving at Work</a>
+    <span class="bibinfo">
+     <a class="booktitle" href="https://doi.org/10.1201/9781003093350">Safety Assurance under Uncertainties</a><span class="publisher">CRC Press</span><span class="year">2025</span></span>
+  </ol>
  <h3>Journal Articles</h3>
-  <ol class=publications>
+  <ol class=publications start=2>
    <li>
     <div class="authors"><?php RT(); AY(); ?></div>
     <a class="title" href="https://doi.org/10.1016/j.jlamp.2026.101129">A verified algorithm for deciding pattern completeness with optimal asymptotic complexity</a>
-    <span class="bibinfo"><?php JLAMP();?><span class="note">to appear</span></span>
+    <span class="bibinfo"><?php JLAMP();?><span class="year">2026</span></span>
    <li>
     <div class="authors">
      <?php AY(); ?>
@@ -342,7 +351,7 @@
     </span><span class=note>Awarded IPSJ Tokai-branch student paper prize for encouragement.</span>
   </ol>
  <h3>Conference Papers</h3>
-  <ol class="publications" start=13>
+  <ol class="publications" start=14>
    <li>
     <div class="authors">
      <a class="author" href="https://www21.in.tum.de/~nipkow/">Tobias Nipkow</a>
@@ -350,11 +359,11 @@
      <span class="author">Moritz Roos</span>
      <span class="author">Akihisa Yamada</span>
     </div>
-    <span class="title">A Unified Formalization of Context-Free Grammar Theory</span>
+    <span class="title">A unified formalization of context-free grammar theory</span>
     <span class="bibinfo"><?php event("IJCAR 2026","Proc.&nbsp;13th International Joint Conference on Automated Reasoning","https://www.floc26.org/ijcar")?><span class="year">2026<span><span class="note">to appear</span></span>
    <li>
     <div class="authors"><?php MA(); AY(); ?></div>
-    <a class="title" href="https://doi.org/10.1007/978-3-032-04167-8_11">Weighted Rewriting</a>
+    <a class="title" href="https://doi.org/10.1007/978-3-032-04167-8_11">Weighted rewriting</a>
     <span class="bibinfo">
      <?php event("FroCoS 2025", "Proc.&nbsp;15th International Symposium on Frontiers of Combining Systems", "https://icetcs.github.io/frocos-itp-tableaux25/frocos/"); ?><span class="pages">191&ndash;208</span><span class="year">2025</span></span>
     <?php errata('In Section 1, our classification of van Oostrom and Toyama [18] is incorrect. Their steps are <i>first-class citizens</i> not just pairs of states, and thus they are actually more general than the ternary relation formulation. Nevertheless, our evaluation on the nature of weights (measures) remains valid. Thanks go to Vincent.'); ?>

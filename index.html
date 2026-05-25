@@ -37,7 +37,7 @@
   span+.year::before, a+.year::before { content: ", "; }
   span+.month::before { content: ". "; }
   span+.series::before { content: ", "; }
-  span+.publisher::before { content: ", "; }
+  span+.publisher::before, a+.publisher::before { content: ", "; }
   .series+.volume::before { content: " "; }
   .journal+.volume::before { content: " "; }
   span.issue::before { content: "("; }
@@ -132,12 +132,20 @@
   <a href="https://scholar.google.com/citations?hl=en&user=S3oRBFEAAAAJ">Google Scholar</a>,
   <a href="https://www.researchgate.net/profile/Akihisa_Yamada">Research Gate</a>,
   <a href="https://researchmap.jp/akihisayamada">researchmap</a>
+ <h3>Book Chapter</h3>
+  <ol class="publications">
+   <li>
+    <div class="authors"><a class=author href="https://researchmap.jp/tsutomu.kobayashi/">Tsutomu Kobayshi</a><a class=author href="https://klikovits.net/">Stefan Klikovits</a><a class="author" href="https://researchmap.jp/r-bohrer">Rose Bohrer</a><span class=author>Akihisa Yamada</span><a class=author href="http://group-mmm.org/~ichiro/">Ichiro Hasuo</a></div>
+    <a class="title" href="https://doi.org/10.1201/9781003093350-9">Theorem Proving at Work</a>
+    <span class="bibinfo">
+     <a class="booktitle" href="https://doi.org/10.1201/9781003093350">Safety Assurance under Uncertainties</a><span class="publisher">CRC Press</span><span class="year">2025</span></span>
+  </ol>
  <h3>Journal Articles</h3>
-  <ol class=publications>
+  <ol class=publications start=2>
    <li>
     <div class="authors"><a class=author href="http://cl-informatik.uibk.ac.at/users/thiemann/">Ren&eacute; Thiemann</a><span class=author>Akihisa Yamada</span></div>
     <a class="title" href="https://doi.org/10.1016/j.jlamp.2026.101129">A verified algorithm for deciding pattern completeness with optimal asymptotic complexity</a>
-    <span class="bibinfo"><span class="journal"><span onclick="toggle_with_next(this)">JLAMP</span><span onclick="toggle_with_previous(this)" class="hidden">Journal of Logical and Algebraic Methods in Programming</span></span><span class="note">to appear</span></span>
+    <span class="bibinfo"><span class="journal"><span onclick="toggle_with_next(this)">JLAMP</span><span onclick="toggle_with_previous(this)" class="hidden">Journal of Logical and Algebraic Methods in Programming</span></span><span class="year">2026</span></span>
    <li>
     <div class="authors">
      <span class=author>Akihisa Yamada</span>    </div>
@@ -227,7 +235,7 @@
     </span><span class=note>Awarded IPSJ Tokai-branch student paper prize for encouragement.</span>
   </ol>
  <h3>Conference Papers</h3>
-  <ol class="publications" start=13>
+  <ol class="publications" start=14>
    <li>
     <div class="authors">
      <a class="author" href="https://www21.in.tum.de/~nipkow/">Tobias Nipkow</a>
@@ -235,11 +243,11 @@
      <span class="author">Moritz Roos</span>
      <span class="author">Akihisa Yamada</span>
     </div>
-    <span class="title">A Unified Formalization of Context-Free Grammar Theory</span>
+    <span class="title">A unified formalization of context-free grammar theory</span>
     <span class="bibinfo"><span class="booktitle"><span class="hidden"><a href="https://www.floc26.org/ijcar">Proc.&nbsp;13th International Joint Conference on Automated Reasoning</a> <span onclick="toggle_with_next(this.parentElement)">(IJCAR 2026)</span></span><span onclick="toggle_with_previous(this)">IJCAR 2026</span></span><span class="year">2026<span><span class="note">to appear</span></span>
    <li>
     <div class="authors"><a class=author href="http://cl-informatik.uibk.ac.at/users/zini/">Martin Avanzini</a><span class=author>Akihisa Yamada</span></div>
-    <a class="title" href="https://doi.org/10.1007/978-3-032-04167-8_11">Weighted Rewriting</a>
+    <a class="title" href="https://doi.org/10.1007/978-3-032-04167-8_11">Weighted rewriting</a>
     <span class="bibinfo">
      <span class="booktitle"><span class="hidden"><a href="https://icetcs.github.io/frocos-itp-tableaux25/frocos/">Proc.&nbsp;15th International Symposium on Frontiers of Combining Systems</a> <span onclick="toggle_with_next(this.parentElement)">(FroCoS 2025)</span></span><span onclick="toggle_with_previous(this)">FroCoS 2025</span></span><span class="pages">191&ndash;208</span><span class="year">2025</span></span>
     <span class="note"><span class="errata" onclick="toggle(this.nextSibling)">errata</span><span class="hidden">: In Section 1, our classification of van Oostrom and Toyama [18] is incorrect. Their steps are <i>first-class citizens</i> not just pairs of states, and thus they are actually more general than the ternary relation formulation. Nevertheless, our evaluation on the nature of weights (measures) remains valid. Thanks go to Vincent.</span></span>   <li>
